@@ -4,7 +4,7 @@
 
 ## 安装 containerd
 
-参考 [安装 Docker](../../install) 一节添加 apt/yum 源，之后执行如下命令。
+参考 [安装 Docker](../../docker/install/) 一节添加 apt/yum 源，之后执行如下命令。
 
 ```bash
 # debian 系
@@ -339,9 +339,7 @@ CONTAINER_RUNTIME_ENDPOINT=/run/cri-containerd/cri-containerd.sock crictl ps -a
 ### 主节点服务
 
 * `apiserver` 是整个系统的对外接口，提供 RESTful 方式供客户端和其它组件调用；
-
 * `scheduler` 负责对资源进行调度，分配某个 pod 到某个节点上；
-
 * `controller-manager` 负责管理控制器，包括 endpoint-controller（刷新服务和 pod 的关联信息）和 replication-controller（维护某个 pod 的复制为配置的数值）。
 
 ### 工作节点服务
