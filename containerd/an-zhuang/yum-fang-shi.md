@@ -1,42 +1,65 @@
 # YUM方式
 
-## 获取YUM源
+<details>
 
-```
+<summary>1：获取YUM源</summary>
+
 获取阿里云YUM源
-# wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-```
 
-```
+<pre class="language-bash"><code class="lang-bash"><strong>wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+</strong></code></pre>
+
 查看YUM源中Containerd软件
-# yum list | grep containerd
+
+```bash
+yum list | grep containerd
 containerd.io.x86_64                        1.4.12-3.1.el7             docker-ce-stable
 ```
 
-## 使用yum命令安装
 
-```
+
+</details>
+
+<details>
+
+<summary>2：使用yum命令安装</summary>
+
 安装Containerd.io软件，即可安装Containerd
-# yum -y install containerd.io
+
+```bash
+yum -y install containerd.io
 ```
 
-## 验证安装及启动服务
+</details>
 
-```
+<details>
+
+<summary>3：验证安装及启动服务</summary>
+
 使用rpm -qa命令查看是否安装
-# rpm -qa | grep containerd
-containerd.io-1.4.12-3.1.el7.x86_64
+
+```bash
+rpm -qa | grep containerd
+# containerd.io-1.4.12-3.1.el7.x86_64
 ```
 
-```
 设置containerd服务启动及开机自启动
-# systemctl enable containerd
-# systemctl start containerd
+
+```bash
+systemctl enable containerd
+systemctl start containerd
 ```
 
-```
 查看containerd服务启动状态
-# systemctl status containerd
+
+
+
+</details>
+
+
+
+```bash
+systemctl status containerd
 ● containerd.service - containerd container runtime
    Loaded: loaded (/usr/lib/systemd/system/containerd.service; enabled; vendor preset: disabled)
    Active: active (running) since 五 2022-02-18 11:38:30 CST; 9s ago 此行第二列及第三列表示其正在运行状态
