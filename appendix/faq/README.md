@@ -1,20 +1,50 @@
 # 附录一：常见问题总结
 
+## 云原生
+
+<details>
+
+<summary>怎么理解云原生？</summary>
+
+IT基础设施 2018年 早期  那时候 叫IT基础设施  包括 物理服务器 物理存储 物理网络
+
+升级到 虚拟服务器 虚拟网络 （管理复杂 需要人肉运维，需要大量人力物力）
+
+云基础设施 IaaS（yo） 基础设施即服务 把众多资源集中起来，需要用的时候申请使用就可以了
+
+PaaS 平台即服务&#x20;
+
+</details>
+
 ## 镜像相关
 
-### 如何批量清理临时镜像文件？
+<details>
+
+<summary>如何批量清理临时镜像文件？</summary>
 
 答：可以使用 `docker image prune` 命令。
 
-### 如何查看镜像支持的环境变量？
+</details>
+
+<details>
+
+<summary>如何查看镜像支持的环境变量？</summary>
 
 答：可以使用 `docker run IMAGE env` 命令。
 
-### 本地的镜像文件都存放在哪里？
+</details>
+
+<details>
+
+<summary>本地的镜像文件都存放在哪里？</summary>
 
 答：与 Docker 相关的本地资源默认存放在 `/var/lib/docker/` 目录下，以 `overlay2` 文件系统为例，其中 `containers` 目录存放容器信息，`image` 目录存放镜像信息，`overlay2` 目录下存放具体的镜像层文件。
 
-### 构建 Docker 镜像应该遵循哪些原则？
+</details>
+
+<details>
+
+<summary>构建 Docker 镜像应该遵循哪些原则？</summary>
 
 答：整体原则上，尽量保持镜像功能的明确和内容的精简，要点包括
 
@@ -27,9 +57,15 @@
 
 更多内容请查看 [Dockerfile 最佳实践](../best\_practices.md)
 
-### 碰到网络问题，无法 pull 镜像，命令行指定 http\_proxy 无效？
+</details>
+
+<details>
+
+<summary>碰到网络问题，无法 pull 镜像，命令行指定 http_proxy 无效？</summary>
 
 答：在 Docker 配置文件中添加 `export http_proxy="http://<PROXY_HOST>:<PROXY_PORT>"`，之后重启 Docker 服务即可。
+
+</details>
 
 ## 容器相关
 
