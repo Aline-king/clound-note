@@ -9,6 +9,7 @@
 * [Docker 简介](docker/introduction/README.md)
   * [什么是 Docker](docker/introduction/what.md)
   * [为什么要用 Docker](docker/introduction/why.md)
+  * [Docker组成](docker/introduction/docker-zu-cheng.md)
 * [基本概念](docker/basic\_concept/README.md)
   * [镜像](docker/basic\_concept/image/README.md)
     * [使用镜像](docker/basic\_concept/image/image/README.md)
@@ -131,6 +132,20 @@
   * [查看镜像](containerd/jing-xiang-guan-li/cha-kan-jing-xiang.md)
   * [下载镜像](containerd/jing-xiang-guan-li/xia-zai-jing-xiang.md)
   * [导出镜像](containerd/jing-xiang-guan-li/dao-chu-jing-xiang.md)
+  * [删除镜像](containerd/jing-xiang-guan-li/shan-chu-jing-xiang.md)
+  * [镜像导出](containerd/jing-xiang-guan-li/jing-xiang-dao-chu.md)
+  * [修改镜像tag](containerd/jing-xiang-guan-li/xiu-gai-jing-xiang-tag.md)
+* [容器管理](containerd/rong-qi-guan-li/README.md)
+  * [查看容器](containerd/rong-qi-guan-li/cha-kan-rong-qi.md)
+  * [查看任务](containerd/rong-qi-guan-li/cha-kan-ren-wu.md)
+  * [创建静态容器](containerd/rong-qi-guan-li/chuang-jian-jing-tai-rong-qi.md)
+  * [静态容器启动为动态容器](containerd/rong-qi-guan-li/jing-tai-rong-qi-qi-dong-wei-dong-tai-rong-qi.md)
+  * [进入容器操作](containerd/rong-qi-guan-li/jin-ru-rong-qi-cao-zuo.md)
+  * [直接运行一个动态容器](containerd/rong-qi-guan-li/zhi-jie-yun-hang-yi-ge-dong-tai-rong-qi.md)
+  * [暂停容器](containerd/rong-qi-guan-li/zan-ting-rong-qi.md)
+  * [恢复容器](containerd/rong-qi-guan-li/hui-fu-rong-qi.md)
+  * [停止容器](containerd/rong-qi-guan-li/ting-zhi-rong-qi.md)
+  * [删除容器](containerd/rong-qi-guan-li/shan-chu-rong-qi.md)
 
 ## ⚙️ ETCD
 
@@ -165,9 +180,10 @@
   * [CentOS Fedora](kubernetes/os/centos.md)
   * [本章小结](kubernetes/os/summary.md)
 
-## ♾️ Dev  ops
+## ♾️ Dev ops
 
-* [实战案例 - CI/CD](dev-ops/ci/README.md)
+* [Dev ops](dev-ops/ci/README.md)
+  * [CI/CD](dev-ops/ci/ci-cd.md)
   * [GitHub Actions](dev-ops/ci/actions.md)
   * [Drone](dev-ops/ci/drone/README.md)
     * [部署 Drone](dev-ops/ci/drone/install.md)
@@ -199,3 +215,7 @@
   * [附录四：Dockerfile 最佳实践](appendix/best\_practices.md)
   * [附录五：如何调试 Docker](appendix/debug.md)
   * [附录六：资源链接](appendix/resources.md)
+
+## 服务网格
+
+* [service mesh](fu-wu-wang-ge/service-mesh.md)
