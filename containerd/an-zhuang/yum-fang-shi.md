@@ -52,12 +52,6 @@ systemctl start containerd
 
 查看containerd服务启动状态
 
-
-
-</details>
-
-
-
 ```bash
 systemctl status containerd
 ● containerd.service - containerd container runtime
@@ -73,13 +67,20 @@ systemctl status containerd
            ......
 ```
 
-## 验证可用性
 
-```
+
+</details>
+
+<details>
+
+<summary>验证可用性</summary>
+
 安装Containerd时ctr命令亦可使用，ctr命令主要用于管理容器及容器镜像等。
-使用ctr命令查看Containerd客户端及服务端相关信息。
-# ctr version
-Client:
+
+&#x20;使用ctr命令查看Containerd客户端及服务端相关信息。
+
+<pre class="language-bash"><code class="lang-bash"><strong># ctr version
+</strong>Client:
   Version:  1.4.12
   Revision: 7b11cfaabd73bb80907dd23182b9347b4245eb5d
   Go version: go1.16.10
@@ -88,6 +89,12 @@ Server:
   Version:  1.4.12
   Revision: 7b11cfaabd73bb80907dd23182b9347b4245eb5d
   UUID: 3c4b142d-d91d-44a5-aae2-9673785d4b2c
-```
+</code></pre>
+
+
+
+</details>
+
+
 
 \
