@@ -147,9 +147,12 @@
   * [停止容器](containerd/rong-qi-guan-li/ting-zhi-rong-qi.md)
   * [删除容器](containerd/rong-qi-guan-li/shan-chu-rong-qi.md)
 * [container使用harbor](containerd/container-shi-yong-harbor.md)
-* [namespace管理](containerd/namespace-guan-li.md)
+* [namespace管理](containerd/namespace-guan-li/README.md)
+  * [共享命名空间](containerd/namespace-guan-li/gong-xiang-ming-ming-kong-jian.md)
 * [network管理](containerd/network-guan-li/README.md)
   * [创建CNI网络](containerd/network-guan-li/chuang-jian-cni-wang-luo.md)
+  * [为container配置网络](containerd/network-guan-li/wei-container-pei-zhi-wang-luo.md)
+* [持久化存储](containerd/chi-jiu-hua-cun-chu.md)
 
 ## ⚙️ ETCD
 

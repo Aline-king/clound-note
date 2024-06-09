@@ -2,28 +2,18 @@
 
 > <mark style="color:yellow;">**说明：**</mark>
 >
+> [_containernetworking_/_cni_](https://github.com/containernetworking/cni)   _对应_   [CNI v1.0.1](https://github.com/containernetworking/cni/releases/tag/v1.0.1)
 >
+> [_containernetworking_/_plugins_](https://github.com/containernetworking/plugins) _对应_   [CNI Plugins v1.0.1](https://github.com/containernetworking/plugins/releases/tag/v1.0.1)
 
-| [_containernetworking_/_cni_](https://github.com/containernetworking/cni)         | [CNI v1.0.1](https://github.com/containernetworking/cni/releases/tag/v1.0.1)             |
-| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| [_containernetworking_/_plugins_](https://github.com/containernetworking/plugins) | [CNI Plugins v1.0.1](https://github.com/containernetworking/plugins/releases/tag/v1.0.1) |
-
-#### 7.1.1 获取CNI工具源码
-
-![image-20220219095355845](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219095355845.png?lastModify=1717923303)
-
-![image-20220219095427153](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219095427153.png?lastModify=1717923303)
-
-![image-20220219095515772](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219095515772.png?lastModify=1717923303)
-
-![image-20220219095615236](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219095615236.png?lastModify=1717923303)
+## 获取CNI工具
 
 ```
 使用wget下载cni工具源码包
 # wget https://github.com/containernetworking/cni/archive/refs/tags/v1.0.1.tar.gz
 ```
 
-```
+```bash
 查看已下载cni工具源码包
 # ls
 v1.0.1.tar.gz
@@ -48,15 +38,7 @@ cnitool             CONTRIBUTING.md  DCO            go.mod  GOVERN
 CODE-OF-CONDUCT.md  CONVENTIONS.md   Documentation  go.sum  libcni         logo.png  pkg          README.md  ROADMAP.md    SPEC.md
 ```
 
-#### 7.1.2 获取CNI Plugins（CNI插件）
-
-![image-20220219095946940](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219095946940.png?lastModify=1717923303)
-
-![image-20220219100008810](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219100008810.png?lastModify=1717923303)
-
-![image-20220219100056059](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219100056059.png?lastModify=1717923303)
-
-![image-20220219100303944](file:///G:/game/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Containerd/05\_%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd/01\_%E7%AC%94%E8%AE%B0/%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%20Containerd.assets/image-20220219100303944.png?lastModify=1717923303)
+## 获取CNI Plugins（CNI插件）
 
 ```
 使用wget下载cni插件工具源码包
@@ -80,7 +62,7 @@ cni
 bandwidth  bridge  dhcp  firewall  host-device  host-local  ipvlan  loopback  macvlan  portmap  ptp  sbr  static  tuning  vlan  vrf
 ```
 
-#### 7.1.3 准备CNI网络配置文件
+## 准备CNI网络配置文件
 
 > 准备容器网络配置文件，用于为容器提供网关、IP地址等。
 
@@ -115,7 +97,7 @@ bandwidth  bridge  dhcp  firewall  host-device  host-local  ipvlan  loopb
 }
 ```
 
-#### 7.1.4 生成CNI网络
+## 生成CNI网络
 
 ```
 获取epel源
