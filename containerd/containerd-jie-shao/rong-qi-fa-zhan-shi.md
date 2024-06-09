@@ -6,11 +6,11 @@
 2. 存储：由docker-volume提供&#x20;
 3. 网络：由docker-network提供
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 当创建容器的请求到达docker api，docker-api会调用containerd执行创建操作，此时containerd会启动一个containerd-shim进程，containerd-shim调用runc执行容器的创建操作。当容器创建完成之后， runc退出，containerd-shim作为容器的父进程收集容器的运行状态，将其上报给containerd，并在容器中 pid 为 1 的进程退出后接管容器中的子进程进行清理, 确保不会出现僵尸进程。
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 > runc是OCI的一个具体实现。 OCI（open container initivtive）全称为开放容器标准，其主要用于规范容器镜像的结构以及容器需要接收的操作指令，如create、start、stop、delete等命令。除了runc之外，Kata、gVisor也符合OCI规范。
 
@@ -20,19 +20,23 @@
 
 ## CRI - container runtime interface
 
-简称容器运行时
-
-在kubernetes早期的时候，由于没法跟docker正面刚，只得通过硬编码的方式在kubelet当中直接调用Docker API创建容器。
+在kubernetes早期的时候，由于没法跟docker正面刚，只得通过硬编码的方式在kubelet当中直接调用Docker API创建容器。内置docker-shim
 
 随着容器生态的逐渐发展，市面上出现了更多的容器运行时。 此时kubernetes为了支持更多的容器运行时，Google就和红帽主导了CRI标准，用于将kubernetes平台和特定的容器运行时解耦。&#x20;
 
-CRI（Container Runtime Interface 容器运行时接口） 本质上就是 Kubernetes 定义的一组与容器运行时进行交互的接口，所以只要实现了这套接口的容器运行时都可以对接Kubernetes 。不过 Kubernetes 推出 CRI 这套标准的时候还没有现在的统治地位，所以有一些容器运行时自身没有实现 CRI 接口，于是就有了 shim（垫片）， 一个 shim 的职责就是作为适配器将各种容器运行时本身的接口适配到 Kubernetes 的 CRI 接口上，其中 dockershim 就是 Kubernetes 对接 Docker 到 CRI 接口上的一个垫片实现。
+{% hint style="info" %}
+CRI（Container Runtime Interface 容器运行时接口） 本质上就是 Kubernetes 定义的一组与容器运行时进行交互的接口，所以只要实现了这套接口的容器运行时都可以对接Kubernetes 。
+
+不过 Kubernetes 推出 CRI 这套标准的时候还没有现在的统治地位，所以有一些容器运行时自身没有实现 CRI 接口，于是就有了 shim（垫片）。
+
+一个 shim 的职责就是作为适配器将各种容器运行时本身的接口适配到 Kubernetes 的 CRI 接口上，其中 dockershim 就是 Kubernetes 对接 Docker 到 CRI 接口上的一个垫片实现。
+{% endhint %}
 
 Kubelet 通过 gRPC 框架与容器运行时或 shim 进行通信，其中 kubelet 作为客户端，CRI shim（也可能是容器运行时本身）作为服务器。
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-由于当时的Docker仍然处于容器生态的统治地位。kubernetes不得不在kubelet当中内置了dockershim：
+由于当时的Docker仍然处于容器生态的统治地位。kubernetes不得不在kubelet当中内置了docker-shim：
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
