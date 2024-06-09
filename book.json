@@ -1,10 +1,10 @@
 {
-  "title": "Docker -- 从入门到实践",
+  "title": "云原生笔记",
   "author": "yeasy",
   "language": "zh-hans",
   "links": {
     "sidebar": {
-      "GitHub": "https://github.com/yeasy/docker_practice"
+      "GitHub": "https://github.com/Aline-king/clound-note"
     }
   },
   "plugins": [
@@ -22,7 +22,7 @@
       "caption": "图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_ - _CAPTION_"
     },
     "github": {
-      "url": "https://github.com/yeasy/docker_practice"
+      "url": "https://github.com/Aline-king/clound-note"
     },
     "editlink": {
       "base": "https://github.com/yeasy/docker_practice/blob/master/",
