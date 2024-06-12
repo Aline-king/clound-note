@@ -6,7 +6,7 @@
 2. 存储：由docker-volume提供&#x20;
 3. 网络：由docker-network提供
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 当创建容器的请求到达docker api，docker-api会调用containerd执行创建操作，此时containerd会启动一个containerd-shim进程，containerd-shim调用runc执行容器的创建操作。当容器创建完成之后， runc退出，containerd-shim作为容器的父进程收集容器的运行状态，将其上报给containerd，并在容器中 pid 为 1 的进程退出后接管容器中的子进程进行清理, 确保不会出现僵尸进程。
 

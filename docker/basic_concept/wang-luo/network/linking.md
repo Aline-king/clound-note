@@ -12,7 +12,7 @@
 $ docker network create -d bridge my-net
 ```
 
-`-d` 参数指定 Docker 网络类型，有 `bridge` `overlay`。其中 `overlay` 网络类型用于 [Swarm mode](../swarm_mode/)，在本小节中你可以忽略它。
+`-d` 参数指定 Docker 网络类型，有 `bridge` `overlay`。其中 `overlay` 网络类型用于 [Swarm mode](../../../swarm\_mode/)，在本小节中你可以忽略它。
 
 ## 连接容器
 
@@ -64,4 +64,4 @@ PING busybox1 (172.19.0.2): 56 data bytes
 
 ## Docker Compose
 
-如果你有多个容器之间需要互相连接，推荐使用 [Docker Compose](../compose)。
+如果你有多个容器之间需要互相连接，推荐使用 [Docker Compose](../../../compose/)。

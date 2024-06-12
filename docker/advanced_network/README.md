@@ -1,4 +1,4 @@
-# 高级网络配置
+# 网络管理
 
 > 注意：本章属于 `Docker` 高级配置，如果您是初学者，您可以暂时跳过本章节，直接学习 [Docker Compose](../compose/) 一节。
 
@@ -13,3 +13,14 @@
 ![Docker 网络](../../advanced\_network/\_images/network.png)
 
 接下来的部分将介绍在一些场景中，Docker 所有的网络定制配置。以及通过 Linux 命令来调整、补充、甚至替换 Docker 默认的网络配置。
+
+
+
+在介绍自定义网络拓扑之前，你可能会对一些外部工具和例子感兴趣：
+
+> 1.  pipework
+>
+>     Jérôme Petazzoni 编写了一个叫 [pipework](https://github.com/jpetazzo/pipework) 的 shell 脚本，可以帮助用户在比较复杂的场景中完成容器的连接。
+> 2.  playground
+>
+>     Brandon Rhodes 创建了一个提供完整的 Docker 容器网络拓扑管理的 [Python库](https://github.com/brandon-rhodes/fopnp/tree/m/playground)，包括路由、NAT 防火墙；以及一些提供 `HTTP` `SMTP` `POP` `IMAP` `Telnet` `SSH` `FTP` 的服务器。

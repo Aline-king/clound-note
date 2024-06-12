@@ -1,4 +1,4 @@
-# 快速配置指南
+# 网络配置指南
 
 <details>
 
@@ -28,3 +28,9 @@
 * `--net=bridge|none|container:NAME_or_ID|host` 配置容器的桥接模式
 * `-p SPEC` 或 `--publish=SPEC` 映射容器端口到宿主主机
 * `-P or --publish-all=true|false` 映射容器所有端口到宿主主机
+
+## 网络配置文件
+
+Docker 1.2.0 开始支持在运行中的容器里编辑 `/etc/hosts`, `/etc/hostname` 和 `/etc/resolv.conf` 文件。
+
+但是这些修改是临时的，只在运行的容器中保留，容器终止或重启后并不会被保存下来，也不会被 `docker commit` 提交。

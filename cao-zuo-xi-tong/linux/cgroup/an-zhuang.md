@@ -4,11 +4,15 @@ coverY: 0
 
 # 安装
 
-## 使用 以下命令安装
+## 安装及开启
 
+```bash
+[root@localhost ~]# yum -y install libcgroup-tools
+[root@localhost ~]# systemctl start cgconfig.service 	
+[root@localhost ~]# systemctl enable cgconfig.service
 ```
-yum -y install libcgroup-tools
-```
+
+
 
 ## 准备cpu 子系统限制进程的cpu
 
