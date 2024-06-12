@@ -1,4 +1,5 @@
-# 示例：创建一个点到点连接
+# 创建一个点到点连接
+
 默认情况下，Docker 会将所有容器连接到由 `docker0` 提供的虚拟子网中。
 
 用户有时候需要两个容器之间可以直连通信，而不用通过主机网桥进行桥接。
@@ -6,6 +7,7 @@
 解决办法很简单：创建一对 `peer` 接口，分别放到两个容器中，配置成点到点链路类型即可。
 
 首先启动 2 个容器：
+
 ```bash
 $ docker run -i -t --rm --net=none base /bin/bash
 root@1f1f4c1f931a:/#
@@ -14,6 +16,7 @@ root@12e343489d2f:/#
 ```
 
 找到进程号，然后创建网络命名空间的跟踪文件。
+
 ```bash
 $ docker inspect -f '{{.State.Pid}}' 1f1f4c1f931a
 2989
@@ -25,6 +28,7 @@ $ sudo ln -s /proc/3004/ns/net /var/run/netns/3004
 ```
 
 创建一对 `peer` 接口，然后配置路由
+
 ```bash
 $ sudo ip link add A type veth peer name B
 
@@ -38,6 +42,7 @@ $ sudo ip netns exec 3004 ip addr add 10.1.1.2/32 dev B
 $ sudo ip netns exec 3004 ip link set B up
 $ sudo ip netns exec 3004 ip route add 10.1.1.1/32 dev B
 ```
+
 现在这 2 个容器就可以相互 ping 通，并成功建立连接。点到点链路不需要子网和子网掩码。
 
 此外，也可以不指定 `--net=none` 来创建点到点链路。这样容器还可以通过原先的网络来通信。
