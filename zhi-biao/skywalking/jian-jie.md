@@ -1,0 +1,8 @@
+# 简介
+
+SkyWalking是一个开源的APM工具，由Apache软件基金会孵化，主要针对云原生、微服务和容器化架构进行观测和分析。SkyWalking可以收集和展示应用程序中各个组件之间的调用链路和时序数据，以及各个组件内部的方法调用和资源消耗。SkyWalking还可以根据预设的规则和阈值对异常情况进行告警通知。SkyWalking还支持分布式事务跟踪，可以追踪跨服务的事务状态和一致性。
+
+![](https://y04h4pmzvxx.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2E1ZTU3NmZlYzBjODI2OWE5ZjA1M2ZlMGI5NDgxZTRfQ0RzQVdCMmFIdFVNZ3pVNE9sUEd3Y3dWRE03U1Y3Z3lfVG9rZW46VFZRcmJWR3RZb1RPTUd4bHlENmNnaDNrbjFmXzE3MTgxODgzNzc6MTcxODE5MTk3N19WNA)
+
+![](https://y04h4pmzvxx.feishu.cn/space/api/box/stream/download/asynccode/?code=M2IwMTdkYjcwZDdiNGI5YzI4ZTc5MjFjNmRlMTJiODVfN2s0TjQzQjZQS1JUcWJFQUl6Mk9OalVNQTJLNjV6S09fVG9rZW46T1BjcWJjc2cyb0dXYmF4RHhtb2NqMnhtblNkXzE3MTgxODgzODQ6MTcxODE5MTk4NF9WNA)
+
