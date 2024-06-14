@@ -1,6 +1,6 @@
 # 部署
 
-
+## 安装calico
 
 {% tabs %}
 {% tab title="获取资源清单文件" %}
@@ -30,7 +30,7 @@ cp calico.yaml{,.bak}
 
 {% endtab %}
 
-{% tab title="定制pod的manifest文件分配网络配置" %}
+{% tab title="分配网络" %}
 ```
 # vim calico.yaml
 ---- 修改下面的内容
@@ -130,6 +130,18 @@ curl 10.108.138.97
 ```
 
 
+{% endtab %}
+
+{% tab title="命令完善" %}
+```bash
+cd /usr/local/bin/
+curl -L https://github.com/projectcalico/calico/releases/download/v3.23.3/calicoctl-linux-amd64 -o calicoctl
+mv calicoctl kubectl-calico
+chmod +x kubectl-calico
+
+测试效果
+kubectl calico node status
+```
 {% endtab %}
 {% endtabs %}
 

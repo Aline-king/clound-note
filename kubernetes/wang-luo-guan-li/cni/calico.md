@@ -2,7 +2,7 @@
 
 Calico是一个开源的虚拟化网络方案，用于为云原生应用实现互联及策略控制。相较于 Flannel 来说，Calico 的优势是对网络策略(network policy)
 
-<figure><img src="../../../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 ## 设计思想
 
