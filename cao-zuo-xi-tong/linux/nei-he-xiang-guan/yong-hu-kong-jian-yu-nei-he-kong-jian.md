@@ -6,5 +6,5 @@
 
 这样的话，用户层只需要关注业务层面的操作，通过技术手段借助于系统调用实现资源相关的操作，从而实现业务和技术层面的解耦
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 

@@ -4,7 +4,7 @@
 
 跨网段通信机制 默认 pod与Pod经由隧道封装后通信，各节点彼此间能通信就行，不要求在同一个二层网络
 
-<figure><img src="../../../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 1. 节点上的pod通过虚拟网卡对，连接到cni0的虚拟网络交换机上，当有外部网络通信的时候，借助于 flannel.1网卡向外发出数据包
 2. 经过 flannel.1 网卡的数据包，借助于flanneld实现数据包的封装和解封，最后送给宿主机的物理接口，发送出去

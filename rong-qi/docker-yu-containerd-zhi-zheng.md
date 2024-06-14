@@ -82,7 +82,7 @@ k8s的广泛使用，容器工具的越来越多，当时推出cri，只要适�
 >
 > OCI：Open Container Initiative (OCI) 开放容器倡议，是一个由科技公司组成的团体，其目的是围绕容器镜像和运行时创建开放的行业标准。他们维护容器镜像格式的规范，以及容器应该如何运行。
 
-<figure><img src="../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 无论是CRI-O还是containerd接入kubernetes的方式都比docker使用dockershim的方式接入kubernetes要来的简单。
 

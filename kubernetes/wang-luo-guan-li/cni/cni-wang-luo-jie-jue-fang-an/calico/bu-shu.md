@@ -1,5 +1,43 @@
 # 部署
 
+## 安装之前先清理网络
+
+我们之前曾经说过，kubernetes支持很多种网络插件，但是默认情况下只能使用1种，所以为了后续的操作，需要清理之前的flannel插件环境
+
+```
+[root@kubernetes-master1 ~]# cd /data/kubernetes/flannel/
+
+[root@kubernetes-master1 /data/kubernetes/flannel]# kubectl  delete -f kube-flannel.yml
+```
+
+在所有节点上重启主机，直接清空所有的路由表信息
+
+```
+[root@kubernetes-master1 /data/kubernetes/flannel]# reboot
+```
+
+重启后，查看网络效果
+
+```
+[root@kubernetes-master1 ~]# ifconfig flannel.1
+
+flannel.1: error fetching interface information: Device not found
+
+[root@kubernetes-master1 ~]# ip route list
+
+default via 10.0.0.2 dev eth0
+
+10.0.0.0/24 dev eth0 proto kernel scope link src 10.0.0.12
+
+169.254.0.0/16 dev eth0 scope link metric 1002
+
+169.254.0.0/16 dev eth1 scope link metric 1003
+
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1
+
+192.168.8.0/24 dev eth1 proto kernel scope link src 192.168.8.12
+```
+
 ## 安装calico
 
 {% tabs %}
