@@ -261,7 +261,7 @@
       * [生命周期与探测](kubernetes/ji-chu-gai-nian/zi-yuan-dui-xiang/pod/sheng-ming-zhou-qi-yu-tan-ce.md)
       * [钩子实践](kubernetes/ji-chu-gai-nian/zi-yuan-dui-xiang/pod/gou-zi-shi-jian.md)
       * [资源限制](kubernetes/ji-chu-gai-nian/zi-yuan-dui-xiang/pod/zi-yuan-xian-zhi.md)
-      * [资源质量](kubernetes/ji-chu-gai-nian/zi-yuan-dui-xiang/pod/zi-yuan-zhi-liang.md)
+      * [服务质量- Qos](kubernetes/ji-chu-gai-nian/zi-yuan-dui-xiang/pod/fu-wu-zhi-liang-qos.md)
   * [网络](kubernetes/ji-chu-gai-nian/wang-luo/README.md)
     * [资源对象属性解析](kubernetes/ji-chu-gai-nian/wang-luo/zi-yuan-dui-xiang-shu-xing-jie-xi.md)
   * [yaml](kubernetes/ji-chu-gai-nian/yaml.md)
@@ -440,3 +440,7 @@
 ## 一致性算法
 
 * [raft](yi-zhi-xing-suan-fa/raft.md)
+
+## Group 1
+
+* [ceph](group-1/ceph.md)
