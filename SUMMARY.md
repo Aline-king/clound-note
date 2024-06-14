@@ -265,6 +265,7 @@
   * [网络](kubernetes/ji-chu-gai-nian/wang-luo/README.md)
     * [资源对象属性解析](kubernetes/ji-chu-gai-nian/wang-luo/zi-yuan-dui-xiang-shu-xing-jie-xi.md)
   * [yaml](kubernetes/ji-chu-gai-nian/yaml.md)
+  * [控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi.md)
 * [实战案例 - 操作系统](kubernetes/os/README.md)
   * [Busybox](kubernetes/os/busybox.md)
   * [Alpine](kubernetes/os/alpine.md)
