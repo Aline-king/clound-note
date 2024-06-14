@@ -30,7 +30,7 @@ containerd GRPC API、Service、 MetaData 为典型的 API 层、逻辑层、数
 * Service 层为具体的逻辑处理层，
 * Metadata 为数据层，Service、 MetaData 两层为 Core 层。
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Containerd 被分为三个大块：`Storage`、`Metadata` 和 `Runtime`
 
