@@ -1,6 +1,6 @@
 # 容器访问外网
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 docker run -d --name web1 -p 8081:80 nginx:latest
