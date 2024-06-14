@@ -23,4 +23,4 @@ kubectl -n kube-system logs etcd-kubernetes-master1
 
 节点内部实现了对端主机的信息数据同步
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>

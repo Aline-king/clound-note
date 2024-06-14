@@ -6,7 +6,7 @@ CIS由一个全球IT社区驱动，其共同目标是识别、开发、验证、
 
 [k8s cis官网](https://www.cisecurity.org/benchmark/kubernetes/)
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ## k8s基准测试
 
@@ -16,6 +16,6 @@ Kubernetes 虽然作为一个出色的容器任务编排领域的管理平台，
 [下载地址](https://www.cisecurity.org/cis-benchmarks/)
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 下载

@@ -14,7 +14,7 @@
 
 4、emptyDir数据卷介质种类跟当前主机的磁盘一样。
 
-<figure><img src="../../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 ## 属性解读
 

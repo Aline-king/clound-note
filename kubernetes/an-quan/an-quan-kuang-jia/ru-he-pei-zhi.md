@@ -8,7 +8,13 @@ description: 使用config配置文件
 
 **使用不同的SA/UA账户并搭配不同的config文件来进行管理集群**
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+> SA：service account 服务账户
+>
+> UA：username account 用户账户
+>
+> 都需要认证和授权，而且都是以插件模式，并且按照短路模型来运行
+
+<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ## 集群命令解读
 

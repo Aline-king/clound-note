@@ -2,11 +2,11 @@
 
 ## pv与pvc与sc的三者关系
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 ## 原理解释
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 1 用户创建了一个包含 PVC 的 Pod，该 PVC 要求使用动态存储卷；
 
@@ -26,7 +26,7 @@
 
 
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Availabled 空闲状态，表示pv没有被其他对象使用
@@ -38,7 +38,7 @@ Released 未回收状态，表示pvc已经被删除了，但是资源没有被�
 Faild 资源回收失败
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 ## AccessModes&#x20;
 

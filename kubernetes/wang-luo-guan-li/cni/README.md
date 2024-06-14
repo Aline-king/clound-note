@@ -10,7 +10,7 @@ CNI- **Container Network Interface**，Google和CoreOS联合定制的网络标�
 * CNI的网络定义以json的格式存储
 * 有关网络的配置通过STDIN的方式传递给CNI插件，其他的参数通过环境变量的方式传递
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 ## 被谁管理
 

@@ -1,6 +1,6 @@
 # 原理
 
-<figure><img src="../../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 Felix 每个节点都有，负责配置路由、ACL、向etcd宣告状态等
 
@@ -22,4 +22,4 @@ Route Reflector 路由反射器，用于集中式的动态生成所有主机的�
 
 Calico编排系统插件 实现更广范围的虚拟网络解决方案。
 
-<figure><img src="../../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>

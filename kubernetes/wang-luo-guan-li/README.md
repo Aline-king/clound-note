@@ -2,7 +2,7 @@
 
 K8s的网络模型如下图所示
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 主机网络 -> 本地网络&#x20;
 
@@ -30,4 +30,4 @@ K8s的网络模型如下图所示
 
 pause容器的示意图
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
