@@ -275,6 +275,7 @@
       * [DaemonSet](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/daemonset.md)
       * [deploy](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/deploy.md)
       * [RC\&RS](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/rc-and-rs.md)
+    * [标签和标签选择器](kubernetes/ji-chu-gai-nian/kong-zhi-qi/biao-qian-he-biao-qian-xuan-ze-qi.md)
 * [实战案例 - 操作系统](kubernetes/os/README.md)
   * [Busybox](kubernetes/os/busybox.md)
   * [Alpine](kubernetes/os/alpine.md)

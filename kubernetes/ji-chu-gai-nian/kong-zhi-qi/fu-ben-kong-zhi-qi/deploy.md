@@ -16,7 +16,7 @@ kubectl scale --replicas=4 -f deploy\_name.yaml
 
 
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 
 
