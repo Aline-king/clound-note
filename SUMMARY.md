@@ -264,10 +264,17 @@
       * [服务质量- Qos](kubernetes/ji-chu-gai-nian/zi-yuan-dui-xiang/pod/fu-wu-zhi-liang-qos.md)
   * [网络](kubernetes/ji-chu-gai-nian/wang-luo/README.md)
     * [资源对象属性解析](kubernetes/ji-chu-gai-nian/wang-luo/zi-yuan-dui-xiang-shu-xing-jie-xi.md)
+    * [service](kubernetes/ji-chu-gai-nian/wang-luo/service.md)
   * [yaml](kubernetes/ji-chu-gai-nian/yaml.md)
   * [控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi/README.md)
     * [监视控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi/jian-shi-kong-zhi-qi/README.md)
       * [metrics](kubernetes/ji-chu-gai-nian/kong-zhi-qi/jian-shi-kong-zhi-qi/metrics.md)
+      * [HPA](kubernetes/ji-chu-gai-nian/kong-zhi-qi/jian-shi-kong-zhi-qi/hpa.md)
+    * [Job和Cron Job](kubernetes/ji-chu-gai-nian/kong-zhi-qi/job-he-cron-job.md)
+    * [副本控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/README.md)
+      * [DaemonSet](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/daemonset.md)
+      * [deploy](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/deploy.md)
+      * [RC\&RS](kubernetes/ji-chu-gai-nian/kong-zhi-qi/fu-ben-kong-zhi-qi/rc-and-rs.md)
 * [实战案例 - 操作系统](kubernetes/os/README.md)
   * [Busybox](kubernetes/os/busybox.md)
   * [Alpine](kubernetes/os/alpine.md)
@@ -326,6 +333,7 @@
   * [kubelet](kubernetes/zu-jian/kubelet/README.md)
     * [CAdvsior](kubernetes/zu-jian/kubelet/cadvsior.md)
 * [Page 2](kubernetes/page-2.md)
+* [集群管理](kubernetes/ji-qun-guan-li.md)
 
 ## ♾️ Dev ops
 
