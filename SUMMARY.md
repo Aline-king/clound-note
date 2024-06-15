@@ -265,7 +265,9 @@
   * [网络](kubernetes/ji-chu-gai-nian/wang-luo/README.md)
     * [资源对象属性解析](kubernetes/ji-chu-gai-nian/wang-luo/zi-yuan-dui-xiang-shu-xing-jie-xi.md)
   * [yaml](kubernetes/ji-chu-gai-nian/yaml.md)
-  * [控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi.md)
+  * [控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi/README.md)
+    * [监视控制器](kubernetes/ji-chu-gai-nian/kong-zhi-qi/jian-shi-kong-zhi-qi/README.md)
+      * [metrics](kubernetes/ji-chu-gai-nian/kong-zhi-qi/jian-shi-kong-zhi-qi/metrics.md)
 * [实战案例 - 操作系统](kubernetes/os/README.md)
   * [Busybox](kubernetes/os/busybox.md)
   * [Alpine](kubernetes/os/alpine.md)
@@ -321,6 +323,8 @@
   * [kubectl 命令行工具](kubernetes/zu-jian/kubectl.md)
   * [kube-apiserver](kubernetes/zu-jian/kube-apiserver.md)
   * [kube-dashboard](kubernetes/zu-jian/kube-dashboard.md)
+  * [kubelet](kubernetes/zu-jian/kubelet/README.md)
+    * [CAdvsior](kubernetes/zu-jian/kubelet/cadvsior.md)
 * [Page 2](kubernetes/page-2.md)
 
 ## ♾️ Dev ops
@@ -344,7 +348,8 @@
       * [Tool](dev-ops/ci/argo-cd/ji-ben-gai-nian/tool.md)
       * [Configuration management tool](dev-ops/ci/argo-cd/ji-ben-gai-nian/configuration-management-tool.md)
       * [Configuration management plugin](dev-ops/ci/argo-cd/ji-ben-gai-nian/configuration-management-plugin.md)
-    * [部署](dev-ops/ci/argo-cd/bu-shu.md)
+    * [部署](dev-ops/ci/argo-cd/bu-shu/README.md)
+      * [安装包](dev-ops/ci/argo-cd/bu-shu/an-zhuang-bao.md)
     * [架构](dev-ops/ci/argo-cd/jia-gou.md)
 
 ***
