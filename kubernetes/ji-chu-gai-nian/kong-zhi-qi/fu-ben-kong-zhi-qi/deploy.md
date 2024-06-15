@@ -5,13 +5,17 @@
 Deployment资源对象在内部使用Replica Set来实现Pod的自动化编排。
 
 {% hint style="info" %}
-基于资源对象调整：&#x20;
+{% code title="基于资源对象调整：" %}
+```bash
+kubectl scale <--current-replicas=3> --replicas=5 deployment/deploy_name 
+```
+{% endcode %}
 
-kubectl scale <--current-replicas=3> --replicas=5 deployment/deploy\_name&#x20;
-
-基于资源文件调整:&#x20;
-
-kubectl scale --replicas=4 -f deploy\_name.yaml
+{% code title="基于资源文件调整: " %}
+```bash
+kubectl scale --replicas=4 -f deploy_name.yaml
+```
+{% endcode %}
 {% endhint %}
 
 
@@ -22,20 +26,30 @@ kubectl scale --replicas=4 -f deploy\_name.yaml
 
 ## 动态更新
 
+{% tabs %}
+{% tab title="更新" %}
+更新命令：
+
+```bash
+kubectl set SUBCOMMAND [options] 资源类型 资源名称   
 ```
-更新命令1：kubectl set SUBCOMMAND [options] 资源类型 资源名称
-    子命令：常用的子命令就是image
-    参数详解：
-        --record=true       更改的时候，将信息增加到历史记录中
-​
+
+子命令：
+
+常用的子命令就是image   &#x20;
+
+参数详解：        --record=true 更改的时候，将信息增加到历史记录中
+{% endtab %}
+
+{% tab title="回滚" %}
+```
 回滚命令： kubectl rollout SUBCOMMAND [options] 资源类型 资源名称
     子命令：
     history     显示 rollout 历史
     status      显示 rollout 的状态
     undo        撤销上一次的 rollout
+
 ```
-
-
 
 ```bash
 资源回滚操作
@@ -47,20 +61,15 @@ REVISION  CHANGE-CAUSE
 1         <none>
 4         kubectl set image nginx-web=kubernetes-register.superopsmsb.com/superopsmsb/nginx:1.16.0 --filename=03_kubernetes_deploy_test.yaml --record=true
 5         kubectl set image nginx-web=kubernetes-register.superopsmsb.com/superopsmsb/nginx:1.23.0 --filename=03_kubernetes_deploy_test.yaml --record=true
-结果显示：
-    将1.23.0版本拿回来了
 ```
-
-\
-
+{% endtab %}
+{% endtabs %}
 
 ## RS和RC的区别
 
-相对于RC的一个最大的升级是:&#x20;
 
-1. 我们可以随时知道当前Pod的"部署"进度&#x20;
-   1. 即Pod创建--调度--绑定Node--在目标Node上启动容器，整个流程都是自动化的。&#x20;
-2. Deployment的更新是滚动式更新。 RC 和 RS 是手动式更新
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
 
 ## 资源对象属性
 
