@@ -18,7 +18,11 @@ Kubernetes的基本特性就是它的所有资源对象都是模型化的 API �
 
 
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ### 授权级别
 
@@ -54,11 +58,13 @@ Kubernetes的基本特性就是它的所有资源对象都是模型化的 API �
 
 ## 属性解析
 
-{% code title="查看Role的属性信息" %}
+<details>
+
+<summary>查看Role的属性信息</summary>
+
 ```bash
 kubectl explain role
 ```
-{% endcode %}
 
 对于role来说，其核心的内容主要是rules的权限规则       &#x20;
 
@@ -76,40 +82,180 @@ kubectl explain role
       verbs                 <[]string> -required-  # 最重要
 ```
 
-&#x20;对于一个role必备的rules来说，他主要有三部分组成：apiGroup、resources、verbs   &#x20;
+### Role核心
 
-apiGroups&#x20;
+[关于api组的信息获取](https://kubernetes.io/docs/reference/#api-reference)
 
-resources 位于apiGroup范围中的某些具体的资源对象   &#x20;
+命令行创建role，查看具有pod资源的get、list权限的属性信息
 
-verbs&#x20;
+```yaml
+# kubectl create role pods-reader --verb=get,list --resource=pods --dry-run -o yaml
+```
 
+对于一个role必备的rules来说，他主要有三部分组成：   &#x20;
 
+* <mark style="color:red;">**apiGroups：**</mark>设定包含资源的api组，如果是多个，表示只要属于api组范围中任意资源都可以操作   &#x20;
+* <mark style="color:green;">**resources**</mark>：位于apiGroup范围中的某些具体的资源对象   &#x20;
+* <mark style="color:purple;">**verbs：**</mark>针对具体资源对象的一些具体操作
 
-<pre class="language-yaml" data-title="命令行创建role，查看具有pod资源的get、list权限的属性信息"><code class="lang-yaml"># kubectl create role pods-reader --verb=get,list --resource=pods --dry-run -o yaml
+```yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   creationTimestamp: null       # 时间信息
   name: pods-reader             # role的名称
 rules:                          # 授权规则
-- <a data-footnote-ref href="#user-content-fn-2">apiGroups</a>:                    # 操作的对象
+- apiGroups:                    # 操作的对象
   - ""                          # 所有权限
   resources:                    # 资源对象
   - pods                        # pod的对象
-  <a data-footnote-ref href="#user-content-fn-3">verbs</a>:                        # 对pod允许的权限
+  verbs:                        # 对pod允许的权限
   - get                         # 获取
   - list                        # 查看
-</code></pre>
+```
 
-[关于api组的信息获取](https://kubernetes.io/docs/reference/#api-reference)
+</details>
+
+<details>
+
+<summary>clusterrole属性信息</summary>
+
+```bash
+# kubectl explain clusterrole
+```
+
+clusterrole相对于role的属性多了一个集中控制器的属性aggregationRule，这是一个可选的属性
+
+```bash
+aggregationRule     <Object>
+apiVersion <string>
+kind <string>
+metadata     <Object>
+rules        <[]Object>
+    apiGroups               <[]string>
+    nonResourceURLs         <[]string>
+    resourceNames           <[]string>
+    resources               <[]string>
+    verbs                   <[]string> -required-
+```
+
+命令行创建clusterrole，查看具有pod资源的get、list权限的属性信息
+
+<pre><code><strong># kubectl create clusterrole myclusterrole --verb=get,list --resource=pods --dry-run -o yaml
+</strong></code></pre>
+
+&#x20;ClusterRole与role的配置一样，也由三部分组成：apiGroup、resources、verbs
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null       # 时间信息
+  name: myclusterrole           # role的名称
+rules:                          # 授权规则
+- apiGroups:                    # 操作的对象
+  - ""                          # 所有权限
+  resources:                    # 资源对象
+  - pods                        # pod的对象
+  verbs:                        # 对pod允许的权限
+  - get                          获取
+  - list                          查看
+```
+
+</details>
+
+## 实践
+
+<details>
+
+<summary>Role用户授权实践</summary>
+
+```bash
+限定用户只能访问命名空间资源
+# kubectl create rolebinding super-rolebind --role=myrole --user=superopsmsb
+rolebinding.rbac.authorization.k8s.io/super-rolebind created
+​
+查看资源效果
+# kubectl  get pod --kubeconfig=/tmp/superopsmsb.conf
+NAME        READY   STATUS    RESTARTS   AGE
+nginx-web   1/1     Running   0          56m
+# kubectl  get svc --kubeconfig=/tmp/superopsmsb.conf
+Error from server (Forbidden): services is forbidden: User "superopsmsb" cannot list resource "services" in API group "" in the namespace "default"
+# kubectl  get svc --kubeconfig=/tmp/superopsmsb.conf -n kube-system
+Error from server (Forbidden): services is forbidden: User "superopsmsb" cannot list resource "services" in API group "" in the namespace "kube-system"
+​
+清理授权
+# kubectl delete rolebindings super-rolebind
+rolebinding.rbac.authorization.k8s.io "super-rolebind" deleted
+```
+
+
+
+</details>
+
+<details>
+
+<summary><strong>ClusterRole实践</strong></summary>
+
+写一个clusterrole资源文件,允许用户操作 Deployment、Pod、RS 的所有权限
+
+```
+# 03_kubernetes_secure_clusterrole.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myclusterrole
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list", "watch"]
+```
+
+```
+创建资源对象
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl  apply -f 03_kubernetes_secure_clusterrole.yaml
+clusterrole.rbac.authorization.k8s.io/myclusterrole created
+```
+
+```
+查看效果
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl describe clusterrole myclusterrole
+Name:         myclusterrole
+Labels:       <none>
+Annotations:  <none>
+PolicyRule:
+  Resources  Non-Resource URLs  Resource Names  Verbs
+  ---------  -----------------  --------------  -----
+  pods       []                 []              [get list watch]
+```
+
+```
+限定用户只能访问命名空间资源
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl create clusterrolebinding super-clusterrolebind --clusterrole=myclusterrole --user=superopsmsb
+​
+查看资源效果
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl  get pod --kubeconfig=/tmp/superopsmsb.conf
+NAME        READY   STATUS    RESTARTS   AGE
+nginx-web   1/1     Running   0          68m
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl  get svc --kubeconfig=/tmp/superopsmsb.conf
+Error from server (Forbidden): services is forbidden: User "superopsmsb" cannot list resource "services" in API group "" in the namespace "default"
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl  get pod --kubeconfig=/tmp/superopsmsb.conf -n kube-system
+NAME                                         READY   STATUS    RESTARTS         AGE
+coredns-5d555c984-hzq8q                      1/1     Running   0                9h
+​
+清理授权
+[root@kubernetes-master1 /data/kubernetes/secure]# kubectl delete clusterrolebinding super-clusterrolebind
+rolebinding.rbac.authorization.k8s.io "super-clusterrolebind" deleted
+```
+
+
+
+</details>
+
+
 
 
 
 简单实践
 
 [^1]: 基于namespace资源
-
-[^2]: 设定包含资源的api组，如果是多个，表示只要属于api组范围中的任意资源都可以操作   &#x20;
-
-[^3]: 针对具体资源对象的一些具体操作

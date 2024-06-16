@@ -2,6 +2,8 @@
 
 
 
+基于账号的token信息，创建kubeconfig文件，实现长久的认证方式。
+
 {% tabs %}
 {% tab title="SA" %}
 ```yaml

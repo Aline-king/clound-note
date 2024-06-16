@@ -268,7 +268,7 @@
       * [资源限制](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/zi-yuan-xian-zhi.md)
       * [服务质量- Qos](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/fu-wu-zhi-liang-qos.md)
   * [网络](kubernetes/gai-nian/wang-luo/README.md)
-    * [资源对象属性解析](kubernetes/gai-nian/wang-luo/zi-yuan-dui-xiang-shu-xing-jie-xi.md)
+    * [网络策略](kubernetes/gai-nian/wang-luo/wang-luo-ce-lve.md)
     * [service](kubernetes/gai-nian/wang-luo/service/README.md)
       * [无头服务](kubernetes/gai-nian/wang-luo/service/wu-tou-fu-wu.md)
       * [ClusterIP](kubernetes/gai-nian/wang-luo/service/clusterip.md)
