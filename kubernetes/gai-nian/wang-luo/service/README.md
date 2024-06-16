@@ -6,17 +6,23 @@
 
 ## service在K8s中的关系
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Kubernetes 的 Service定义了一个服务的访问入口地址，前端的应用Pod通过Service访问其背后一组有Pod副本组成的集群示例，
 
 Service通过Label Selector访问指定的后端Pod，RC保证Service的服务能力和服务质量处于预期状态。
 
+## 工作模型
+
+本质上就是工作节点的一些iptables或ipvs规则，这些规则由<mark style="color:orange;">**kube-proxy**</mark>进行实时维护，
+
+站在kubernetes的发展脉络上来说，kube-proxy将请求代理至相应端点的方式有三种：userspace/iptables/ipvs。目前我们主要用的是 iptables/ipvs 两种。
+
 ## 详细解释
 
 Service是Kubernetes中最高一级的抽象资源对象，每个Service提供一个独立的服务，集群Service彼此间使用TCP/IP进行通信，将不同的服务组合在一起运行起来，就行了我们所谓的"系统"，效果如下图
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Pod入口
 
@@ -53,4 +59,3 @@ service vs endpoint
 -- 所以Service 其实就是 为动态的一组pod资源对象 提供一个固定的访问入口。
 ```
 
-**小结**

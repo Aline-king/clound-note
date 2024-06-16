@@ -1,6 +1,6 @@
 # 高可用集群
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 下面我们使用 [Docker Compose](../../docker/compose/) 模拟启动一个 3 节点的 `etcd` 集群。
 

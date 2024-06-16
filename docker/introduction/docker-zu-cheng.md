@@ -1,6 +1,6 @@
 # Docker组成
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * docker-cli：这是一个命令行工具，它是用来完成 `docker pull`, `build`, `run`, `exec` 等命令进行交互。
 * containerd：这是一个管理和运行容器的守护进程。它推送和拉动镜像，管理存储和网络，并监督容器的运行。

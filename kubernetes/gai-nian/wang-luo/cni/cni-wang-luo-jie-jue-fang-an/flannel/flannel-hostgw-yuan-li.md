@@ -2,7 +2,7 @@
 
 Pod与Pod不经隧道封装而直接通信，要求各节点位于同一个二层网络
 
-<figure><img src="../../../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 1 节点上的pod通过虚拟网卡对，连接到cni0的虚拟网络交换机上。
 

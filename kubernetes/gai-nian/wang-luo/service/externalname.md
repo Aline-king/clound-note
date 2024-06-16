@@ -1,0 +1,3 @@
+# ExternalName
+
+ExternalName 当前k8s集群依赖集群外部的服务，那么通过externalName将外部主机引入到k8s集群内部外部主机名以 DNS方式解析为一个 CNAME记录给k8s集群的其他主机来使用这种Service既不会有ClusterIP，也不会有NodePort.而且依赖于内部的CoreDNS功能
