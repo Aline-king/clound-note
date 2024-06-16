@@ -1,10 +1,10 @@
-# Docker Desktop 启用 Kubernetes
+# Docker Desktop 安装并使用
 
-使用 Docker Desktop 可以很方便的启用 Kubernetes，由于国内获取不到 `k8s.gcr.io` 镜像，我们必须首先解决这一问题。
-
+{% hint style="info" %}
 ## 获取 `k8s.gcr.io` 镜像
 
-由于国内拉取不到 `k8s.gcr.io` 镜像，我们可以使用开源项目 [AliyunContainerService/k8s-for-docker-desktop](https://github.com/AliyunContainerService/k8s-for-docker-desktop) 来获取所需的镜像。
+国内被墙，使用开源项目 [AliyunContainerService/k8s-for-docker-desktop](https://github.com/AliyunContainerService/k8s-for-docker-desktop) 来获取所需的镜像
+{% endhint %}
 
 ## 启用 Kubernetes
 

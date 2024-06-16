@@ -8,6 +8,11 @@ StorageClass根据自由申请后端存储的类型，有很多不同的实现�
 
 {% hint style="danger" %}
 自从kubernetes 1.20版本禁用了 selfLink，所以默认情况下，我们在创建SC提供者环境的时候，会发生报错，只能首先修改kubernetes的启动属性。
+
+参考链接：
+
+[https://stackoverflow.com/questions/65376314/kubernetes-nfs-provider-selflink-was- empty](https://stackoverflow.com/questions/65376314/kubernetes-nfs-provider-selflink-was-emptyhttps://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/issues/25)[\
+https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/issues/25](https://stackoverflow.com/questions/65376314/kubernetes-nfs-provider-selflink-was-emptyhttps://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/issues/25)
 {% endhint %}
 
 ## 解决办法
