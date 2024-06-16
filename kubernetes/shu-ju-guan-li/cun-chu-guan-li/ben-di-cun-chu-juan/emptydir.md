@@ -18,6 +18,12 @@
 
 ## 属性解读
 
+{% hint style="info" %}
+临时存储的文件存放的位置在指定节点的/var/lib/kubelet目录下
+
+文件是随着pod而存在的，一旦pod删除了，文件也丢失了。
+{% endhint %}
+
 关于volume和容器的关系，每个容器都可以单独挂载多个volume，每种volume都可以被多个容器挂载
 
 <pre class="language-bash"><code class="lang-bash"> # kubectl explain pod.spec.volumes.emptyDir
@@ -31,7 +37,26 @@
     subPath   	是否挂载子路径
 </code></pre>
 
+配置样式
 
+{% hint style="info" %}
+volume和容器的关系
+
+每个容器都可以单独挂载多个volume，每种volume都可以被多个容器挂载
+{% endhint %}
+
+```yaml
+# volume配置样式
+  volumes:
+  - name: volume_name
+    emptyDir: {}
+
+# volume使用样式
+  containers:
+    - volumeMounts:
+       - name: volume_name
+         mountPath: /path/to/container/
+```
 
 ## 挂载演示
 

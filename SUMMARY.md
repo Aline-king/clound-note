@@ -326,14 +326,15 @@
       * [演示](kubernetes/shu-ju-guan-li/cun-chu-guan-li/pv-yu-pvc/yan-shi.md)
     * [StorageClass](kubernetes/shu-ju-guan-li/cun-chu-guan-li/storageclass/README.md)
       * [演示](kubernetes/shu-ju-guan-li/cun-chu-guan-li/storageclass/yan-shi.md)
-    * [网络存储](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu.md)
+    * [网络存储](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/README.md)
+      * [nfs](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/nfs/README.md)
+        * [实践](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/nfs/shi-jian.md)
 * [组件](kubernetes/zu-jian/README.md)
   * [kubectl 命令行工具](kubernetes/zu-jian/kubectl.md)
   * [kube-apiserver](kubernetes/zu-jian/kube-apiserver.md)
   * [kube-dashboard](kubernetes/zu-jian/kube-dashboard.md)
   * [kubelet](kubernetes/zu-jian/kubelet/README.md)
     * [CAdvsior](kubernetes/zu-jian/kubelet/cadvsior.md)
-* [Page 2](kubernetes/page-2.md)
 * [集群管理](kubernetes/ji-qun-guan-li.md)
 
 ## ♾️ Dev ops
