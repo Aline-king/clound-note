@@ -169,38 +169,38 @@
 
 ## ⚾ Containerd
 
-* [containerd介绍](containerd/containerd-jie-shao/README.md)
+* [介绍](containerd/containerd-jie-shao/README.md)
   * [容器发展史](containerd/containerd-jie-shao/rong-qi-fa-zhan-shi.md)
   * [架构](containerd/containerd-jie-shao/jia-gou.md)
   * [性能对比](containerd/containerd-jie-shao/xing-neng-dui-bi.md)
 * [安装](containerd/an-zhuang/README.md)
   * [YUM方式](containerd/an-zhuang/yum-fang-shi.md)
   * [二进制形式](containerd/an-zhuang/er-jin-zhi-xing-shi.md)
-* [基本概念](containerd/ji-ben-gai-nian/README.md)
-  * [镜像管理](containerd/ji-ben-gai-nian/jing-xiang-guan-li/README.md)
-    * [查看镜像](containerd/ji-ben-gai-nian/jing-xiang-guan-li/cha-kan-jing-xiang.md)
-    * [下载镜像](containerd/ji-ben-gai-nian/jing-xiang-guan-li/xia-zai-jing-xiang.md)
-    * [导出镜像](containerd/ji-ben-gai-nian/jing-xiang-guan-li/dao-chu-jing-xiang.md)
-    * [删除镜像](containerd/ji-ben-gai-nian/jing-xiang-guan-li/shan-chu-jing-xiang.md)
-    * [镜像导出](containerd/ji-ben-gai-nian/jing-xiang-guan-li/jing-xiang-dao-chu.md)
-    * [修改镜像tag](containerd/ji-ben-gai-nian/jing-xiang-guan-li/xiu-gai-jing-xiang-tag.md)
-  * [容器管理](containerd/ji-ben-gai-nian/rong-qi-guan-li/README.md)
-    * [查看容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/cha-kan-rong-qi.md)
-    * [查看任务](containerd/ji-ben-gai-nian/rong-qi-guan-li/cha-kan-ren-wu.md)
-    * [创建静态容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/chuang-jian-jing-tai-rong-qi.md)
-    * [静态容器启动为动态容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/jing-tai-rong-qi-qi-dong-wei-dong-tai-rong-qi.md)
-    * [进入容器操作](containerd/ji-ben-gai-nian/rong-qi-guan-li/jin-ru-rong-qi-cao-zuo.md)
-    * [直接运行一个动态容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/zhi-jie-yun-hang-yi-ge-dong-tai-rong-qi.md)
-    * [暂停容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/zan-ting-rong-qi.md)
-    * [恢复容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/hui-fu-rong-qi.md)
-    * [停止容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/ting-zhi-rong-qi.md)
-    * [删除容器](containerd/ji-ben-gai-nian/rong-qi-guan-li/shan-chu-rong-qi.md)
+* [概念](containerd/gai-nian/README.md)
+  * [镜像管理](containerd/gai-nian/jing-xiang-guan-li/README.md)
+    * [查看镜像](containerd/gai-nian/jing-xiang-guan-li/cha-kan-jing-xiang.md)
+    * [下载镜像](containerd/gai-nian/jing-xiang-guan-li/xia-zai-jing-xiang.md)
+    * [导出镜像](containerd/gai-nian/jing-xiang-guan-li/dao-chu-jing-xiang.md)
+    * [删除镜像](containerd/gai-nian/jing-xiang-guan-li/shan-chu-jing-xiang.md)
+    * [镜像导出](containerd/gai-nian/jing-xiang-guan-li/jing-xiang-dao-chu.md)
+    * [修改镜像tag](containerd/gai-nian/jing-xiang-guan-li/xiu-gai-jing-xiang-tag.md)
+  * [容器管理](containerd/gai-nian/rong-qi-guan-li/README.md)
+    * [查看容器](containerd/gai-nian/rong-qi-guan-li/cha-kan-rong-qi.md)
+    * [查看任务](containerd/gai-nian/rong-qi-guan-li/cha-kan-ren-wu.md)
+    * [创建静态容器](containerd/gai-nian/rong-qi-guan-li/chuang-jian-jing-tai-rong-qi.md)
+    * [静态容器启动为动态容器](containerd/gai-nian/rong-qi-guan-li/jing-tai-rong-qi-qi-dong-wei-dong-tai-rong-qi.md)
+    * [进入容器操作](containerd/gai-nian/rong-qi-guan-li/jin-ru-rong-qi-cao-zuo.md)
+    * [直接运行一个动态容器](containerd/gai-nian/rong-qi-guan-li/zhi-jie-yun-hang-yi-ge-dong-tai-rong-qi.md)
+    * [暂停容器](containerd/gai-nian/rong-qi-guan-li/zan-ting-rong-qi.md)
+    * [恢复容器](containerd/gai-nian/rong-qi-guan-li/hui-fu-rong-qi.md)
+    * [停止容器](containerd/gai-nian/rong-qi-guan-li/ting-zhi-rong-qi.md)
+    * [删除容器](containerd/gai-nian/rong-qi-guan-li/shan-chu-rong-qi.md)
+  * [namespace管理](containerd/gai-nian/namespace-guan-li/README.md)
+    * [共享命名空间](containerd/gai-nian/namespace-guan-li/gong-xiang-ming-ming-kong-jian.md)
+  * [network管理](containerd/gai-nian/network-guan-li/README.md)
+    * [创建CNI网络](containerd/gai-nian/network-guan-li/chuang-jian-cni-wang-luo.md)
+    * [为container配置网络](containerd/gai-nian/network-guan-li/wei-container-pei-zhi-wang-luo.md)
 * [container使用harbor](containerd/container-shi-yong-harbor.md)
-* [namespace管理](containerd/namespace-guan-li/README.md)
-  * [共享命名空间](containerd/namespace-guan-li/gong-xiang-ming-ming-kong-jian.md)
-* [network管理](containerd/network-guan-li/README.md)
-  * [创建CNI网络](containerd/network-guan-li/chuang-jian-cni-wang-luo.md)
-  * [为container配置网络](containerd/network-guan-li/wei-container-pei-zhi-wang-luo.md)
 * [持久化存储](containerd/chi-jiu-hua-cun-chu.md)
 
 ## ⚙️ ETCD
@@ -229,11 +229,15 @@
   * [架构设计](kubernetes/kubernetes/design.md)
 * [部署 Kubernetes](kubernetes/setup/README.md)
   * [kubeadm 安装(CRI 使用 containerd)](kubernetes/setup/kubeadm.md)
-  * [Docker Desktop 安装并使用](kubernetes/setup/docker-desktop.md)
-  * [一步步部署 kubernetes 集群](kubernetes/setup/systemd.md)
   * [部署 Dashboard](kubernetes/setup/dashboard.md)
-  * [使用sealos部署集群](kubernetes/setup/shi-yong-sealos-bu-shu-ji-qun.md)
   * [二进制部署](kubernetes/setup/er-jin-zhi-bu-shu.md)
+  * [节点管理](kubernetes/setup/jie-dian-guan-li/README.md)
+    * [集群升级](kubernetes/setup/jie-dian-guan-li/ji-qun-sheng-ji.md)
+    * [集群扩缩容](kubernetes/setup/jie-dian-guan-li/ji-qun-kuo-suo-rong.md)
+  * [使用第三方工具](kubernetes/setup/shi-yong-di-san-fang-gong-ju/README.md)
+    * [使用sealos部署集群](kubernetes/setup/shi-yong-di-san-fang-gong-ju/shi-yong-sealos-bu-shu-ji-qun.md)
+  * [win部署](kubernetes/setup/win-bu-shu/README.md)
+    * [Docker Desktop 安装并使用](kubernetes/setup/win-bu-shu/docker-desktop.md)
 * [概念](kubernetes/gai-nian/README.md)
   * [概述](kubernetes/gai-nian/gai-shu/README.md)
     * [k8s 组件](kubernetes/gai-nian/gai-shu/k8s-zu-jian/README.md)
@@ -292,7 +296,7 @@
           * [部署](kubernetes/gai-nian/wang-luo/cni/cni-wang-luo-jie-jue-fang-an/calico/bu-shu.md)
           * [命令完善](kubernetes/gai-nian/wang-luo/cni/cni-wang-luo-jie-jue-fang-an/calico/ming-ling-wan-shan.md)
           * [原理](kubernetes/gai-nian/wang-luo/cni/cni-wang-luo-jie-jue-fang-an/calico/yuan-li.md)
-    * [域名服务](kubernetes/gai-nian/wang-luo/yu-ming-fu-wu.md)
+    * [域名服务DNS](kubernetes/gai-nian/wang-luo/yu-ming-fu-wu-dns.md)
   * [yaml](kubernetes/gai-nian/yaml.md)
   * [控制器](kubernetes/gai-nian/kong-zhi-qi/README.md)
     * [监视控制器](kubernetes/gai-nian/kong-zhi-qi/jian-shi-kong-zhi-qi/README.md)
@@ -337,7 +341,6 @@
         * [实践](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/nfs/shi-jian.md)
   * [状态管理](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/README.md)
     * [stateful  Set](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/stateful-set.md)
-* [集群管理](kubernetes/ji-qun-guan-li.md)
 
 ## ♾️ Dev ops
 
@@ -394,11 +397,12 @@
 
 ## 📞 服务网格
 
-* [Page](fu-wu-wang-ge/page.md)
 * [预前知识](fu-wu-wang-ge/yu-qian-zhi-shi/README.md)
   * [service mesh](fu-wu-wang-ge/yu-qian-zhi-shi/service-mesh.md)
   * [服务治理](fu-wu-wang-ge/yu-qian-zhi-shi/fu-wu-zhi-li.md)
   * [边车模式](fu-wu-wang-ge/yu-qian-zhi-shi/bian-che-mo-shi.md)
+* [Istio](fu-wu-wang-ge/istio.md)
+* [Envoy](fu-wu-wang-ge/envoy.md)
 
 ## 操作系统
 
@@ -459,6 +463,6 @@
 
 * [raft](yi-zhi-xing-suan-fa/raft.md)
 
-## Group 1
+## 😄 存储
 
-* [ceph](group-1/ceph.md)
+* [ceph](cun-chu/ceph.md)

@@ -2,6 +2,169 @@
 
 
 
+Kubernetes 集群内部为了实现高质量的安全通信，需要 PKI 证书才能进行基于 TLS 的身份验证。kubeadm 部署的 Kubernetes集群， 会自动生成集群所需的证书。如果我们定制自己的证书，在kubernetes环境中也可以使用。
+
+## 证书管理
+
+{% tabs %}
+{% tab title="证书位置" %}
+{% hint style="info" %}
+kubeadm 部署的 Kubernetes集群，
+
+* 大部分证书都存储在 <mark style="color:yellow;">**/etc/kubernetes/pki**</mark> 目录中，
+* 只有kubernetes集群的用户证书文件在 <mark style="color:yellow;">**/etc/kubernetes**</mark> 目录中。
+{% endhint %}
+
+{% code title="核心的证书和私钥" %}
+```bash
+# ls /etc/kubernetes/pki/{ca.*,sa.*,etcd/ca.*}
+/etc/kubernetes/pki/ca.crt  /etc/kubernetes/pki/etcd/ca.crt  /etc/kubernetes/pki/sa.pub
+/etc/kubernetes/pki/ca.key  /etc/kubernetes/pki/etcd/ca.key
+/etc/kubernetes/pki/ca.srl  /etc/kubernetes/pki/sa.key
+```
+{% endcode %}
+
+
+{% endtab %}
+
+{% tab title="查看证书有效期" %}
+由 kubeadm 默认生成的客户端证书在 1 年后到期，如果需要更新证书的话，kubeadm支持自定义证书来实现更新，前提是必须将证书文件放置在通过
+
+* &#x20;<mark style="color:green;">**--cert-dir**</mark> 命令行参数
+* kubeadm 配置中的 certificatesDir 配置项指明的目录中。&#x20;
+
+默认的值是 <mark style="color:blue;">**/etc/kubernetes/pki**</mark>
+
+## <mark style="color:blue;">**方法1**</mark>
+
+{% code title="检测证书是否过期" %}
+```bash
+# kubeadm certs check-expiration
+[check-expiration] Reading configuration from the cluster...
+[check-expiration] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+```
+{% endcode %}
+
+{% hint style="warning" %}
+kubeadm 不能管理由外部 CA 签名的证书，否则需要自己手动去更新外部证书&#x20;
+
+kubeadm 和 kubelet 之间的证书同步是自动方式来实现的 默认证书有效期为 1 年，CA 根证书是 10 年
+{% endhint %}
+
+```
+CERTIFICATE                EXPIRES                  RESIDUAL TIME ...
+admin.conf                 Jul 28, 2063 15:17 UTC   364d          ...
+apiserver                  Jul 28, 2063 15:15 UTC   364d          ...
+apiserver-etcd-client      Jul 28, 2063 15:15 UTC   364d          ...
+apiserver-kubelet-client   Jul 28, 2063 15:15 UTC   364d          ...
+controller-manager.conf    Jul 28, 2063 15:16 UTC   364d          ...
+etcd-healthcheck-client    Jul 24, 2063 11:24 UTC   360d          ...
+etcd-peer                  Jul 24, 2063 11:24 UTC   360d          ...
+etcd-server                Jul 24, 2063 11:24 UTC   360d          ...
+front-proxy-client         Jul 28, 2063 15:15 UTC   364d          ...
+scheduler.conf             Jul 28, 2063 15:16 UTC   364d          ...
+
+CERTIFICATE AUTHORITY   EXPIRES                  RESIDUAL TIME   ...
+ca                      Jul 21, 2072 11:24 UTC   9y              ...
+etcd-ca                 Jul 21, 2072 11:24 UTC   9y              ...
+front-proxy-ca          Jul 21, 2072 11:24 UTC   9y              ...
+```
+
+## &#x20;方法2
+
+```bash
+# openssl x509 -in /etc/kubernetes/pki/apiserver.crt -noout -text |grep ' Not '
+            Not Before: Jul 24 11:24:51 2062 GMT
+            Not After : Jul 28 15:15:56 2063 GMT
+```
+{% endtab %}
+
+{% tab title="延长证书有效期" %}
+1. 为了避免证书更新对于环境的异常影响，我们这里首先将相关文件进行备份
+
+所有的master节点的操作内容一致
+
+{% hint style="danger" %}
+kubeadm alpha 延长证书有效期 ，不推荐使用这个命令
+
+参考：[https://kubernetes.io/zh-cn/docs/reference/setup-tools/kubeadm/kubeadm-alpha/](https://kubernetes.io/zh-cn/docs/reference/setup-tools/kubeadm/kubeadm-alpha/)
+{% endhint %}
+
+<pre><code><strong>mkdir /etc/kubernetes-bak
+</strong>cd /etc/kubernetes
+cp -r $(ls | grep -v tmp) ../kubernetes-bak/
+cp -r /var/lib/etcd /etc/kubernetes-bak/lib-etcd
+</code></pre>
+
+手动延长
+
+```bash
+kubeadm certs renew -h
+```
+
+{% hint style="danger" %}
+<mark style="color:red;">**注意：**</mark>&#x20;
+
+* &#x20;指定证书，则更新指定的证书
+* all 代表更新所有证书&#x20;
+* certs renew 使用现有的证书作为属性(CN/O/L等)的权威来源&#x20;
+  * 无论证书的到期时间如何，都会无条件地续订一年。&#x20;
+  * renew执行后，需要重启各组件，才能生效。
+{% endhint %}
+
+<pre><code><strong>This command is not meant to be run on its own. See list of available subcommands.
+</strong>Usage:
+  kubeadm certs renew [flags]
+  kubeadm certs renew [command]
+​
+Available Commands:
+  admin.conf               Renew the certificate embedded in the kubeconfig file for the admin to use and for kubeadm itself
+  all                      Renew all available certificates
+  ...
+</code></pre>
+
+{% code title="所有master节点上更新所有证书" %}
+```bash
+[root@kubernetes-master1 ~]# kubeadm certs renew all
+[renew] Reading configuration from the cluster...
+[renew] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+​
+certificate embedded in the kubeconfig file for the admin to use and for kubeadm itself renewed
+certificate for serving the Kubernetes API renewed
+certificate the apiserver uses to access etcd renewed
+certificate for the API server to connect to kubelet renewed
+certificate embedded in the kubeconfig file for the controller manager to use renewed
+certificate for liveness probes to healthcheck etcd renewed
+certificate for etcd nodes to communicate with each other renewed
+certificate for serving etcd renewed
+certificate for the front proxy client renewed
+certificate embedded in the kubeconfig file for the scheduler manager to use renewed
+​
+Done renewing certificates. You must restart the kube-apiserver, kube-controller-manager, kube-scheduler and etcd, so that they can use the new certificates.
+```
+{% endcode %}
+
+```
+确认效果(两条命令任选其一执行)
+[root@kubernetes-master1 ~]# kubeadm certs check-expiration
+[root@kubernetes-master1 ~]# openssl x509 -in /etc/kubernetes/pki/apiserver.crt -noout -text |grep ' Not '
+```
+
+```
+重启组件服务
+# kubectl delete pod -n kube-system -l component
+​
+确认效果
+# kubectl get pod -n kube-system -l component
+```
+
+\
+
+{% endtab %}
+{% endtabs %}
+
+
+
 基于账号的token信息，创建kubeconfig文件，实现长久的认证方式。
 
 {% tabs %}
@@ -114,9 +277,12 @@ Certificate:
 命令解析
 
 ```
-命令格式：kubectl create serviceaccount NAME [--dry-run] [options]
+kubectl create serviceaccount NAME [--dry-run] [options]
+```
+
+```
 作用：创建一个"服务账号"
-参数详解
+参数
     --dry-run=false                     模拟创建模式
     --generator='serviceaccount/v1'     设定api版本信息
     -o, --output=''                     设定输出信息格式，常见的有：

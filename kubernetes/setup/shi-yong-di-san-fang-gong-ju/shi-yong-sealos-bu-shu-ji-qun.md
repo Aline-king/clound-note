@@ -87,24 +87,32 @@ reboot
 {% endtab %}
 {% endtabs %}
 
-## 二、sealos准备
+## sealos部署
 
-```
-wget -c https://sealyun-home.oss-cn-beijing.aliyuncs.com/sealos-4.0/latest/sealos-amd64 -O sealos &&     chmod +x sealos && mv sealos /usr/bin
-```
+{% tabs %}
+{% tab title="准备" %}
+11
 
-```
+{% code overflow="wrap" %}
+```bash
+wget -c https://sealyun-home.oss-cn-beijing.aliyuncs.com/sealos-4.0/latest/sealos-amd64 -O sealos && chmod +x sealos && mv sealos /usr/bin
+
 # sealos version
 {"gitVersion":"4.0.0","gitCommit":"7146cfe","buildDate":"2022-06-30T14:24:31Z","goVersion":"go1.17.11","compiler":"gc","platform":"linux/amd64"}
 ```
+{% endcode %}
 
-## 三、使用sealos部署kubernetes集群
 
+{% endtab %}
+
+{% tab title="使用sealos部署" %}
 > kubernetes集群默认使用containerd
 
+{% code overflow="wrap" %}
+```bash
+sealos run labring/kubernetes:v1.24.0 labring/calico:v3.22.1   --masters 192.168.10.142,192.168.10.143,192.168.10.144  --nodes 192.168.10.145   --passwd centos
 ```
-sealos run labring/kubernetes:v1.24.0 labring/calico:v3.22.1     --masters 192.168.10.142,192.168.10.143,192.168.10.144     --nodes 192.168.10.145     --passwd centos
-```
+{% endcode %}
 
 ```
 # kubectl get nodes
@@ -139,49 +147,50 @@ kube-scheduler-k8s-master03            1/1     Running   1 (15h ago)  
 kube-sealyun-lvscare-k8s-worker01      1/1     Running   1 (15h ago)   16h
 ```
 
-## 四、使用kuboard实现k8s集群托管
 
+
+
+{% endtab %}
+
+{% tab title="使用kuboard实现k8s集群托管" %}
 | 序号 | 主机名            | 主机IP           |
 | -- | -------------- | -------------- |
 | 1  | kuboard-server | 192.168.10.146 |
 
-### 4.1 kuboard部署及访问
-
-```
+{% code overflow="wrap" %}
+```bash
 wget https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
-```
 
-```bash
 yum -y install docker-ce
-```
 
-```bash
 systemctl enable --now docker
-```
 
-```bash
+docker run -d   --restart=unless-stopped   --name=kuboard   -p 80:80/tcp   -p 10081:10081/tcp   -e KUBOARD_ENDPOINT="http://192.168.10.146:80"   -e KUBOARD_AGENT_SERVER_TCP_PORT="10081"   -v /root/kuboard-data:/data   eipwork/kuboard:v3
+
 docker run -d   --restart=unless-stopped   --name=kuboard   -p 80:80/tcp   -p 10081:10081/tcp   -e KUBOARD_ENDPOINT="http://192.168.10.146:80"   -e KUBOARD_AGENT_SERVER_TCP_PORT="10081"   -v /root/kuboard-data:/data   eipwork/kuboard:v3
 ```
+{% endcode %}
 
+
+{% endtab %}
+
+{% tab title="kuboard访问" %}
 > 用户名和密码分别为：admin及Kuboard123
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-### kuboard添加k8s集群
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 [root@k8s-master01 ~]# kubectl apply -f kuboard-agent.yaml
-
 namespace/kuboard created
 serviceaccount/kuboard-admin created
 clusterrolebinding.rbac.authorization.k8s.io/kuboard-admin-crb created
@@ -198,10 +207,15 @@ kuboard-agent-du7gv7-2-84f65f77b8-rcb4x   1/1     Running   0          54s
 kuboard-agent-du7gv7-56c7cb9564-m78qx     1/1     Running   0          54s
 ```
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+
+{% endtab %}
+{% endtabs %}
+
