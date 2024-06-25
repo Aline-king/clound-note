@@ -340,9 +340,10 @@
       * [nfs](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/nfs/README.md)
         * [实践](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/nfs/shi-jian.md)
   * [状态管理](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/README.md)
-    * [stateful  Set](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/stateful-set.md)
+    * [stateful Set](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/stateful-set.md)
 * [公有云](kubernetes/gong-you-yun/README.md)
-  * [阿里云](kubernetes/gong-you-yun/a-li-yun.md)
+  * [阿里云](kubernetes/gong-you-yun/a-li-yun/README.md)
+    * [容器服务ACK](kubernetes/gong-you-yun/a-li-yun/rong-qi-fu-wu-ack.md)
 
 ## ♾️ Dev ops
 
