@@ -341,6 +341,8 @@
         * [实践](kubernetes/shu-ju-guan-li/cun-chu-guan-li/wang-luo-cun-chu/nfs/shi-jian.md)
   * [状态管理](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/README.md)
     * [stateful  Set](kubernetes/shu-ju-guan-li/zhuang-tai-guan-li/stateful-set.md)
+* [公有云](kubernetes/gong-you-yun/README.md)
+  * [阿里云](kubernetes/gong-you-yun/a-li-yun.md)
 
 ## ♾️ Dev ops
 
