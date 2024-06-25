@@ -237,66 +237,54 @@ apidemo                                            v1        cae07723a2c3   7 mi
 
 {% tabs %}
 {% tab title="部署apidemo_Deployment" %}
-<figure><img src="../../../.gitbook/assets/apidemo01.png" alt=""><figcaption><p>dwadwa</p></figcaption></figure>
+12
+
+<figure><img src="../../../.gitbook/assets/apidemo01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemo02.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemo03.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemo04.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemo05.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image-20221012170947145.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/image-20221012171112503.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemo08.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemo09.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="apidemo_SVC" %}
+<figure><img src="../../../.gitbook/assets/apidemosvc01.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../../.gitbook/assets/apidemosvc02.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="apidemo_ingress" %}
+<figure><img src="../../../.gitbook/assets/apidemoingress01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemoingress02.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemoingress03.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemoingress04.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/apidemoingress05.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="访问apidemo服务" %}
+<figure><img src="../../../.gitbook/assets/修改hosts01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/修改hosts02.png" alt=""><figcaption></figcaption></figure>
+
+浏览器访问apidemo.kubemsb.com/info
+
+<figure><img src="../../../.gitbook/assets/修改hosts03.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
-
-![apidemo01](ack.assets/apidemo01.png)
-
-![apidemo02](ack.assets/apidemo02.png)
-
-![apidemo03](ack.assets/apidemo03.png)
-
-![apidemo04](ack.assets/apidemo04.png)
-
-![apidemo05](ack.assets/apidemo05.png)
-
-![image-20221012170947145](ack.assets/image-20221012170947145.png)
-
-![image-20221012171112503](ack.assets/image-20221012171112503.png)
-
-![apidemo08](ack.assets/apidemo08.png)
-
-![apidemo09](ack.assets/apidemo09.png)
-
-#### 4.10.2 部署apidemo\_SVC
-
-![apidemosvc01](ack.assets/apidemosvc01.png)
-
-![apidemosvc02](ack.assets/apidemosvc02.png)
-
-#### 4.10.3 部署apidemo\_ingress
-
-![apidemoingress01](ack.assets/apidemoingress01.png)
-
-![apidemoingress02](ack.assets/apidemoingress02.png)
-
-![apidemoingress03](ack.assets/apidemoingress03.png)
-
-![apidemoingress04](ack.assets/apidemoingress04.png)
-
-![apidemoingress05](ack.assets/apidemoingress05.png)
-
-### 4.11 访问apidemo服务
-
-#### 4.11.1 pc添加hosts
-
-![修改hosts01](ack.assets/%E4%BF%AE%E6%94%B9hosts01-16655662413204.png)
-
-![修改hosts02](ack.assets/%E4%BF%AE%E6%94%B9hosts02-16655662470795.png)
-
-![修改hosts03](ack.assets/%E4%BF%AE%E6%94%B9hosts03-16655662512246.png)
-
-![修改hosts05](ack.assets/%E4%BF%AE%E6%94%B9hosts05.png)
-
-#### 4.11.2 访问apidemo服务
-
-> 浏览器访问apidemo.kubemsb.com/info
-
-返回如下信息则证明服务部署成功
 
 ![image-20221012171836782](ack.assets/image-20221012171836782.png)
