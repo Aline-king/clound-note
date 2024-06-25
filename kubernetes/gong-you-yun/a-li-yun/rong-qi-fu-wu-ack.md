@@ -1,126 +1,118 @@
 # 容器服务ACK
 
-# 阿里云容器服务ACK
-
-# 一、配置专有网络
-
-## 1.1进入阿里云VPC控制台
-
-![进入VPC控制台](ack.assets/进入VPC控制台.png)
-
-## 1.2开通阿里云VPC服务
-
-![vpc控制台](ack.assets/vpc控制台.png)
-
-![vpc开通成功](ack.assets/vpc开通成功.png)
-
-## 1.3创建vpc
-
-![创建vpc](ack.assets/创建vpc.png)
-
-![配置vpc01](ack.assets/配置vpc01.png)
-
-![配置vpc02](ack.assets/配置vpc02.png)
-
-![image-20221012160149721](ack.assets/image-20221012160149721.png)
-
-# 二、配置Kubernetes集群
-
-## 2.1进入阿里云ACK控制台
-
-![容器服务ack](ack.assets/容器服务ack.png)
-
-![进入ack控制台](ack.assets/进入ack控制台.png)
-
-## 2.2创建集群
-
-### 2.2.1进入集群配置界面
-
-![创建集群](ack.assets/创建集群.png)
-
-### 2.2.2选择集群配置
-
-![配置k8s01](ack.assets/配置k8s01.png)
-
-![配置k8s02](ack.assets/配置k8s02.png)
-
-![配置k8s03](ack.assets/配置k8s03.png)
-
-### 2.2.3选择节点池配置
-
-![配置nodepool01](ack.assets/配置nodepool01.png)
-
-![配置nodepool02](ack.assets/配置nodepool02.png)
-
-### 2.2.4选择组件配置
-
-![配置组件01](ack.assets/配置组件01.png)
-
-### 2.2.5确认配置
-
-![创建集群02](ack.assets/创建集群02-16655626080871.png)
-
-### 2.2.6创建集群
-
-![集群创建中](ack.assets/集群创建中.png)
-
-![集群列表](ack.assets/集群列表.png)
 
 
+## 一、配置专有网络
 
-# 三、阿里云控制台测试集群可用性
+{% tabs %}
+{% tab title="进入VPC控制台" %}
+<figure><img src="../../../.gitbook/assets/进入VPC控制台.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 
-## 3.1创建Deployment
+{% tab title="开通VPC服务" %}
+<figure><img src="../../../.gitbook/assets/vpc控制台.png" alt=""><figcaption></figcaption></figure>
 
-![demo01](ack.assets/demo01.png)
+<figure><img src="../../../.gitbook/assets/vpc开通成功.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 
-![demo02](ack.assets/demo02.png)
+{% tab title="创建vpc" %}
+<figure><img src="../../../.gitbook/assets/创建vpc.png" alt=""><figcaption></figcaption></figure>
 
-![demo03](ack.assets/demo03.png)
+<figure><img src="../../../.gitbook/assets/配置vpc01.png" alt=""><figcaption></figcaption></figure>
 
-## 3.2创建Service
+<figure><img src="../../../.gitbook/assets/配置vpc02.png" alt=""><figcaption></figcaption></figure>
 
-![svcDemo01](ack.assets/svcDemo01.png)
+<figure><img src="../../../.gitbook/assets/image-20221012160149721.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
-![svcDemo02](ack.assets/svcDemo02-16655630626753.png)
+## 二、配置Kubernetes集群
 
-![svcDemo03](ack.assets/svcDemo03.png)
+{% tabs %}
+{% tab title="进入控制台" %}
+<figure><img src="../../../.gitbook/assets/容器服务ack.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/进入ack控制台.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="创建集群" %}
+<figure><img src="../../../.gitbook/assets/创建集群.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/配置k8s01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/配置k8s02.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/配置k8s03.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="选择节点池配置" %}
+<figure><img src="../../../.gitbook/assets/配置nodepool01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/配置nodepool02.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="确认配置" %}
+<figure><img src="../../../.gitbook/assets/创建集群02.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="创建集群" %}
+<figure><img src="../../../.gitbook/assets/集群创建中.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/集群列表.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+## 三、阿里云控制台测试集群可用性
+
+{% tabs %}
+{% tab title="创建Deployment" %}
+<figure><img src="../../../.gitbook/assets/demo01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/demo02.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/demo03.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="创建Service" %}
+<figure><img src="../../../.gitbook/assets/svcDemo01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/svcDemo02.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/svcDemo03.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+
+{% tab title="创建Ingress" %}
+<figure><img src="../../../.gitbook/assets/ingressDemo01.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/ingressDemo02.png" alt=""><figcaption></figcaption></figure>
 
 
+{% endtab %}
 
-## 3.3创建Ingress
-
-![ingressDemo01](ack.assets/ingressDemo01.png)
-
-![ingressDemo02](ack.assets/ingressDemo02.png)
-
-![访问01](ack.assets/访问01.png)
-
-
-
-## 3.4本地pc添加hosts(ingress域名未做备案)
+{% tab title="本地pc添加hosts" %}
+### ingress域名未做备案
 
 同时按住win键+R键进入运行
 
-![修改hosts01](ack.assets/修改hosts01.png)
+<figure><img src="../../../.gitbook/assets/修改hosts01.png" alt=""><figcaption></figcaption></figure>
 
-![修改hosts02](ack.assets/修改hosts02.png)
+<figure><img src="../../../.gitbook/assets/修改hosts02.png" alt=""><figcaption></figcaption></figure>
 
-![修改hosts03](ack.assets/修改hosts03.png)
+<figure><img src="../../../.gitbook/assets/修改hosts03.png" alt=""><figcaption></figcaption></figure>
 
-![修改hosts04](ack.assets/修改hosts04.png)
+<figure><img src="../../../.gitbook/assets/修改hosts04.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 
-## 3.5访问应用
+{% tab title="访问应用" %}
+<figure><img src="../../../.gitbook/assets/访问02.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
-![访问02](ack.assets/访问02.png)
+## 四、通过api连接集群，并使用阿里云容器镜像仓库服务进行应用发布
 
-# 四、通过api连接集群，并使用阿里云容器镜像仓库服务进行应用发布
+### 4.1 安装kubectl
 
-
-
-## 4.1 安装kubectl
-
-~~~powershell
+```powershell
 [root@kubemsb ~]# curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
 [root@kubemsb ~]# chmod +x kubectl
@@ -132,17 +124,23 @@ WARNING: This version information is deprecated and will be replaced with the ou
 Client Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.2", GitCommit:"5835544ca568b757a8ecae5c153f317e5736700e", GitTreeState:"clean", BuildDate:"2022-09-21T14:33:49Z", GoVersion:"go1.19.1", Compiler:"gc", Platform:"linux/amd64"}
 Kustomize Version: v4.5.7
 Server Version: version.Info{Major:"1", Minor:"24+", GitVersion:"v1.24.6-aliyun.1", GitCommit:"6965b276168c8f1e4a8545c52152838a2f433758", GitTreeState:"clean", BuildDate:"2022-09-22T08:06:05Z", GoVersion:"go1.18.6", Compiler:"gc", Platform:"linux/amd64"}
-~~~
+```
 
+### 4.2 下载kubeConfig文件
 
+<figure><img src="../../../.gitbook/assets/连接k8s01.png" alt=""><figcaption></figcaption></figure>
 
-## 4.2 下载kubeConfig文件
+<div>
 
-![连接k8s01](ack.assets/连接k8s01.png)
+<img src="ack.assets/%E8%BF%9E%E6%8E%A5k8s02.png" alt="">
 
-![连接k8s02](ack.assets/连接k8s02.png)
+ 
 
-~~~powershell
+<figure><img src="../../../.gitbook/assets/连接k8s02.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+```powershell
 [root@kubemsb ~]# mkdir /root/.kube
 [root@kubemsb ~]# vim /root/.kube/config
 apiVersion: v1
@@ -164,92 +162,88 @@ users:
   user:
     client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUQvRENDQXVTZ0F3SUJBZ0lEZUJIRE1BMEdDU3FHU0liM0RRRUJDd1VBTUdveEtqQW9CZ05WQkFvVElXTXcKWVdFNFl6UTNabUptWVdJMFlqZGxZbVkyTVRCa01ESXhOR0ptWVdOa05URVFNQTRHQTFVRUN4TUhaR1ZtWVhWcwpkREVxTUNnR0ExVUVBeE1oWXpCaFlUaGpORGRtWW1aaFlqUmlOMlZpWmpZeE1HUXdNakUwWW1aaFkyUTFNQjRYCkRUSXlNVEF4TWpBME5EZ3dNRm9YRFRJMU1UQXhNVEEwTlRNMU9Wb3dTREVWTUJNR0ExVUVDaE1NYzNsemRHVnQKT25WelpYSnpNUWt3QndZRFZRUUxFd0F4SkRBaUJnTlZCQU1UR3pFNE9UazJPRGd4TXpJME5EQTROVEV0TVRZMgpOVFUxTURRek9UQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUwvRjFmQ0VZc1FVCmJtODJsYUM3dlNiUTl3WHdNcEJ1ZDQ2ek1PTGtVMU5GcEF3OERUSmw5RGoyZlRFeFZFeGkrT1VFaDBzN0dncysKcitMamlmVVhQT0pRTGxUUGZTdU1iaFdtNmloc3Y1dGlFakg0bXJzRGYwUlpCc2RqMG9oOUVlbDdZT0NTKytuZwpHZFZqNDlIbzBtWUhjRXQ1Z0g4dzQ2UEQwcjBRQi9vVE52SWJFejNMVGpZZEY1ZEYyZG9QcXVKSjFTUDNvODliCmlZR2k0Z2xhL1g2dzVzOWg2TmlNNWhqNGdudHRLeisyNTNsOU4zbEdYWm9xWEVUdW5qS2RYQzlFeThBbklwYW8KVUR4NXlwb0ZqbWc4dTdNWUVBTW9sM0E3c0o4MjFzWUlnMmpsb0FIVGtZZThFNGtDOGRBZnpVaWpuNlRFNVlqTwpMUXZFKzJ0b1RFVUNBd0VBQWFPQnpEQ0J5VEFPQmdOVkhROEJBZjhFQkFNQ0I0QXdFd1lEVlIwbEJBd3dDZ1lJCkt3WUJCUVVIQXdJd0RBWURWUjBUQVFIL0JBSXdBREFmQmdOVkhTTUVHREFXZ0JRYks4NTBMcE9aREtoYnpKelIKN0ZSbVAwclhZVEE4QmdnckJnRUZCUWNCQVFRd01DNHdMQVlJS3dZQkJRVUhNQUdHSUdoMGRIQTZMeTlqWlhKMApjeTVoWTNNdVlXeHBlWFZ1TG1OdmJTOXZZM053TURVR0ExVWRId1F1TUN3d0txQW9vQ2FHSkdoMGRIQTZMeTlqClpYSjBjeTVoWTNNdVlXeHBlWFZ1TG1OdmJTOXliMjkwTG1OeWJEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUEKRW5jWXN1TXNTTGpHZkRMcmJibXg5enhIYmFQcjN5NVVqc3ZjbkFCbDh2Rlh1ZEIzdmtNMFRrWjl6bmZEMFoybAowY2tDRVNkM0FLamV1Zy9XamVaNnp0dWpQNyttMDJiaDU5K3A0V25JRTMxZm43eDVuNmdLVXd0d0hQRUpWdGU1CnptK0QzamxSTXRQWUp0dXpNelBHKzQ2YTdnbWRYVnB1NHdmY0JDNytOOUdRZlVSV28razBQeVU5QXM5YVVrUjcKd1M4RkFydDNQZTRrRkM3SS8wdmptRXVYOGVLMENFWW1KNGdPVWhRSk1OTmRDWEVGaGVFNDdETnhQR0RRTlMrcgp5TW5ibkJNWDJrbUd4WUdLWkxlU3RTbENjMFBXTU1QNWF4b2hwVmphQnRHenJwZG9wQkpmQ1BxSWtua1pnMlJFCm1oUGNjR0pNZk03OHorbUVnWTdQQlE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
     client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBdjhYVjhJUml4QlJ1YnphVm9MdTlKdEQzQmZBeWtHNTNqck13NHVSVFUwV2tERHdOCk1tWDBPUFo5TVRGVVRHTDQ1UVNIU3pzYUN6NnY0dU9KOVJjODRsQXVWTTk5SzR4dUZhYnFLR3kvbTJJU01maWEKdXdOL1JGa0d4MlBTaUgwUjZYdGc0Skw3NmVBWjFXUGowZWpTWmdkd1MzbUFmekRqbzhQU3ZSQUgraE0yOGhzVApQY3RPTmgwWGwwWFoyZytxNGtuVkkvZWp6MXVKZ2FMaUNWcjlmckRtejJIbzJJem1HUGlDZTIwclA3Ym5lWDAzCmVVWmRtaXBjUk82ZU1wMWNMMFRMd0NjaWxxaFFQSG5LbWdXT2FEeTdzeGdRQXlpWGNEdXduemJXeGdpRGFPV2cKQWRPUmg3d1RpUUx4MEIvTlNLT2ZwTVRsaU00dEM4VDdhMmhNUlFJREFRQUJBb0lCQUVIQnpJSVVZdWxwT0JUYQpXcVFxdThrN2pmaHpUR05KL2FUb3ZMS1FLQ0k5bHVxN0RLdGpXa0xPQWsrRDRxdnVvL21qZStESCt6NHYySStzCkJmb01aY3dVUWs3Q2R1RWYzZjkrcEh3SURndHhyVnVGSzBsRkFiYWw4RFVlZldwZnVHeWU2YkVYdFZtVWhrY3QKWVVqdzFIUTN5TUdZZi84Yy9IR0REQmZZRDJRbjZhTDFWQXJIMU1RanM2QUhsdTBqNmlScmtiZStJQTJmaEhCWgo3SWxNMm1mMWFUQ2UxTFh5VlFLY2lab3FEdG9EaHlGVzlJeFNBRWgyWDJCeHN2aStjbXFFRnMrYVpsQjlOYmVrCmNiaWJNby9BbFBKL0Q5dlUvd2dvOG83eFJKVUVwN0JjNXptQkd1Vk9mOXQyL1FRTHRYMnF3Ym5NbTJ2L09vSmkKcmdDTkt3RUNnWUVBeGtFZ3crelFsdGxIM1dON3FqaTV0SjZoMU54K0FIbXlOVktkMXo4TWVQQlRmWklEYnJwZwpRckk1SGViR0JkRFR3R09xWEFaVjNGMkhNKzVzTmNtRVpMUXgxUFlwUjJKNmRhTDlQcHgyUVYrWG1jcGJFM2h2CnlQdFNxK01jS2dLQTFBWXUvYUpMRUFGYzhkRzZXQSsyVll4S2dHQkoxYWZVd2FkOHNqa01lZjBDZ1lFQTk2Rm4KeG0zcWx5V0NIVVVScGZZbWxHRjcwazhoNEhHbEhQVDhKWFRPUDJ1azhJSG5IcWVHMURHWkVXTjlObGFHNlE2OApwT21kVmpGYUVaRkhsaUgrM2EycjM5ODJZbE0zV2ptdHAwWU1OamRjb0VkNVB2SmhBcDVnanJjanFEbitCRVJRCkhJTlloTHVVTkhldkgybTcxanBMZFc0T3U4RDBtemcwYWZmKzZla0NnWUFqSEsvSDQyNUIrVE9BSXpsb3VXa3kKY3hIb1dEQzh0dEQ0SHF5enpZZlE5NGRoNnZWT3JCV1dXbWhCUW5qNTJMVllFbzYrZzZTN1JabEhla2VSOHlITwprQmR2UnpXaVhlK2dYQUNNRVR2a2NpQ3diU1ZhT205WjRpRVBMa2J6cmNQUlNWTVRPcVllckk4Z2lPdCs0ekdBCnp6cjJwNWNNRHhCZ1IrQ08xQW5BcFFLQmdRQzVidEI3TXd3Y3F5WElMVlNONXNuMUN4cmgzZ2dNUG8zYUpVbzcKOGtBUUZkZXBrbDAwQTFkZnh0Uk14U2VhYlNrUmxNdUc0cm5ETmFtd3hnM0pTeVBEZEsza013NVNpdVpFVmpUSApzaGlxOE1JWDgrM0RTVldEMUgyUjRXcCtLdzhndXRjU3d2aWlUS1VxdFFVYWpON3dDUzlBZkcza0F4WW90ZW5xCkFKK1BJUUtCZ0MxRGFJdS9wWnVNa0FJTUpUZzdKUFZrVVlpMmZ6RkxqSTFQYS9qdWo4NGJ0TCtvRi9BdmZPblkKK1AvTjhHUWJ5UnNqc1owc2JzTzZvWUZrUVd4dlhWY1Y5a3NVNks5ZFpRUkNoSktrM0gxUzFvQ2xnclk2YkViKwowNFpKZlM0bWR0QzVvVVkydVNBdzEyOTI4MUpXdG9XdE5QaHRUeWlDV2xVclRNbDZQZ3R3Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
-~~~
+```
 
+### 4.3 查看集群信息
 
-
-## 4.3 查看集群信息
-
-~~~powershell
+```powershell
 [root@kubemsb ~]# kubectl get nodes --kubeconfig /root/.kube/config
 NAME                       STATUS   ROLES    AGE     VERSION
 cn-chengdu.192.168.10.43   Ready    <none>   3h37m   v1.24.6-aliyun.1
 cn-chengdu.192.168.10.44   Ready    <none>   3h37m   v1.24.6-aliyun.1
 cn-chengdu.192.168.10.45   Ready    <none>   3h37m   v1.24.6-aliyun.1
-~~~
+```
 
+### 4.4 创建阿里云容器镜像服务
 
+{% tabs %}
+{% tab title="镜像服务" %}
+<figure><img src="../../../.gitbook/assets/镜像服务.png" alt=""><figcaption></figcaption></figure>
 
-## 4.4 创建阿里云容器镜像服务
+<figure><img src="../../../.gitbook/assets/镜像服务02.png" alt=""><figcaption></figcaption></figure>
 
-![镜像服务](ack.assets/镜像服务.png)
+<figure><img src="../../../.gitbook/assets/镜像服务03.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
 
-![镜像服务02](ack.assets/镜像服务02.png)
+{% tab title="undefined" %}
+<figure><img src="../../../.gitbook/assets/创建仓库01.png" alt=""><figcaption></figcaption></figure>
 
-![镜像服务03](ack.assets/镜像服务03.png)
+<figure><img src="../../../.gitbook/assets/创建仓库05.png" alt=""><figcaption></figcaption></figure>
 
-![创建仓库01](ack.assets/创建仓库01.png)
+<figure><img src="../../../.gitbook/assets/创建仓库03.png" alt=""><figcaption></figcaption></figure>
 
-![创建仓库05](ack.assets/创建仓库05.png)
+<figure><img src="../../../.gitbook/assets/创建仓库04.png" alt=""><figcaption></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
-![创建仓库03](ack.assets/创建仓库03.png)
+### 4.5 安装docker
 
-![创建仓库04](ack.assets/创建仓库04.png)
-
-
-
-## 4.5 安装docker
-
-~~~powershell
+```powershell
 [root@kubemsb ~]# wget -O /etc/yum.repos.d/docker-ce.repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 [root@kubemsb ~]# yum -y install docker-ce
 [root@kubemsb ~]# systemctl enable docker
 [root@kubemsb ~]# systemctl start docker
-~~~
+```
 
-
-
-## 4.6 上传镜像至服务器
+### 4.6 上传镜像至服务器
 
 将资源目录下的“apidemo.tar上传至服务器”
 
+### 4.7 导入镜像
 
-
-## 4.7 导入镜像
-
-~~~powershell
+```powershell
 [root@kubemsb ~]# docker load -i apidemo.tar
 [root@kubemsb ~]# docker images
 REPOSITORY                                         TAG       IMAGE ID       CREATED         SIZE
 apidemo                                            v1        cae07723a2c3   7 minutes ago   15.5MB
-~~~
+```
 
+### 4.8 登录镜像仓库
 
-
-## 4.8 登录镜像仓库
-
-~~~powershell
+```powershell
 [root@kubemsb ~]# docker login --username=你的用户名 registry.cn-chengdu.aliyuncs.com
-~~~
+```
 
+### 4.9 上传镜像至阿里云镜像仓库
 
-
-## 4.9 上传镜像至阿里云镜像仓库
-
-~~~powershell
+```powershell
 [root@kubemsb ~]# docker tag apidemo:v1 registry.cn-chengdu.aliyuncs.com/kubemsb/apidemo:v1
 [root@kubemsb ~]# docker push registry.cn-chengdu.aliyuncs.com/kubemsb/apidemo:v1
-~~~
+```
 
 ![image-20221012170435435](ack.assets/image-20221012170435435.png)
 
+### 4.10在阿里云控制台部署项目
 
+{% tabs %}
+{% tab title="部署apidemo_Deployment" %}
+<figure><img src="../../../.gitbook/assets/apidemo01.png" alt=""><figcaption><p>dwadwa</p></figcaption></figure>
+{% endtab %}
 
-## 4.10在阿里云控制台部署项目
+{% tab title="Second Tab" %}
 
-
-
-### 4.10.1 部署apidemo_Deployment
+{% endtab %}
+{% endtabs %}
 
 ![apidemo01](ack.assets/apidemo01.png)
 
@@ -269,17 +263,13 @@ apidemo                                            v1        cae07723a2c3   7 mi
 
 ![apidemo09](ack.assets/apidemo09.png)
 
-
-
-### 4.10.2 部署apidemo_SVC
+#### 4.10.2 部署apidemo\_SVC
 
 ![apidemosvc01](ack.assets/apidemosvc01.png)
 
 ![apidemosvc02](ack.assets/apidemosvc02.png)
 
-
-
-### 4.10.3 部署apidemo_ingress
+#### 4.10.3 部署apidemo\_ingress
 
 ![apidemoingress01](ack.assets/apidemoingress01.png)
 
@@ -291,21 +281,19 @@ apidemo                                            v1        cae07723a2c3   7 mi
 
 ![apidemoingress05](ack.assets/apidemoingress05.png)
 
+### 4.11 访问apidemo服务
 
+#### 4.11.1 pc添加hosts
 
-## 4.11 访问apidemo服务
+![修改hosts01](ack.assets/%E4%BF%AE%E6%94%B9hosts01-16655662413204.png)
 
-### 4.11.1 pc添加hosts
+![修改hosts02](ack.assets/%E4%BF%AE%E6%94%B9hosts02-16655662470795.png)
 
-![修改hosts01](ack.assets/修改hosts01-16655662413204.png)
+![修改hosts03](ack.assets/%E4%BF%AE%E6%94%B9hosts03-16655662512246.png)
 
-![修改hosts02](ack.assets/修改hosts02-16655662470795.png)
+![修改hosts05](ack.assets/%E4%BF%AE%E6%94%B9hosts05.png)
 
-![修改hosts03](ack.assets/修改hosts03-16655662512246.png)
-
-![修改hosts05](ack.assets/修改hosts05.png)
-
-### 4.11.2 访问apidemo服务
+#### 4.11.2 访问apidemo服务
 
 > 浏览器访问apidemo.kubemsb.com/info
 
