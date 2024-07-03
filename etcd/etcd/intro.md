@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # 简介
 
 ![](../\_images/etcd\_logo.png)
@@ -18,6 +32,8 @@ etcd内部采用[`raft`](../../yi-zhi-xing-suan-fa/raft.md)协议作为一致性
 * 安全：支持 `HTTPS` 方式的访问
 * 快速：支持并发 `10 k/s` 的写操作
 * 可靠：支持分布式结构，基于 `Raft` 的一致性算法
+
+
 
 ## 应用场景
 
