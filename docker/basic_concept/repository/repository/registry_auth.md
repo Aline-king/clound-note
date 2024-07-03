@@ -8,6 +8,18 @@
 
 如果你拥有一个域名，国内各大云服务商均提供免费的站点证书。你也可以使用 `openssl` 自行签发证书。
 
+{% hint style="info" %}
+## Expandable blocks
+
+<details>
+
+<summary>Expandable block</summary>
+
+
+
+</details>
+{% endhint %}
+
 这里假设我们将要搭建的私有仓库地址为 `docker.domain.com`，下面我们介绍使用 `openssl` 自行签发 `docker.domain.com` 的站点 SSL 证书。
 
 第一步创建 `CA` 私钥。
@@ -25,7 +37,7 @@ $ openssl req \
           -subj '/C=CN/ST=Shanxi/L=Datong/O=Your Company Name/CN=Your Company Name Docker Registry CA'
 ```
 
->以上命令中 `-subj` 参数里的 `/C` 表示国家，如 `CN`；`/ST` 表示省；`/L` 表示城市或者地区；`/O` 表示组织名；`/CN` 通用名称。
+> 以上命令中 `-subj` 参数里的 `/C` 表示国家，如 `CN`；`/ST` 表示省；`/L` 表示城市或者地区；`/O` 表示组织名；`/CN` 通用名称。
 
 第三步配置 `CA` 根证书，新建 `root-ca.cnf`。
 

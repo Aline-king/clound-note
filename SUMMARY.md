@@ -469,3 +469,7 @@
 ## 😄 存储
 
 * [ceph](cun-chu/ceph.md)
+
+## 🩻 gitbook文档
+
+* [组合的妙用](gitbook-wen-dang/zu-he-de-miao-yong.md)
