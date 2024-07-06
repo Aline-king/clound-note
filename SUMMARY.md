@@ -405,10 +405,18 @@
   * [服务治理](fu-wu-wang-ge/yu-qian-zhi-shi/fu-wu-zhi-li.md)
   * [边车模式](fu-wu-wang-ge/yu-qian-zhi-shi/bian-che-mo-shi.md)
 * [Istio](fu-wu-wang-ge/istio.md)
-* [Envoy](fu-wu-wang-ge/envoy/README.md)
-  * [简介](fu-wu-wang-ge/envoy/jian-jie.md)
-  * [基本功能](fu-wu-wang-ge/envoy/ji-ben-gong-neng.md)
+* [Envoy](fu-wu-wang-ge/envoy.md)
+  * [简介](fu-wu-wang-ge/envoy/jian-jie/README.md)
+    * [架构图](fu-wu-wang-ge/envoy/jian-jie/jia-gou-tu.md)
+    * [常用术语](fu-wu-wang-ge/envoy/jian-jie/chang-yong-shu-yu.md)
+    * [架构设计](fu-wu-wang-ge/envoy/jian-jie/jia-gou-she-ji.md)
+  * [核心能力](fu-wu-wang-ge/envoy/he-xin-neng-li.md)
   * [功能](fu-wu-wang-ge/envoy/gong-neng.md)
+  * [部署](fu-wu-wang-ge/envoy/bu-shu/README.md)
+    * [sidecar](fu-wu-wang-ge/envoy/bu-shu/sidecar/README.md)
+      * [集群内Service to Service访问](fu-wu-wang-ge/envoy/bu-shu/sidecar/ji-qun-nei-service-to-service-fang-wen.md)
+      * [Service（Client） to Service ingress listener](fu-wu-wang-ge/envoy/bu-shu/sidecar/service-client-to-service-ingress-listener.md)
+      * [Service to Service egress listener](fu-wu-wang-ge/envoy/bu-shu/sidecar/service-to-service-egress-listener.md)
 
 ## 操作系统
 

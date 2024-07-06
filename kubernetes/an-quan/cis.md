@@ -16,6 +16,6 @@ Kubernetes 虽然作为一个出色的容器任务编排领域的管理平台，
 [下载地址](https://www.cisecurity.org/cis-benchmarks/)
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 下载

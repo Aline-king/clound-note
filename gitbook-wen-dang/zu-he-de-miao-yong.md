@@ -30,6 +30,21 @@
 <details>
 <summary>这是折叠块标题提</summary>
 </details>
+<details>
+<summary>这是折叠块标题提</summary>
+</details>
+<details>
+<summary>这是折叠块标题提</summary>
+</details>
+<details>
+<summary>这是折叠块标题提</summary>
+</details>
+<details>
+<summary>这是折叠块标题提</summary>
+</details>
+<details>
+<summary>这是折叠块标题提</summary>
+</details>
 {% endhint %}
 {% endraw %}
 ```
@@ -152,6 +167,51 @@ dwad
 {% endhint %}
 {% endraw %}
 ```
+
+```
+{% raw %}
+{% hint style="info" %}
+**提示块标题**
+# 这是主标题
+{% tabs %}
+
+{% tab title="Windows" %} 1111 {% endtab %}
+{% tab title="Windows" %} 2222 {% endtab %}
+{% endtabs %}
+{% tabs %}
+
+{% tab title="Windows" %} 1111 {% endtab %}
+{% tab title="Windows" %} 2222 {% endtab %}
+{% endtabs %}
+{% endhint %}
+{% endraw %}
+```
+
+{% hint style="info" %}
+**提示块标题**
+
+## 这是主标题
+
+{% tabs %}
+{% tab title="Windows" %}
+1111
+{% endtab %}
+
+{% tab title="Windows" %}
+2222
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Windows" %}
+1111
+{% endtab %}
+
+{% tab title="Windows" %}
+2222
+{% endtab %}
+{% endtabs %}
+{% endhint %}
 
 ## 提示快内嵌选项卡和折叠块
 
@@ -289,8 +349,43 @@ Here are the instructions for Linux
 
 ## 选项卡嵌套选项卡
 
+{% hint style="info" %}
+**提示块标题**
+
+## 这是主标题
+
+{% tabs %}
+{% tab title="Windows" %}
+{% hint style="info" %}
+**提示快标题**
+
+{% tabs %}
+{% tab title="Windows" %}
+
+{% endtab %}
+
+{% tab title="OSX" %}
+Here are the instructions for macOS
+{% endtab %}
+{% endtabs %}
+{% endhint %}
+{% endtab %}
+
+{% tab title="OSX" %}
+Here are the instructions for macOS
+{% endtab %}
+
+{% tab title="Linux" %}
+Here are the instructions for Linux
+{% endtab %}
+{% endtabs %}
+{% endhint %}
+
 ```
 {% raw %}
+{% hint style="info" %}
+**提示块标题**
+# 这是主标题
 {% tabs %}
 {% tab title="Windows" %} 
 {% hint style="info" %}
@@ -308,6 +403,7 @@ Here are the instructions for Linux
 {% tab title="Linux" %} Here are the instructions for Linux {% endtab %}
 
 {% endtabs %}
+{% endhint %}
 {% endraw %}
 ```
 
@@ -333,3 +429,32 @@ Here are the instructions for Linux
 {% endtab %}
 {% endtabs %}
 
+```
+{% raw %}
+{% hint style="info" %}
+**提示块标题**
+# 这是主标题
+{% tabs %}
+
+{% tab title="Windows" %} 1111 {% endtab %}
+{% tab title="Windows" %} 2222 {% endtab %}
+{% endtabs %}
+{% endhint %}
+{% endraw %}
+```
+
+{% hint style="info" %}
+**提示块标题**
+
+## 这是主标题
+
+{% tabs %}
+{% tab title="Windows" %}
+1111
+{% endtab %}
+
+{% tab title="Windows" %}
+2222
+{% endtab %}
+{% endtabs %}
+{% endhint %}
