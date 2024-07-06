@@ -6,7 +6,7 @@ CIS由一个全球IT社区驱动，其共同目标是识别、开发、验证、
 
 [k8s cis官网](https://www.cisecurity.org/benchmark/kubernetes/)
 
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## k8s基准测试
 

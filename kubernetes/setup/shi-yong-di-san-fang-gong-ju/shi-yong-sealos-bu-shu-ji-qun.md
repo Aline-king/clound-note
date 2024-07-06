@@ -213,7 +213,7 @@ kuboard-agent-du7gv7-56c7cb9564-m78qx     1/1     Running   0          54s
 
 <figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 {% endtab %}

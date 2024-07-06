@@ -20,7 +20,7 @@ Kubernetes的基本特性就是它的所有资源对象都是模型化的 API �
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

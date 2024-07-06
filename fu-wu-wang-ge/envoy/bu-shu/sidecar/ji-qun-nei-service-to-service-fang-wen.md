@@ -1,6 +1,6 @@
 # 集群内Service to Service访问
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 这张图展示了微服务架构中的一种典型设计。在该设计中，每个服务集群（Service Cluster）都由一个Envoy代理和一个实际的服务组成。
 
