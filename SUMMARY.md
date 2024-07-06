@@ -405,7 +405,10 @@
   * [服务治理](fu-wu-wang-ge/yu-qian-zhi-shi/fu-wu-zhi-li.md)
   * [边车模式](fu-wu-wang-ge/yu-qian-zhi-shi/bian-che-mo-shi.md)
 * [Istio](fu-wu-wang-ge/istio.md)
-* [Envoy](fu-wu-wang-ge/envoy.md)
+* [Envoy](fu-wu-wang-ge/envoy/README.md)
+  * [简介](fu-wu-wang-ge/envoy/jian-jie.md)
+  * [基本功能](fu-wu-wang-ge/envoy/ji-ben-gong-neng.md)
+  * [功能](fu-wu-wang-ge/envoy/gong-neng.md)
 
 ## 操作系统
 
@@ -450,12 +453,6 @@
   * [特点](zhi-biao/skywalking/te-dian.md)
   * [部署](zhi-biao/skywalking/bu-shu.md)
 * [APM](zhi-biao/apm.md)
-
-## Envoy
-
-* [简介](envoy/jian-jie.md)
-* [基本概念](envoy/ji-ben-gai-nian.md)
-* [功能](envoy/gong-neng.md)
 
 ## 🌐 网络
 
