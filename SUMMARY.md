@@ -414,9 +414,13 @@
     * [核心能力](fu-wu-wang-ge/envoy/jian-jie/he-xin-neng-li.md)
   * [基本概念](fu-wu-wang-ge/envoy/ji-ben-gai-nian/README.md)
     * [侦听器 Listener](fu-wu-wang-ge/envoy/ji-ben-gai-nian/zhen-ting-qi-listener.md)
-    * [集群](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun.md)
+    * [集群](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/README.md)
+      * [查看集群信息](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/cha-kan-ji-qun-xin-xi.md)
     * [管理工具admin](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/README.md)
       * [使用](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/shi-yong.md)
+    * [查看帮助信息](fu-wu-wang-ge/envoy/ji-ben-gai-nian/cha-kan-bang-zhu-xin-xi.md)
+    * [运行时环境 runtime](fu-wu-wang-ge/envoy/ji-ben-gai-nian/yun-xing-shi-huan-jing-runtime/README.md)
+      * [事例](fu-wu-wang-ge/envoy/ji-ben-gai-nian/yun-xing-shi-huan-jing-runtime/shi-li.md)
   * [部署](fu-wu-wang-ge/envoy/bu-shu/README.md)
     * [sidecar](fu-wu-wang-ge/envoy/bu-shu/sidecar/README.md)
       * [集群内Service to Service访问](fu-wu-wang-ge/envoy/bu-shu/sidecar/ji-qun-nei-service-to-service-fang-wen.md)
@@ -429,11 +433,13 @@
     * [侦听器与集群配置](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/README.md)
       * [侦听器工作原理](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/zhen-ting-qi-gong-zuo-yuan-li.md)
       * [网络过滤（L3/L4）Network Filters](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/wang-luo-guoll3l4network-filters.md)
+    * [查看配置信息](fu-wu-wang-ge/envoy/pei-zhi/cha-kan-pei-zhi-xin-xi.md)
   * [😚 应用案例](fu-wu-wang-ge/envoy/ying-yong-an-li/README.md)
     * [🇵🇳 四层TCP转发](fu-wu-wang-ge/envoy/ying-yong-an-li/si-ceng-tcp-zhuan-fa.md)
     * [✴️ http ingress](fu-wu-wang-ge/envoy/ying-yong-an-li/http-ingress.md)
     * [🫡 htttp egress](fu-wu-wang-ge/envoy/ying-yong-an-li/htttp-egress.md)
     * [http front proxy](fu-wu-wang-ge/envoy/ying-yong-an-li/http-front-proxy.md)
+  * [可观测](fu-wu-wang-ge/envoy/ke-guan-ce.md)
 
 ## 操作系统
 
@@ -495,3 +501,9 @@
 ## 🩻 gitbook文档
 
 * [组合的妙用](gitbook-wen-dang/zu-he-de-miao-yong.md)
+
+## 可观测
+
+* [介绍](ke-guan-ce/jie-shao/README.md)
+  * [日志](ke-guan-ce/jie-shao/ri-zhi.md)
+  * [指标](ke-guan-ce/jie-shao/zhi-biao.md)

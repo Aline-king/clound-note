@@ -1,6 +1,6 @@
 # 创建流程和生命周期
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1 用户通过多种方式向master结点上的API-Server发起创建一个Pod的请求&#x20;
 
