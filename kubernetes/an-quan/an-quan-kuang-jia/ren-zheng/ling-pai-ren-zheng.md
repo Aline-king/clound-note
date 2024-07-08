@@ -180,7 +180,7 @@ Name:         dashboard-admin-token-4cdrd
 token:      eyJhbG...qU3__b9ITbLHEytrA
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="用户级别" %}
@@ -228,7 +228,7 @@ Name:         dashboard-ns-token-btq6w
 token:       eyJhbG...qU3__8Kqc0Q
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

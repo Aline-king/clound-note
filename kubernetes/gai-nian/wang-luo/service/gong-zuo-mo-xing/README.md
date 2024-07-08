@@ -1,6 +1,6 @@
 # 工作模型
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 userspace模型是k8s(1.1-1.2)最早的一种工作模型，作用就是将service的策略转换成iptables规则，这些规则仅仅做请求的拦截，而不对请求进行调度处理。 该模型中，请求流量到达内核空间后，由套接字送往用户空间的kube-proxy，再由它送回内核空间，并调度至后端Pod。因为涉及到来回转发，效率不高，另外用户空间的转发，默认开启了会话粘滞，会导致流量转发给无效的pod上。
 

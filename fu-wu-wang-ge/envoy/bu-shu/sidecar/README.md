@@ -6,7 +6,7 @@ Envoy通常用于以容器编排系统为底层环境的服务网格中，并以
 
 具体使用时常见的部署类型如下图所示：
 
-<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 用户流量通过Front Proxy把流量转到对应服务的Ingress Listener即可对对应的服务进行访问
 * 当Service A需要对Service B、C、D服务进行访问时，是通过Egress Listener实现的，即Service A的Envoy SideCar中Egress Listener为正向代理实现对B、C、D进行访问。

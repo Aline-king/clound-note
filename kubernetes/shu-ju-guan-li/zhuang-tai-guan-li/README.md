@@ -2,7 +2,7 @@
 
 ## 有状态应用
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 生产中，一些中间件业务集群，比如MySQL集群、MongoDB集群、Zookeeper集群等，这些应用集群有一下特点：&#x20;
 

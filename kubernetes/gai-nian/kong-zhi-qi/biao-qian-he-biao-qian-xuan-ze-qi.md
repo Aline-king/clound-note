@@ -8,7 +8,7 @@
 
 作用： 一个资源对象可以定义多个Lable，同一个Lable也可以关联多个资源对象上去 通过对Lable的管理从而达到对同Lable的资源进行分组管理(分配、调度、配置、部署等)。
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 使用方法
 

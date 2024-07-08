@@ -415,6 +415,8 @@
   * [基本概念](fu-wu-wang-ge/envoy/ji-ben-gai-nian/README.md)
     * [侦听器 Listener](fu-wu-wang-ge/envoy/ji-ben-gai-nian/zhen-ting-qi-listener.md)
     * [集群](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun.md)
+    * [管理工具admin](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/README.md)
+      * [使用](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/shi-yong.md)
   * [部署](fu-wu-wang-ge/envoy/bu-shu/README.md)
     * [sidecar](fu-wu-wang-ge/envoy/bu-shu/sidecar/README.md)
       * [集群内Service to Service访问](fu-wu-wang-ge/envoy/bu-shu/sidecar/ji-qun-nei-service-to-service-fang-wen.md)
@@ -427,9 +429,11 @@
     * [侦听器与集群配置](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/README.md)
       * [侦听器工作原理](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/zhen-ting-qi-gong-zuo-yuan-li.md)
       * [网络过滤（L3/L4）Network Filters](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/wang-luo-guoll3l4network-filters.md)
-  * [应用案例](fu-wu-wang-ge/envoy/ying-yong-an-li/README.md)
+  * [😚 应用案例](fu-wu-wang-ge/envoy/ying-yong-an-li/README.md)
     * [🇵🇳 四层TCP转发](fu-wu-wang-ge/envoy/ying-yong-an-li/si-ceng-tcp-zhuan-fa.md)
     * [✴️ http ingress](fu-wu-wang-ge/envoy/ying-yong-an-li/http-ingress.md)
+    * [🫡 htttp egress](fu-wu-wang-ge/envoy/ying-yong-an-li/htttp-egress.md)
+    * [http front proxy](fu-wu-wang-ge/envoy/ying-yong-an-li/http-front-proxy.md)
 
 ## 操作系统
 
