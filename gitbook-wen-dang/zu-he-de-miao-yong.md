@@ -121,7 +121,13 @@ dwad
 <details>
 
 <summary>Expandable block</summary>
+dadad
+<details>
 
+<summary>Expandable block</summary>
+
+
+</details>
 
 </details>
 ```
@@ -133,6 +139,14 @@ dwad
 1111112211
 
 \-2222
+
+</details>
+
+<details>
+
+<summary>Expandable block</summary>
+
+dadad
 
 </details>
 
