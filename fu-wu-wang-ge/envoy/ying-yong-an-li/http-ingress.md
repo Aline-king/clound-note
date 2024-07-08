@@ -1,2 +1,51 @@
 # ✴️ http ingress
 
+```
+# vim docker-compose.yaml
+# cat docker-compose.yaml
+```
+
+{% tabs %}
+{% tab title="First Tab" %}
+```yaml
+version: '3'
+
+services:
+  envoy:
+    image: envoyproxy/envoy:v1.30.1
+    volumes:
+    - ./envoy.yaml:/etc/envoy/envoy.yaml
+    environment:
+      - ENVOY_UID=0
+      - ENVOY_GID=0
+    networks:
+      envoymesh:
+        ipv4_address: 172.22.1.2
+        aliases:
+        - ingress
+
+  webserver01:
+    image: www.kubemsb.com/envoy/demoapp:v1.0
+    environment:
+      - PORT=8080
+      - HOST=127.0.0.1
+    network_mode: "service:envoy"
+    depends_on:
+    - envoy
+
+networks:
+  envoymesh:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.1.0/24
+```
+
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
+
