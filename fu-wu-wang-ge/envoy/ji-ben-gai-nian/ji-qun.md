@@ -4,4 +4,4 @@
 * 每个主机映射为集群中的一个端点
 * 下游的请求被调度至上游主机
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

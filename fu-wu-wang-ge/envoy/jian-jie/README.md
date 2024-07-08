@@ -9,4 +9,4 @@ Envoy 代理是唯一与数据平面流量交互的 Istio 组件。Envoy 代理�
 * 前端代理
 * SideCar代理
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>

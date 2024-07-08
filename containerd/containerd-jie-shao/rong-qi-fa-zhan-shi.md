@@ -38,7 +38,7 @@ Kubelet 通过 gRPC 框架与容器运行时或 shim 进行通信，其中 kubel
 
 由于当时的Docker仍然处于容器生态的统治地位。kubernetes不得不在kubelet当中内置了docker-shim：
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 再后来，Docker在容器生态大战中败北。在2017年的时候，Docker公司将其容器运行时Containerd捐献给了CNCF。为了将containerd接入到CRI标准中，k8s又搞出了cri-containerd项目，cri-containerd是一个守护进程用来实现kubelet和containerd之间的交互，此时k8s节点上kubelet启动容器就变成了下面这个样子：
 

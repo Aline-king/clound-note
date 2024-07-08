@@ -54,7 +54,7 @@ TCPSocketAction - 端口能正常打开，即成功&#x20;
 
 HTTPGetAction - 向指定的path发HTTP请求，2xx, 3xx的响应码表示成功
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这里面仅仅罗列的livenessProbe ，readnessProbe 的属性与livenessProbe一样
 

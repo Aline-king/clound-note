@@ -52,7 +52,7 @@ Kubelet 通过 gRPC 框架与容器运行时或 shim 进行通信，其中 kubel
 
 由于当时的Docker仍然处于容器生态的统治地位。kubernetes不得不在kubelet当中内置了docker-shim：
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 2016年Docker公司推出了Docker Swarm，意在一统Docker生态，让Docker既可以实现容器应用管理，也可以实现大规模容器编排，经过近1年左右时间的市场验证后，发现在容器编排方面无法独立抗衡kubernetes，所以Docker公司于2017年正式宣布原生支持Kubernetes。
