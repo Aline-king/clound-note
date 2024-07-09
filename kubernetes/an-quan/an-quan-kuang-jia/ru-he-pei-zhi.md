@@ -14,7 +14,7 @@ description: 使用config配置文件
 >
 > 都需要认证和授权，而且都是以插件模式，并且按照短路模型来运行
 
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 集群命令解读
 

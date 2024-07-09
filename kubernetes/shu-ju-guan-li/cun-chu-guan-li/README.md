@@ -26,7 +26,7 @@
 
 
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Availabled 空闲状态，表示pv没有被其他对象使用

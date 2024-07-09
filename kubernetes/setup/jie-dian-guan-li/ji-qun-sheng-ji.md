@@ -42,7 +42,7 @@ listen kubernetes-master-6443
 [root@kubernetes-ha1 ~]# systemctl restart haproxy.service
 ```
 
-<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 {% endtab %}

@@ -421,6 +421,8 @@
     * [查看帮助信息](fu-wu-wang-ge/envoy/ji-ben-gai-nian/cha-kan-bang-zhu-xin-xi.md)
     * [运行时环境 runtime](fu-wu-wang-ge/envoy/ji-ben-gai-nian/yun-xing-shi-huan-jing-runtime/README.md)
       * [事例](fu-wu-wang-ge/envoy/ji-ben-gai-nian/yun-xing-shi-huan-jing-runtime/shi-li.md)
+    * [xds](fu-wu-wang-ge/envoy/ji-ben-gai-nian/xds/README.md)
+      * [ADS](fu-wu-wang-ge/envoy/ji-ben-gai-nian/xds/ads.md)
   * [部署](fu-wu-wang-ge/envoy/bu-shu/README.md)
     * [sidecar](fu-wu-wang-ge/envoy/bu-shu/sidecar/README.md)
       * [集群内Service to Service访问](fu-wu-wang-ge/envoy/bu-shu/sidecar/ji-qun-nei-service-to-service-fang-wen.md)
@@ -428,7 +430,10 @@
       * [Service to Service egress listener](fu-wu-wang-ge/envoy/bu-shu/sidecar/service-to-service-egress-listener.md)
     * [镜像部署](fu-wu-wang-ge/envoy/bu-shu/jing-xiang-bu-shu.md)
   * [🚷 配置](fu-wu-wang-ge/envoy/pei-zhi/README.md)
-    * [配置方式](fu-wu-wang-ge/envoy/pei-zhi/pei-zhi-fang-shi.md)
+    * [配置方式](fu-wu-wang-ge/envoy/pei-zhi/pei-zhi-fang-shi/README.md)
+      * [xDS动态配置](fu-wu-wang-ge/envoy/pei-zhi/pei-zhi-fang-shi/xds-dong-tai-pei-zhi/README.md)
+        * [基于文件系统的订阅](fu-wu-wang-ge/envoy/pei-zhi/pei-zhi-fang-shi/xds-dong-tai-pei-zhi/ji-yu-wen-jian-xi-tong-de-ding-yue.md)
+        * [基于gRPC管理服务器订阅](fu-wu-wang-ge/envoy/pei-zhi/pei-zhi-fang-shi/xds-dong-tai-pei-zhi/ji-yu-grpc-guan-li-fu-wu-qi-ding-yue.md)
     * [配置概念](fu-wu-wang-ge/envoy/pei-zhi/pei-zhi-gai-nian.md)
     * [侦听器与集群配置](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/README.md)
       * [侦听器工作原理](fu-wu-wang-ge/envoy/pei-zhi/zhen-ting-qi-yu-ji-qun-pei-zhi/zhen-ting-qi-gong-zuo-yuan-li.md)
@@ -439,7 +444,13 @@
     * [✴️ http ingress](fu-wu-wang-ge/envoy/ying-yong-an-li/http-ingress.md)
     * [🫡 htttp egress](fu-wu-wang-ge/envoy/ying-yong-an-li/htttp-egress.md)
     * [http front proxy](fu-wu-wang-ge/envoy/ying-yong-an-li/http-front-proxy.md)
-  * [可观测](fu-wu-wang-ge/envoy/ke-guan-ce.md)
+  * [可观测](fu-wu-wang-ge/envoy/ke-guan-ce/README.md)
+    * [Envoy状态统计](fu-wu-wang-ge/envoy/ke-guan-ce/envoy-zhuang-tai-tong-ji/README.md)
+      * [统计数据获取方式](fu-wu-wang-ge/envoy/ke-guan-ce/envoy-zhuang-tai-tong-ji/tong-ji-shu-ju-huo-qu-fang-shi.md)
+    * [stats sink](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/README.md)
+      * [主要作用](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/zhu-yao-zuo-yong.md)
+      * [常见stats sink类型](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/chang-jian-stats-sink-lei-xing.md)
+      * [stats相关配置](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/stats-xiang-guan-pei-zhi.md)
 
 ## 操作系统
 
@@ -477,14 +488,6 @@
       * [cgroup](cao-zuo-xi-tong/linux/xu-ni-hua-ji-shu/linux-namespace/cgroup.md)
     * [LXC](cao-zuo-xi-tong/linux/lxc.md)
 
-## 🧫 指标
-
-* [skywalking](zhi-biao/skywalking/README.md)
-  * [简介](zhi-biao/skywalking/jian-jie.md)
-  * [特点](zhi-biao/skywalking/te-dian.md)
-  * [部署](zhi-biao/skywalking/bu-shu.md)
-* [APM](zhi-biao/apm.md)
-
 ## 🌐 网络
 
 * [Vlan](wang-luo/vlan/README.md)
@@ -506,4 +509,14 @@
 
 * [介绍](ke-guan-ce/jie-shao/README.md)
   * [日志](ke-guan-ce/jie-shao/ri-zhi.md)
-  * [指标](ke-guan-ce/jie-shao/zhi-biao.md)
+  * [指标](ke-guan-ce/jie-shao/zhi-biao/README.md)
+    * [skywalking](ke-guan-ce/jie-shao/zhi-biao/skywalking/README.md)
+      * [简介](ke-guan-ce/jie-shao/zhi-biao/skywalking/jian-jie.md)
+      * [特点](ke-guan-ce/jie-shao/zhi-biao/skywalking/te-dian.md)
+      * [部署](ke-guan-ce/jie-shao/zhi-biao/skywalking/bu-shu.md)
+* [APM](ke-guan-ce/apm.md)
+
+## 包管理解决方案及应用商店
+
+* [Helm](bao-guan-li-jie-jue-fang-an-ji-ying-yong-shang-dian/helm.md)
+* [kubeapp](bao-guan-li-jie-jue-fang-an-ji-ying-yong-shang-dian/kubeapp.md)

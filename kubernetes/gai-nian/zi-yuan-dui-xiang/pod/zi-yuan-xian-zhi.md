@@ -6,6 +6,6 @@ Resquests和Limits 申请配额(Requests)： 业务运行时最小的资源申�
 
 最大配额(Limits)： 业务运行时最大的资源允许使用量，该参数的值不能被突破，若突破，该业务的资源对象会被重启或删除等意外操作
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 kubernetes为了方便统一管理各种容器的资源使用情况，提供了一种资源限制对象 LimitRange，它可以针对我们的请求的资源进行简单的控制。

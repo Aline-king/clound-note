@@ -1,6 +1,6 @@
 # 🫡 htttp egress
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 [root@dockerhost-envoy ~]# mkdir envoy_http_egress
@@ -113,7 +113,7 @@ networks:
               socket_address: { address: 172.23.1.4, port_value: 80 }
 </code></pre>
 
-![](<../../../.gitbook/assets/image (6).png>)
+![](<../../../.gitbook/assets/image (6) (1).png>)
 
 </details>
 
