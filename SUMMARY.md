@@ -344,6 +344,8 @@
 * [公有云](kubernetes/gong-you-yun/README.md)
   * [阿里云](kubernetes/gong-you-yun/a-li-yun/README.md)
     * [容器服务ACK](kubernetes/gong-you-yun/a-li-yun/rong-qi-fu-wu-ack.md)
+* [双栈IPv4/IPv6](kubernetes/shuang-zhan-ipv4ipv6/README.md)
+  * [部署](kubernetes/shuang-zhan-ipv4ipv6/bu-shu.md)
 
 ## ♾️ Dev ops
 
@@ -416,6 +418,10 @@
     * [侦听器 Listener](fu-wu-wang-ge/envoy/ji-ben-gai-nian/zhen-ting-qi-listener.md)
     * [集群](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/README.md)
       * [查看集群信息](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/cha-kan-ji-qun-xin-xi.md)
+      * [集群管理器 cluster manager](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/ji-qun-guan-li-qi-cluster-manager.md)
+      * [主动健康状态检测](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/zhu-dong-jian-kang-zhuang-tai-jian-ce.md)
+      * [异常检测（被动健康检测）](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/yi-chang-jian-ce-bei-dong-jian-kang-jian-ce.md)
+      * [负载均衡器策略](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/fu-zai-jun-heng-qi-ce-le.md)
     * [管理工具admin](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/README.md)
       * [使用](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/shi-yong.md)
     * [查看帮助信息](fu-wu-wang-ge/envoy/ji-ben-gai-nian/cha-kan-bang-zhu-xin-xi.md)
@@ -423,6 +429,7 @@
       * [事例](fu-wu-wang-ge/envoy/ji-ben-gai-nian/yun-xing-shi-huan-jing-runtime/shi-li.md)
     * [xds](fu-wu-wang-ge/envoy/ji-ben-gai-nian/xds/README.md)
       * [ADS](fu-wu-wang-ge/envoy/ji-ben-gai-nian/xds/ads.md)
+    * [服务发现](fu-wu-wang-ge/envoy/ji-ben-gai-nian/fu-wu-fa-xian.md)
   * [部署](fu-wu-wang-ge/envoy/bu-shu/README.md)
     * [sidecar](fu-wu-wang-ge/envoy/bu-shu/sidecar/README.md)
       * [集群内Service to Service访问](fu-wu-wang-ge/envoy/bu-shu/sidecar/ji-qun-nei-service-to-service-fang-wen.md)
@@ -540,3 +547,7 @@
   * [访问kubeapp](bao-guan-li-jie-jue-fang-an-ji-ying-yong-shang-dian/kubeapp/fang-wen-kubeapp.md)
   * [部署nginx](bao-guan-li-jie-jue-fang-an-ji-ying-yong-shang-dian/kubeapp/bu-shu-nginx.md)
   * [部署mysql](bao-guan-li-jie-jue-fang-an-ji-ying-yong-shang-dian/kubeapp/bu-shu-mysql.md)
+
+## 分布式系统
+
+* [Page 2](fen-bu-shi-xi-tong/page-2.md)
