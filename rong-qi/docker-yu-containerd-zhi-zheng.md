@@ -8,11 +8,11 @@
 2. 存储：由docker-volume提供&#x20;
 3. 网络：由docker-network提供
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 当创建容器的请求到达docker api，docker-api会调用containerd执行创建操作，此时containerd会启动一个containerd-shim进程，containerd-shim调用runc执行容器的创建操作。当容器创建完成之后， runc退出，containerd-shim作为容器的父进程收集容器的运行状态，将其上报给containerd，并在容器中 pid 为 1 的进程退出后接管容器中的子进程进行清理, 确保不会出现僵尸进程。
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > &#x20;OCI（open container initivtive）全称为开放容器标准，其主要用于规范容器镜像的结构以及容器需要接收的操作指令，如create、start、stop、delete等命令。除了runc之外，Kata、gVisor也符合OCI规范。runc是OCI的一个具体实现。
 
@@ -88,4 +88,4 @@ k8s的广泛使用，容器工具的越来越多，当时推出cri，只要适�
 
 > 在2020年12月份，kubernetes宣布将在1.22版本当中正式从kubelet当中移除docker-shim代码。也就是说，如果docker仍然不支持CRI，则kubernetes将会放弃对docker的支持。而在2021年8月，kubernetes正式发布了1.22版本。
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

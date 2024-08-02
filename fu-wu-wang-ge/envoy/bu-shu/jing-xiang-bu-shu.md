@@ -614,7 +614,7 @@ e611b40b2d59   goharbor/redis-photon:v2.10.0         "redis-server /etc/r…"   
 
 **3.2.3.6 访问harbor UI界面**
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png>)![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png>)![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png>)
 
 </details>
 

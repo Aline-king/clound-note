@@ -400,12 +400,31 @@
   * [附录五：如何调试 Docker](appendix/debug.md)
   * [附录六：资源链接](appendix/resources.md)
 
+## 可观测
+
+* [介绍](ke-guan-ce/jie-shao/README.md)
+  * [日志](ke-guan-ce/jie-shao/ri-zhi.md)
+  * [指标](ke-guan-ce/jie-shao/zhi-biao.md)
+    * [skywalking](zhi-biao/skywalking/README.md)
+      * [简介](zhi-biao/skywalking/jian-jie.md)
+      * [特点](zhi-biao/skywalking/te-dian.md)
+      * [部署](zhi-biao/skywalking/bu-shu.md)
+  * [跟踪](ke-guan-ce/jie-shao/gen-zong/README.md)
+    * [分布式跟踪](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/README.md)
+      * [分布式系统中请求跟踪的必要性](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-xi-tong-zhong-qing-qiu-gen-zong-de-bi-yao-xing.md)
+      * [分布式系统介绍](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-xi-tong-jie-shao.md)
+      * [分布式跟踪系统实现方式](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-gen-zong-xi-tong-shi-xian-fang-shi.md)
+* [APM](ke-guan-ce/apm.md)
+
 ## 📞 服务网格
 
 * [预前知识](fu-wu-wang-ge/yu-qian-zhi-shi/README.md)
   * [service mesh](fu-wu-wang-ge/yu-qian-zhi-shi/service-mesh.md)
   * [服务治理](fu-wu-wang-ge/yu-qian-zhi-shi/fu-wu-zhi-li.md)
   * [边车模式](fu-wu-wang-ge/yu-qian-zhi-shi/bian-che-mo-shi.md)
+  * [流量治理](fu-wu-wang-ge/yu-qian-zhi-shi/liu-liang-zhi-li.md)
+  * [混沌工程](fu-wu-wang-ge/yu-qian-zhi-shi/hun-dun-gong-cheng/README.md)
+    * [故障注入](fu-wu-wang-ge/yu-qian-zhi-shi/hun-dun-gong-cheng/gu-zhang-zhu-ru.md)
 * [Istio](fu-wu-wang-ge/istio.md)
 * [Envoy](fu-wu-wang-ge/envoy.md)
   * [简介](fu-wu-wang-ge/envoy/jian-jie/README.md)
@@ -467,7 +486,13 @@
       * [Envoy HTTP路由（Route）](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/envoy-http-lu-you-route.md)
       * [HTTP连接管理器（HTTP Connection Manager）](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/http-lian-jie-guan-li-qi-http-connection-manager.md)
       * [Envoy HTTP高级路由](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/envoy-http-gao-ji-lu-you.md)
-    * [进阶](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie.md)
+      * [路由域名映射过程](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/lu-you-yu-ming-ying-she-guo-cheng.md)
+    * [进阶](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/README.md)
+      * [Envoy HTTP流量迁移与分割过程](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-liu-liang-qian-yi-yu-fen-ge-guo-cheng.md)
+      * [Envoy HTTP路由流量治理策略](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-lu-you-liu-liang-zhi-li-ce-le.md)
+      * [Envoy HTTP路由流量迁移](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-lu-you-liu-liang-qian-yi.md)
+      * [Envoy HTTP路由流量镜像](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-lu-you-liu-liang-jing-xiang.md)
+      * [Envoy HTTP路由局部故障处理机制](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-lu-you-ju-bu-gu-zhang-chu-li-ji-zhi.md)
   * [线程模型](fu-wu-wang-ge/envoy/xian-cheng-mo-xing.md)
 
 ## 操作系统
@@ -522,21 +547,6 @@
 ## 🩻 gitbook文档
 
 * [组合的妙用](gitbook-wen-dang/zu-he-de-miao-yong.md)
-
-## 可观测
-
-* [介绍](ke-guan-ce/jie-shao/README.md)
-  * [日志](ke-guan-ce/jie-shao/ri-zhi.md)
-  * [指标](ke-guan-ce/jie-shao/zhi-biao.md)
-    * [skywalking](zhi-biao/skywalking/README.md)
-      * [简介](zhi-biao/skywalking/jian-jie.md)
-      * [特点](zhi-biao/skywalking/te-dian.md)
-      * [部署](zhi-biao/skywalking/bu-shu.md)
-  * [跟踪](ke-guan-ce/jie-shao/gen-zong/README.md)
-    * [分布式跟踪](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/README.md)
-      * [分布式系统中请求跟踪的必要性](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-xi-tong-zhong-qing-qiu-gen-zong-de-bi-yao-xing.md)
-      * [介绍](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/jie-shao.md)
-* [APM](ke-guan-ce/apm.md)
 
 ## 包管理解决方案及应用商店
 
