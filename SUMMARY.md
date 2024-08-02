@@ -421,7 +421,11 @@
       * [集群管理器 cluster manager](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/ji-qun-guan-li-qi-cluster-manager.md)
       * [主动健康状态检测](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/zhu-dong-jian-kang-zhuang-tai-jian-ce.md)
       * [异常检测（被动健康检测）](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/yi-chang-jian-ce-bei-dong-jian-kang-jian-ce.md)
-      * [负载均衡器策略](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/fu-zai-jun-heng-qi-ce-le.md)
+      * [负载均衡器策略](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/fu-zai-jun-heng-qi-ce-le/README.md)
+        * [节点优先级与优先级调度](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/fu-zai-jun-heng-qi-ce-le/jie-dian-you-xian-ji-yu-you-xian-ji-diao-du.md)
+        * [位置加权负载均衡](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/fu-zai-jun-heng-qi-ce-le/wei-zhi-jia-quan-fu-zai-jun-heng.md)
+        * [子集负载均衡器Subset](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/fu-zai-jun-heng-qi-ce-le/zi-ji-fu-zai-jun-heng-qi-subset.md)
+      * [熔断](fu-wu-wang-ge/envoy/ji-ben-gai-nian/ji-qun/rong-duan.md)
     * [管理工具admin](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/README.md)
       * [使用](fu-wu-wang-ge/envoy/ji-ben-gai-nian/guan-li-gong-ju-admin/shi-yong.md)
     * [查看帮助信息](fu-wu-wang-ge/envoy/ji-ben-gai-nian/cha-kan-bang-zhu-xin-xi.md)
@@ -458,6 +462,9 @@
       * [主要作用](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/zhu-yao-zuo-yong.md)
       * [常见stats sink类型](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/chang-jian-stats-sink-lei-xing.md)
       * [stats相关配置](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/stats-xiang-guan-pei-zhi.md)
+  * [http流量治理](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/README.md)
+    * [基础](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu.md)
+    * [进阶](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie.md)
 
 ## 操作系统
 

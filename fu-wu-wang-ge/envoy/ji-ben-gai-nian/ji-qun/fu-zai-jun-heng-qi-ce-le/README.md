@@ -4,45 +4,59 @@
 
 在Envoy中，负载均衡（Load Balancing）策略用于决定如何在多个上游（upstream）服务实例之间分配传入的请求。Envoy支持多种负载均衡策略，每种策略都有其独特的行为和应用场景。以下是Envoy支持的一些主要负载均衡策略：
 
+<details>
 
+<summary>ROUND_ROBIN（轮询）</summary>
 
-{% tabs %}
-{% tab title="ROUND_ROBIN（轮询）" %}
 **Round Robin**策略按顺序循环地将请求分配给每个上游实例。它是一种简单且常见的负载均衡策略，适用于请求量均匀且服务实例性能相似的场景。
 
 ```
 lb_policy: ROUND_ROBIN
 ```
-{% endtab %}
 
-{% tab title="LEAST_REQUEST（最少请求）" %}
+</details>
+
+<details>
+
+<summary>LEAST_REQUEST（最少请求）</summary>
+
 **Least Request**策略将请求分配给当前处理请求数量最少的上游实例。这种策略适用于负载分布不均匀的场景，有助于平衡负载并提高整体性能。
 
 ```
 lb_policy: LEAST_REQUEST
 ```
-{% endtab %}
 
-{% tab title="RANDOM（随机）" %}
+</details>
+
+<details>
+
+<summary>RANDOM（随机）</summary>
+
 **Random**策略随机选择一个上游实例来处理请求。这种策略适用于简单的负载均衡需求，不需要任何复杂计算。
 
 ```
 lb_policy: RANDOM
 ```
-{% endtab %}
 
-{% tab title="RING_HASH（环哈希）" %}
-**Ring Hash**策略使用一致性哈希将请求分配给上游实例，适用于需要会话粘性或状态持久性的场景。该策略常用于缓存服务，以确保相同的请求始终路由到相同的上游实例。
+</details>
+
+<details>
+
+<summary>RING_HASH（环哈希）</summary>
+
+**Ring Hash**策略使用一致性哈希将请求分配给上游实例，适用于需要会话粘性或状态持久性的场景。该策略常用于缓存服务，以确保相同的请求始终路由到相同的上游实例
 
 ```
 lb_policy: RING_HASH
 ```
-{% endtab %}
 
-{% tab title="MAGLEV" %}
+</details>
+
+<details>
+
+<summary><strong>Maglev</strong></summary>
+
 **Maglev**策略也是一种基于哈希的负载均衡算法，设计用于在更改上游集群时提供较低的请求重新分配率。这有助于实现更平滑的负载转移。
-
-
 
 其名称源自Google的Maglev项目，该项目旨在提供高性能、低延迟的负载均衡。Maglev算法通过优化一致性哈希的实现，减少了节点变更时的请求重新分配率，从而提高了负载均衡的稳定性和效率。
 
@@ -102,16 +116,16 @@ Maglev负载均衡策略通过优化一致性哈希算法，提供了高效、�
 ```
 lb_policy: MAGLEV
 ```
-{% endtab %}
-{% endtabs %}
 
-**6. WEIGHTED\_LEAST\_REQUEST（加权最少请求）**
+</details>
+
+<details>
+
+<summary><strong>WEIGHTED_LEAST_REQUEST（加权最少请求）</strong></summary>
 
 **Weighted Least Request**策略是在最少请求策略的基础上增加了权重因素。上游实例可以根据其权重和当前负载来决定请求的分配。适用于实例性能不同的场景，通过权重调整分配比例。
 
-**配置示例**
-
-```yaml
+```
 lb_policy: LEAST_REQUEST
 least_request_lb_config:
   choice_count: 2
@@ -120,29 +134,37 @@ least_request_lb_config:
     runtime_key: "new_active_request_bias"
 ```
 
-**7. ORIGINAL\_DST（原始目标）**
+</details>
+
+<details>
+
+<summary><strong>ORIGINAL_DST（原始目标）</strong></summary>
 
 **Original Destination**策略将请求直接路由到原始目标地址，而不进行任何负载均衡。这种策略适用于需要保留原始目标地址的场景。
 
-**配置示例**
-
-```yaml
+```
 lb_policy: ORIGINAL_DST_LB
 original_dst_lb_config:
   use_http_header: true
 ```
 
-**8. CLUSTER\_PROVIDED（集群提供）**
+</details>
+
+<details>
+
+<summary><strong>CLUSTER_PROVIDED（集群提供）</strong></summary>
 
 **Cluster Provided**策略允许集群自己决定负载均衡策略，通常用于集成自定义负载均衡逻辑的场景。
 
-**配置示例**
-
-```yaml
+```
 lb_policy: CLUSTER_PROVIDED
 ```
 
-**9. LOAD\_BALANCING\_POLICY（动态负载均衡策略）**
+</details>
+
+<details>
+
+<summary><strong>LOAD_BALANCING_POLICY（动态负载均衡策略）</strong></summary>
 
 Envoy还支持通过LoadBalancingPolicy配置动态选择负载均衡策略，允许在运行时调整策略。
 
@@ -185,12 +207,14 @@ static_resources:
 
 Envoy提供了多种负载均衡策略，以满足不同的应用场景和需求。从简单的轮询和随机策略，到复杂的哈希和最少请求策略，每种策略都有其特定的优势和适用场景。通过灵活选择和配置负载均衡策略，Envoy能够优化请求分配，提高服务的可靠性和性能。
 
+</details>
+
 ## 二、 全局负载均衡及分布式负载均衡 <a href="#er-quan-ju-fu-zai-jun-heng-ji-fen-bu-shi-fu-zai-jun-heng-56" id="er-quan-ju-fu-zai-jun-heng-ji-fen-bu-shi-fu-zai-jun-heng-56"></a>
 
 在Envoy中，全局负载均衡和分布式负载均衡是两种不同的负载均衡策略，它们在工作机制和适用场景上有所不同。
 
-### 2.1 全局负载均衡（Global Load Balancing） <a href="#id-21-quan-ju-fu-zai-jun-heng-globalloadbalancing58" id="id-21-quan-ju-fu-zai-jun-heng-globalloadbalancing58"></a>
-
+{% tabs %}
+{% tab title="全局负载均衡（Global Load Balancing）" %}
 全局负载均衡是指在整个服务网格中实现跨多个区域或数据中心的负载均衡。它关注的是如何在多个地理位置上的实例之间分配流量，以实现高可用性和灾备能力。
 
 **特点：**
@@ -198,9 +222,9 @@ Envoy提供了多种负载均衡策略，以满足不同的应用场景和需求
 * **跨区域**：流量可以在不同的区域或数据中心之间分配。
 * **高可用性**：在某个区域或数据中心出现故障时，可以将流量分配到其他区域。
 * **灾备能力**：确保即使在大规模故障发生时，服务仍然可用。
+{% endtab %}
 
-### 2.2 分布式负载均衡（Local Load Balancing） <a href="#id-22-fen-bu-shi-fu-zai-jun-heng-localloadbalancing62" id="id-22-fen-bu-shi-fu-zai-jun-heng-localloadbalancing62"></a>
-
+{% tab title="分布式负载均衡（Local Load Balancing）" %}
 分布式负载均衡是指在本地服务实例之间进行流量分配。它主要关注的是如何在单个区域或数据中心内部的多个实例之间均匀分配流量，以优化资源利用和性能。
 
 **特点：**
@@ -208,29 +232,35 @@ Envoy提供了多种负载均衡策略，以满足不同的应用场景和需求
 * **本地性**：流量在本地实例之间分配。
 * **低延迟**：由于负载均衡发生在同一区域或数据中心，网络延迟较低。
 * **资源优化**：在本地实例之间均匀分配负载，优化资源利用。
+{% endtab %}
+{% endtabs %}
 
 ### 2.3 Envoy的负载均衡策略分类 <a href="#id-23envoy-de-fu-zai-jun-heng-ce-le-fen-lei-66" id="id-23envoy-de-fu-zai-jun-heng-ce-le-fen-lei-66"></a>
 
 Envoy提供的负载均衡策略可以分为全局负载均衡和分布式负载均衡。以下是对上述负载均衡算法的分类：
 
-**全局负载均衡策略**
-
+{% tabs %}
+{% tab title="全局负载均衡策略" %}
 * **RING\_HASH**：环哈希策略，适用于需要会话粘性或跨数据中心的一致性哈希。
 * **MAGLEV**：Maglev负载均衡策略，设计用于低重新分配率的跨区域流量分配。
+{% endtab %}
 
-**分布式负载均衡策略**
-
+{% tab title="分布式负载均衡策略" %}
 * **ROUND\_ROBIN**：轮询策略，适用于简单的本地负载均衡。
 * **LEAST\_REQUEST**：最少请求策略，适用于需要优化本地负载的场景。
 * **RANDOM**：随机策略，适用于简单且均匀分布的本地负载均衡。
 * **WEIGHTED\_LEAST\_REQUEST**：加权最少请求策略，结合权重和最少请求进行本地负载均衡。
 * **ORIGINAL\_DST**：原始目标策略，保持请求的原始目标地址，用于本地的特殊场景。
 * **CLUSTER\_PROVIDED**：集群提供策略，允许集群自行决定本地负载均衡逻辑。
+{% endtab %}
+{% endtabs %}
 
 **具体示例与理解**
 
-**全局负载均衡示例**
 
+
+{% tabs %}
+{% tab title="全局负载均衡示例" %}
 假设有一个服务需要在多个区域进行负载均衡，可以使用RING\_HASH策略：
 
 ```yaml
@@ -256,8 +286,10 @@ static_resources:
                 port_value: 80
 ```
 
-**分布式负载均衡示例**
 
+{% endtab %}
+
+{% tab title="分布式负载均衡示例" %}
 对于在单个数据中心内进行负载均衡，可以使用LEAST\_REQUEST策略：
 
 ```yaml
@@ -277,6 +309,10 @@ static_resources:
                 address: local-service.example.com
                 port_value: 80
 ```
+
+
+{% endtab %}
+{% endtabs %}
 
 * **全局负载均衡**关注跨区域或数据中心的流量分配，常用的策略有RING\_HASH和MAGLEV。
 * **分布式负载均衡**关注本地实例之间的流量分配，常用的策略有ROUND\_ROBIN、LEAST\_REQUEST、RANDOM等。

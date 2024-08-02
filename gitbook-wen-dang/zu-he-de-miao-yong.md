@@ -117,36 +117,22 @@ dwad
 
 </details>
 
-```jsx
-<details>
+<pre class="language-jsx"><code class="lang-jsx"><strong>&#x3C;details>
+</strong>
+&#x3C;summary>Expandable block&#x3C;/summary>
+{% tabs %}
 
-<summary>Expandable block</summary>
-dadad
-<details>
-
-<summary>Expandable block</summary>
-
-
-</details>
-
-</details>
-```
+{% tab title="Windows" %} 1111 {% endtab %}
+{% tab title="Windows" %} 2222 {% endtab %}
+{% endtabs %}
+&#x3C;/details>
+</code></pre>
 
 <details>
 
 <summary>Expandable block</summary>
 
-1111112211
-
-\-2222
-
-</details>
-
-<details>
-
-<summary>Expandable block</summary>
-
-dadad
+11112222
 
 </details>
 

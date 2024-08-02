@@ -4,7 +4,7 @@
 
 {% tabs %}
 {% tab title="介绍" %}
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Envoy中的集群管理器（Cluster Manager）是一个关键组件，用于管理和维护所有上游集群（upstream clusters）。它负责维护集群的健康状态、执行负载均衡策略、路由请求等。
 {% endtab %}
@@ -200,4 +200,4 @@ static_resources:
     http2_protocol_options: {}  # 如果使用HTTP/2，请配置此项
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>

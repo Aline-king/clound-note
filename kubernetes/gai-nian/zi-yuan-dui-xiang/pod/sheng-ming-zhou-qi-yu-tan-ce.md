@@ -38,7 +38,7 @@ StartupProbe：&#x20;
 kubectl explain pod.spec.containers.startupProbe
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 1. init容器 初始化容器，独立于主容器之外，pod可以拥有任意数量的init容器，所有init顺序执行完成后，才启动主容器。它主要是为了为主容器准备应用的功能，比如向主容器的存储卷写入数据，然后将存储卷挂载到主容器上。
 2. 生命周期钩子 启动后钩子 PostStart - 主程序启动后执行的程序 运行中钩子 Liveiness - 判断当前容器是否处于存活状态 Readiness - 判断当前容器是否可以正常的对外提供服务 停止前钩子 PreStop - 主程序关闭前执行的程序。
