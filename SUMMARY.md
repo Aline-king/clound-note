@@ -496,6 +496,7 @@
       * [Envoy HTTP路由流量镜像](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-lu-you-liu-liang-jing-xiang.md)
       * [Envoy HTTP路由局部故障处理机制](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie/envoy-http-lu-you-ju-bu-gu-zhang-chu-li-ji-zhi.md)
   * [线程模型](fu-wu-wang-ge/envoy/xian-cheng-mo-xing.md)
+  * [Envoy 分布式跟踪功能及机制](fu-wu-wang-ge/envoy/envoy-fen-bu-shi-gen-zong-gong-neng-ji-ji-zhi.md)
 
 ## 操作系统
 
