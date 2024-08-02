@@ -463,8 +463,11 @@
       * [常见stats sink类型](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/chang-jian-stats-sink-lei-xing.md)
       * [stats相关配置](fu-wu-wang-ge/envoy/ke-guan-ce/stats-sink/stats-xiang-guan-pei-zhi.md)
   * [http流量治理](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/README.md)
-    * [基础](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu.md)
+    * [基础](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/README.md)
+      * [Envoy HTTP路由（Route）](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/envoy-http-lu-you-route.md)
+      * [Page 3](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/ji-chu/page-3.md)
     * [进阶](fu-wu-wang-ge/envoy/http-liu-liang-zhi-li/jin-jie.md)
+  * [线程模型](fu-wu-wang-ge/envoy/xian-cheng-mo-xing.md)
 
 ## 操作系统
 

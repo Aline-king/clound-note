@@ -79,4 +79,4 @@ API Server 从某种层面上来说，它仅仅是一个数据库的接口，对
    * 如果两个状态不一致，那么就指挥node节点的资源进行修改，保证 两个状态一致&#x20;
    * 状态一致后，通过APIServer同步更新当前资源对象在ETCD上的数据
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
