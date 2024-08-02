@@ -67,7 +67,7 @@ routes:
 
 在Envoy中，路由匹配（match）用于定义如何筛选进入的流量并匹配特定的路由规则。路由匹配可以根据请求路径、请求头、查询参数等进行配置。主要包括基础匹配和高级匹配两类。
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% tabs %}
 {% tab title="匹配" %}

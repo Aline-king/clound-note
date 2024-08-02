@@ -13,6 +13,8 @@
 
 **端到端的具体含义**
 
+
+
 * **全面覆盖**：端到端跟踪的目的是全面覆盖一个请求在系统中的所有活动和步骤，包括所有的服务调用、数据库操作、缓存访问、外部API调用等。
 * **完整视图**：通过端到端跟踪，可以获得请求在系统中的完整视图，了解每个步骤的详细信息，比如每个服务的处理时间、请求路径、任何发生的错误等。
 * **性能监控**：能够详细监控每个环节的性能，识别系统瓶颈和延迟。
@@ -102,7 +104,7 @@
 
 ### 工作逻辑 <a href="#id-331-gong-zuo-luo-ji-46" id="id-331-gong-zuo-luo-ji-46"></a>
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>展示了一个请求在分布式系统中的完整流动路径（端到端追踪），以及每个节点处理请求所花的时间。</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>展示了一个请求在分布式系统中的完整流动路径（端到端追踪），以及每个节点处理请求所花的时间。</p></figcaption></figure>
 
 以下是各部分的详细解释：
 
@@ -142,4 +144,4 @@
 
 #### 工作流程
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>

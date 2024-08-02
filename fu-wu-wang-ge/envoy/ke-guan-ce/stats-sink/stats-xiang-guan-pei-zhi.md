@@ -19,5 +19,5 @@ Envoy 的 stats 配置参数位于 Bootstrap 配置文件的顶级配置段。
 
 **stats\_sinks 配置示例**
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 

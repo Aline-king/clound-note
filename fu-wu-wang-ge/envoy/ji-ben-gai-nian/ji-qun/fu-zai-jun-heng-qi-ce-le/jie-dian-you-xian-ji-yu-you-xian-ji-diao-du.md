@@ -199,4 +199,4 @@ Panic阈值是一个关键点，当健康的服务器比例低于这个阈值时
 
 
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>

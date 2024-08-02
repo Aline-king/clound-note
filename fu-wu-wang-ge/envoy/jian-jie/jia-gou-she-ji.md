@@ -10,7 +10,7 @@ Envoy 采⽤单进程多线程架构。
 
 Envoy 整体架构如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这幅图展示了Envoy Proxy的架构和工作原理。Envoy Proxy是一个开源的边缘服务代理，用于在微服务体系结构中提供网络流量控制。
 

@@ -414,6 +414,8 @@
       * [分布式系统中请求跟踪的必要性](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-xi-tong-zhong-qing-qiu-gen-zong-de-bi-yao-xing.md)
       * [分布式系统介绍](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-xi-tong-jie-shao.md)
       * [分布式跟踪系统实现方式](ke-guan-ce/jie-shao/gen-zong/fen-bu-shi-gen-zong/fen-bu-shi-gen-zong-xi-tong-shi-xian-fang-shi.md)
+    * [Google Dapper](ke-guan-ce/jie-shao/gen-zong/google-dapper.md)
+    * [跟踪框架](ke-guan-ce/jie-shao/gen-zong/gen-zong-kuang-jia.md)
 * [APM](ke-guan-ce/apm.md)
 
 ## 📞 服务网格
