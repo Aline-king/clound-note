@@ -8,7 +8,7 @@
 
 在Envoy中，HTTP路由是通过路由配置来实现的，这是Envoy的核心功能之一。Envoy作为一个边缘和服务代理，提供了丰富的路由功能，能够管理微服务架构中的流量。下面是Envoy中HTTP路由及配置框架的一些关键组件和概念：
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <table data-header-hidden><thead><tr><th width="164"></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td><strong>路由配置 (Route Configuration)</strong></td><td>Envoy的路由配置通常在其配置文件中定义，主要包括虚拟主机（virtual hosts）、路由条目（route entries）和路由表（route tables）。这些配置可以静态定义，也可以通过xDS API动态获取。</td><td></td></tr><tr><td><strong>虚拟主机 (Virtual Hosts)</strong></td><td>虚拟主机是一组路由规则的集合，它们基于请求的域名（例如 <code>Host</code>头部）来进行匹配。每个虚拟主机包含一个或多个路由规则，用于根据路径、请求头等信息将流量路由到不同的后端服务。</td><td></td></tr><tr><td><strong>路由条目 (Route Entries)</strong></td><td>每个路由条目定义了单个路由规则。它包含匹配条件和路由行为，如重定向、直接响应或将请求转发到指定的集群。路由条目可以根据请求路径、请求头、HTTP方法等条件进行匹配。</td><td></td></tr><tr><td><strong>集群 (Clusters)</strong></td><td><p></p><p>集群是Envoy用来管理后端服务的节点。每个集群包含一个或多个服务实例，Envoy将根据路由配置将流量分发到这些实例。集群支持多种发现和健康检查机制。</p></td><td></td></tr></tbody></table>
 

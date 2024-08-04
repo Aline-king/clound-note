@@ -28,9 +28,13 @@ Ceph的发展对于Centos系列和Redhat系列不友好，新版本不支持旧�
 
 ## 介绍
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+
+Ceph 是一个开源的分布式存储系统，同时支持对象存储、块设备、文件系统.
+
+对象数据的底层存储服务是由多个主机（host）组成的存储集群，该集群也被称之为 **RADOS**（Reliable Automatic Distributed Object Store）存储集群，即可靠、自动化、 分布式对象存储系统 librados是RADOS存储集群的API，它支持C、C++、Java、Python、Ruby和PHP等编程语言。
 
 ### 为什么很多人用ceph？&#x20;
 
@@ -40,21 +44,19 @@ Ceph的发展对于Centos系列和Redhat系列不友好，新版本不支持旧�
 
 #### _基本结构_
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ceph是一个多版本存储系统，它把每一个待管理的数据流（例如一个文件） 切分为一到多个固定大小的对象数据，并以其为原子单元完成数据存取。&#x20;
-
-对象数据的底层存储服务是由多个主机（host）组成的存储集群，该集群也被称之为 RADOS（Reliable Automatic Distributed Object Store）存储集群，即可靠、自动化、 分布式对象存储系统 librados是RADOS存储集群的API，它支持C、C++、Java、Python、Ruby和PHP等编程语言。
 
 _**应用场景**_
 
 Ceph uniquely(独特的) delivers object, block, and file storage in one unified(统一) system. 注意：这个介绍在官网这几年基本没有变化
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 RadosGW、RBD和CephFS都是RADOS存储服务的客户端，它们把RADOS的存储服务接口(librados)分别从不同的角度做了进一步抽象，因而各自适用于不同的应用场景。 也就是说，ceph将三种存储类型统一在一个平台中，从而实现了更强大的适用性。
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 LIBRADOS：通过自编程方式实现数据的存储能力&#x20;
 
@@ -64,4 +66,4 @@ RBD：将ceph提供的空间，模拟出来一个一个的独立块设备使用�
 
 CFS：通过一个标准的文件系统接口来进行数据的存储
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>

@@ -53,7 +53,7 @@ OpenTelemetry是由OC和OT合并生成一个新项目
 
 
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>这张图片展示了OpenTelemetry的架构，包括API、SDK和Collector的工作流程。以下是对图片内容的详细介绍，帮助你更好地理解OpenTelemetry的工作原理。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>这张图片展示了OpenTelemetry的架构，包括API、SDK和Collector的工作流程。以下是对图片内容的详细介绍，帮助你更好地理解OpenTelemetry的工作原理。</p></figcaption></figure>
 
 <details>
 
@@ -166,7 +166,7 @@ Zipkin 是一个开源的分布式追踪系统，用于收集和分析跨多个�
 
 Zipkin通过分布式追踪帮助开发者了解和优化微服务架构中的请求流动情况，识别和解决性能瓶颈和错误，提供了强大的可视化和分析工具。通过简单的架构和多语言支持，Zipkin在分布式系统监控和诊断方面提供了极大的便利。
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p>这张图片展示了Zipkin的工作流程和架构，通过追踪和记录请求在分布式系统中的流动情况来帮助开发者监控和诊断系统性能问题。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>这张图片展示了Zipkin的工作流程和架构，通过追踪和记录请求在分布式系统中的流动情况来帮助开发者监控和诊断系统性能问题。</p></figcaption></figure>
 
 
 

@@ -7,7 +7,7 @@ k8s应用访问流程有两种
 2. 需要认证
    * 管理k8s平台上各种应用对象
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

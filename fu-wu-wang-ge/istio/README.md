@@ -1,4 +1,26 @@
+---
+cover: >-
+  https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/preview/WAAYbEntkoVjM6xm5MOcpw5hnph/?preview_type=16
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Istio
+
+
 
 ## 解释
 
@@ -12,7 +34,7 @@ Istio是Google主导的第二代Service Mesh产品，是Google继Kubernetes之�
 
 Istio能够有效减少部署的复杂性，可以方便的将Istio应用到已有的分布式应用系统架构环境中，Istio包含的API可以方便地集成任何功能平台和访问策略系统。
 
-Istio有丰富的功能，可以帮助开发者更加高效地运行一个分布式微服务架构，并提供一个统一的方式来保护、连接、监控微服务。
+Istio有丰富的功能，可以帮助开发者更![](<../../.gitbook/assets/image (1).png>)加高效地运行一个分布式微服务架构，并提供一个统一的方式来保护、连接、监控微服务。
 
 Istio提供了一个完整的解决方案，可以满足多样化的分布式微服务的需求。
 

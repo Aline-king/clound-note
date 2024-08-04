@@ -17,7 +17,7 @@
 
 kubeDNS自从k8s诞生以来，其方案的具体实现样式前后经历了三代，[coreDNS](../gai-shu/k8s-zu-jian/core-dns/)(现在默认）
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 域名解析记录
 

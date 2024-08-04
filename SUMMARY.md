@@ -272,6 +272,7 @@
       * [钩子实践](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/gou-zi-shi-jian.md)
       * [资源限制](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/zi-yuan-xian-zhi.md)
       * [服务质量- Qos](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/fu-wu-zhi-liang-qos.md)
+    * [CRD（自定义资源对象）](kubernetes/gai-nian/zi-yuan-dui-xiang/crd-zi-ding-yi-zi-yuan-dui-xiang.md)
   * [网络](kubernetes/gai-nian/wang-luo/README.md)
     * [网络策略](kubernetes/gai-nian/wang-luo/wang-luo-ce-lve.md)
     * [service](kubernetes/gai-nian/wang-luo/service/README.md)
@@ -347,6 +348,9 @@
     * [容器服务ACK](kubernetes/gong-you-yun/a-li-yun/rong-qi-fu-wu-ack.md)
 * [双栈IPv4/IPv6](kubernetes/shuang-zhan-ipv4ipv6/README.md)
   * [部署](kubernetes/shuang-zhan-ipv4ipv6/bu-shu.md)
+* [源码与编程](kubernetes/yuan-ma-yu-bian-cheng/README.md)
+  * [预前知识](kubernetes/yuan-ma-yu-bian-cheng/yu-qian-zhi-shi/README.md)
+    * [声明式API](kubernetes/yuan-ma-yu-bian-cheng/yu-qian-zhi-shi/sheng-ming-shi-api.md)
 
 ## 🖥️ 监控
 
@@ -446,6 +450,7 @@
   * [技术演变](fu-wu-wang-ge/istio/ji-shu-yan-bian.md)
   * [流量管理](fu-wu-wang-ge/istio/liu-liang-guan-li.md)
   * [功能和对象](fu-wu-wang-ge/istio/gong-neng-he-dui-xiang.md)
+  * [组件与架构解读](fu-wu-wang-ge/istio/zu-jian-yu-jia-gou-jie-du.md)
 * [Envoy](fu-wu-wang-ge/envoy.md)
   * [简介](fu-wu-wang-ge/envoy/jian-jie/README.md)
     * [功能](fu-wu-wang-ge/envoy/jian-jie/gong-neng.md)
@@ -563,7 +568,11 @@
 
 ## 😄 存储
 
-* [ceph](cun-chu/ceph.md)
+* [ceph](cun-chu/ceph/README.md)
+  * [组件介绍](cun-chu/ceph/zu-jian-jie-shao.md)
+  * [存储原理](cun-chu/ceph/cun-chu-yuan-li.md)
+  * [集群部署](cun-chu/ceph/ji-qun-bu-shu/README.md)
+    * [Page 1](cun-chu/ceph/ji-qun-bu-shu/page-1.md)
 * [预前知识](cun-chu/yu-qian-zhi-shi/README.md)
   * [DFS（分布式存储）](cun-chu/yu-qian-zhi-shi/dfs-fen-bu-shi-cun-chu.md)
   * [存储类型](cun-chu/yu-qian-zhi-shi/cun-chu-lei-xing.md)
