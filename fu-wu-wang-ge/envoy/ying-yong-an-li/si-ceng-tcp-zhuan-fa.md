@@ -5,7 +5,7 @@
 [root@dockerhost-envoy ~]# cd envoy_tcp/
 ```
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>四层tcp转发流程图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption><p>四层tcp转发流程图</p></figcaption></figure>
 
 {% hint style="info" %}
 ## 准备工作

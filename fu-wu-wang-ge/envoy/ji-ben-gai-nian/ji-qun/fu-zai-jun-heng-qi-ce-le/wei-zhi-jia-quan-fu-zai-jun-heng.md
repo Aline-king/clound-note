@@ -134,4 +134,4 @@ endpoints:
 
 这使得Envoy能够根据地理位置或数据中心的不同权重和优先级来分配流量，从而优化响应时间和资源利用率。 在提供的配置中，两个地理位置被配置为具有不同的权重，这些设置直接影响到负载均衡的决策：
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

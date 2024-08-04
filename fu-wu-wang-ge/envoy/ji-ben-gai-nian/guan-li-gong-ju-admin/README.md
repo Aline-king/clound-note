@@ -10,4 +10,4 @@ Envoy代理的admin接口是一个非常有用的工具，它允许你管理和�
 
 Envoy的admin接口是一个功能强大的工具，提供了对Envoy实例广泛的监控和管理能力，是日常运维和故障排查的重要助手。
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

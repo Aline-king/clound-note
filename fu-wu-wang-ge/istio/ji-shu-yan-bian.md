@@ -4,13 +4,13 @@
 
 {% tabs %}
 {% tab title="变革趋势" %}
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>来源于 redhat在2015年的openshift的容器大会上的一张PPT，这张图在当时给出了几个技术领域的发展趋势，目前来看，基本上都实现了。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>来源于 redhat在2015年的openshift的容器大会上的一张PPT，这张图在当时给出了几个技术领域的发展趋势，目前来看，基本上都实现了。</p></figcaption></figure>
 
 
 {% endtab %}
 
 {% tab title="2. 研发框架" %}
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>经过一代代的研发模式的演进，目前微服务架构(Microservice Architecture)作为一种更为灵活的架构思想，在业界逐渐流行起来，这种架构相较于其他几种架构来说，更加需要从整体上对软件系统进行通盘的考虑。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>经过一代代的研发模式的演进，目前微服务架构(Microservice Architecture)作为一种更为灵活的架构思想，在业界逐渐流行起来，这种架构相较于其他几种架构来说，更加需要从整体上对软件系统进行通盘的考虑。</p></figcaption></figure>
 
 {% hint style="info" %}
 微服务架构旨在通过将功能分解到各个离散的服务中，在架构系统层次以实现对解决方案的解耦，并提供更加灵活的服务支持。它围绕业务领域，将一个大型的单个应用程序和服务拆分为数个甚至数十个的小规模应用服务，通过扩展单个组件数量，加强小组件应用之间的协调，用一些功能比较明确、业务比较精练的服务去解决更大、更实际的问题，同时满足服务等级要求。
@@ -80,7 +80,7 @@
 
 **服务实现**: 在微服务架构中，每个服务都可能有多个随时变动的副本实例以负载均衡的方式提供服务，对于这种场景，他们一般以服务发现的机制来对服务进行统一管理，子应用服务上线时，服务提供者将自己的服务信息注册到registry，并通过心跳维持长链接，实时更新链接信息(包括服务下线)
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### 设计模式
 
@@ -88,7 +88,7 @@
 
 {% tabs %}
 {% tab title="聚合模式" %}
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 这是最简单的一种微服务设计模式，聚合器调用多个服务实现应用程序所需的功能。它可以是一个简单的Web页面，将检索到的数据进行处理展示。
 
@@ -96,7 +96,7 @@
 {% endtab %}
 
 {% tab title="链式模式" %}
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 是在服务调用场景下存在的一种模式，服务A接收到请求后会与服务B进行通信，类似地，服务B会同服务C进行通信。所有服务都使用同步消息传递。在整个链式调用完成之前，客户端会一直阻塞。因此，服务调用链不宜过长，以免客户端长时间等待。 分支模式是聚合器模式的扩展，允许同时调用两个微服务链，
 {% endtab %}
@@ -106,11 +106,11 @@
 
 {% tabs %}
 {% tab title="1. 单体式服务间通信" %}
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p><strong>集中式代理服务模式:</strong> 以nginx或者LVS为例，我们在nginx中定制两个后端服务，然后通过upstream实现负载均衡。存在单点问题的。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p><strong>集中式代理服务模式:</strong> 以nginx或者LVS为例，我们在nginx中定制两个后端服务，然后通过upstream实现负载均衡。存在单点问题的。</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="2. 分层式服务阶段" %}
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 **左图**：在复杂的服务通信过程中，涉及到了业务逻辑和服务网络控制相关的内容，所以直接在代码中，通过繁杂的代码功能实现各自的功能。&#x20;
 

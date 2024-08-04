@@ -564,6 +564,9 @@
 ## 😄 存储
 
 * [ceph](cun-chu/ceph.md)
+* [预前知识](cun-chu/yu-qian-zhi-shi/README.md)
+  * [DFS（分布式存储）](cun-chu/yu-qian-zhi-shi/dfs-fen-bu-shi-cun-chu.md)
+  * [存储类型](cun-chu/yu-qian-zhi-shi/cun-chu-lei-xing.md)
 
 ## 🩻 gitbook文档
 
