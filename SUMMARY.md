@@ -257,7 +257,8 @@
       * [安装并使用](kubernetes/gai-nian/cun-chu/nfs/an-zhuang-bing-shi-yong.md)
     * [Pv与Pvc](kubernetes/gai-nian/cun-chu/pv-yu-pvc/README.md)
       * [简介](kubernetes/gai-nian/cun-chu/pv-yu-pvc/jian-jie.md)
-    * [Page 1](kubernetes/gai-nian/cun-chu/page-1.md)
+    * [Untitled](kubernetes/gai-nian/cun-chu/page-1/README.md)
+      * [存储](https://app.gitbook.com/o/yrIaYU7odlzYhLkHdGCW/s/CciQTOc6CLGkCYciwhF1/\~/changes/71/cun-chu)
   * [资源对象](kubernetes/gai-nian/zi-yuan-dui-xiang/README.md)
     * [pod](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/README.md)
       * [创建流程和生命周期](kubernetes/gai-nian/zi-yuan-dui-xiang/pod/chuang-jian-liu-cheng-he-sheng-ming-zhou-qi.md)
@@ -347,6 +348,19 @@
 * [双栈IPv4/IPv6](kubernetes/shuang-zhan-ipv4ipv6/README.md)
   * [部署](kubernetes/shuang-zhan-ipv4ipv6/bu-shu.md)
 
+## 🖥️ 监控
+
+* [prometheus](jian-kong/prometheus/README.md)
+  * [基础概念](jian-kong/prometheus/ji-chu-gai-nian/README.md)
+    * [分位值（histogram与summary）](jian-kong/prometheus/ji-chu-gai-nian/fen-wei-zhi-histogram-yu-summary.md)
+    * [Metries 指标](jian-kong/prometheus/ji-chu-gai-nian/metries-zhi-biao.md)
+  * [存储](jian-kong/prometheus/cun-chu/README.md)
+    * [m3db](jian-kong/prometheus/cun-chu/m3db.md)
+    * [TSDB](jian-kong/prometheus/cun-chu/tsdb.md)
+* [预前知识](jian-kong/yu-qian-zhi-shi/README.md)
+  * [pull系统和push系统](jian-kong/yu-qian-zhi-shi/pull-xi-tong-he-push-xi-tong.md)
+  * [分位值](jian-kong/yu-qian-zhi-shi/fen-wei-zhi.md)
+
 ## ♾️ Dev ops
 
 * [Dev ops](dev-ops/ci/README.md)
@@ -427,7 +441,11 @@
   * [流量治理](fu-wu-wang-ge/yu-qian-zhi-shi/liu-liang-zhi-li.md)
   * [混沌工程](fu-wu-wang-ge/yu-qian-zhi-shi/hun-dun-gong-cheng/README.md)
     * [故障注入](fu-wu-wang-ge/yu-qian-zhi-shi/hun-dun-gong-cheng/gu-zhang-zhu-ru.md)
-* [Istio](fu-wu-wang-ge/istio.md)
+  * [Page 3](fu-wu-wang-ge/yu-qian-zhi-shi/page-3.md)
+* [Istio](fu-wu-wang-ge/istio/README.md)
+  * [技术演变](fu-wu-wang-ge/istio/ji-shu-yan-bian.md)
+  * [流量管理](fu-wu-wang-ge/istio/liu-liang-guan-li.md)
+  * [功能和对象](fu-wu-wang-ge/istio/gong-neng-he-dui-xiang.md)
 * [Envoy](fu-wu-wang-ge/envoy.md)
   * [简介](fu-wu-wang-ge/envoy/jian-jie/README.md)
     * [功能](fu-wu-wang-ge/envoy/jian-jie/gong-neng.md)

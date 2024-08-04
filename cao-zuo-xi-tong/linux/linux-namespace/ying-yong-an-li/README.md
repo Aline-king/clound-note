@@ -6,4 +6,4 @@
 * 从系统的角度来看，当通过clone()系统调用创建新进程时，传递标志CLONE\_NEWNET将在新进程中创建一个全新的网络命名空间。
 * 从用户的角度来看，我们只需使用工具ip（package is iproute2）来创建一个新的持久网络命名空间。
 
-<figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>

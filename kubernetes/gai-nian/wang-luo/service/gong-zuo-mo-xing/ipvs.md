@@ -1,6 +1,6 @@
 # IPVS
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 关键点： ipvs会在每个节点上创建一个名为kube-ipvs0的虚拟接口，并将集群所有Service对象的ClusterIP和ExternalIP都配置在该接口； - 所以每增加一个ClusterIP 或者 EternalIP，就相当于为 kube-ipvs0 关联了一个地址罢了。 kube-proxy为每个service生成一个虚拟服务器( IPVS Virtual Server)的定义。'
 

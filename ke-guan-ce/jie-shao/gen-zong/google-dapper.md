@@ -15,7 +15,7 @@
 
 如图所示，一次请求需要经过多个系统处理才能完成，整个过程形成了一个树形结构的调用链。
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 **这张图片展示了一个用户请求在分布式系统中的完整调用路径，具体过程如下：**
 
@@ -70,7 +70,7 @@ Dapper是Google开发的一个内部工具，用来解决这个问题。它可�
 
 Dapper使用树形结构和Span来详细记录请求在系统中的每一步。通过记录每个Span的名称、ID和父ID，以及所有Span共享的跟踪ID，Dapper可以重建请求的完整路径，帮助我们理解和分析系统中的每个操作。这种方式让我们能够清楚地看到请求从开始到结束的每一步，找到并解决可能出现的问题。
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这张图片展示了一个分布式系统中请求的调用链，以树形结构表示。图片中，每个矩形框代表一个Span，显示了请求在不同服务之间的调用关系。具体内容如下：
 
@@ -128,7 +128,7 @@ Dapper使用树形结构和Span来详细记录请求在系统中的每一步。�
 
 通过 Trace、Span 和 Annotation，我们可以详细地记录和分析一个请求在系统中的每一步操作。这有助于我们了解系统的性能，快速定位并解决问题，确保请求能够顺利完成。
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -180,7 +180,7 @@ Dapper使用树形结构和Span来详细记录请求在系统中的每一步。�
 
 ### 分布式追踪系统中 Span Context（Span 上下文信息）的传递过程 <a href="#id-44-fen-bu-shi-zhui-zong-xi-tong-zhong-spancontextspan-shang-xia-wen-xin-xi-de-chuan-di-guo-cheng-148" id="id-44-fen-bu-shi-zhui-zong-xi-tong-zhong-spancontextspan-shang-xia-wen-xin-xi-de-chuan-di-guo-cheng-148"></a>
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 这张图片展示了分布式追踪系统中 Span Context（Span 上下文信息）的传递过程。
 

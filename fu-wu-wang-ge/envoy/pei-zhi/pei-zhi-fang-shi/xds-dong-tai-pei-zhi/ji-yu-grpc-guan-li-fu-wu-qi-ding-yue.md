@@ -6,7 +6,7 @@
 
 这种方法使得Envoy能够在不重启的情况下，动态地接收和应用配置变更。
 
-<figure><img src="../../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **使用优势**
 
@@ -212,7 +212,7 @@ static_resources:
         max_retries: 3
 ```
 
-![](<../../../../../.gitbook/assets/image (8).png>)
+![](<../../../../../.gitbook/assets/image (8) (1).png>)
 
 </details>
 
@@ -268,7 +268,7 @@ static_resources:
                socket_address: { address: 127.0.0.1, port_value: 8080 }
 ```
 
-![](<../../../../../.gitbook/assets/image (11).png>)
+![](<../../../../../.gitbook/assets/image (11) (1).png>)
 
 </details>
 {% endtab %}
