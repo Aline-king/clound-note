@@ -4,7 +4,7 @@
 
 {% tabs %}
 {% tab title="变革趋势" %}
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>来源于 redhat在2015年的openshift的容器大会上的一张PPT，这张图在当时给出了几个技术领域的发展趋势，目前来看，基本上都实现了。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>来源于 redhat在2015年的openshift的容器大会上的一张PPT，这张图在当时给出了几个技术领域的发展趋势，目前来看，基本上都实现了。</p></figcaption></figure>
 
 
 {% endtab %}
@@ -110,7 +110,7 @@
 {% endtab %}
 
 {% tab title="2. 分层式服务阶段" %}
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **左图**：在复杂的服务通信过程中，涉及到了业务逻辑和服务网络控制相关的内容，所以直接在代码中，通过繁杂的代码功能实现各自的功能。&#x20;
 
@@ -122,7 +122,7 @@
 {% endtab %}
 
 {% tab title="3. 分布式服务阶段" %}
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 **左图**：随着可靠性服务的规模越来越大，服务节点越来越多，当我们的架构发展已经超越了基础网络的发展，服务通信部分的功能，只能由程序员通过代码的方式在内部来实现。&#x20;
 
@@ -142,10 +142,10 @@
 
 其实服务网格并没有什么新的概念和功能，它只是把原来服务框架所做的功能完全独立出来，整合了一个服务网格的基础设施层，实现了服务和服务治理功能完全解耦，所以服务网格的概念已经提出，便得到了很多人的支持，希望能够解决当前微服务所遇到的问题。
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 初级阶段的网格
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 直接在sidecar内部通过手工或者模板的方式定制大量流量相关的策略配置，但是这种方式虽然能够实现一定意义层面的服务治理作用，但是在大规模场景中，这些繁琐的配置文件定制是一个非常困难的点。 所以在服务网格的初级阶段的后期，我们最期望的是有一个控制服务，专门用于定制各种流量策略相关的配置信息。

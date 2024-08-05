@@ -212,7 +212,7 @@ static_resources:
         max_retries: 3
 ```
 
-![](<../../../../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 </details>
 
@@ -268,7 +268,7 @@ static_resources:
                socket_address: { address: 127.0.0.1, port_value: 8080 }
 ```
 
-![](<../../../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1).png>)
 
 </details>
 {% endtab %}

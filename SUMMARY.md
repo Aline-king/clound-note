@@ -573,6 +573,7 @@
   * [存储原理](cun-chu/ceph/cun-chu-yuan-li.md)
   * [集群部署](cun-chu/ceph/ji-qun-bu-shu/README.md)
     * [Page 1](cun-chu/ceph/ji-qun-bu-shu/page-1.md)
+    * [性能调优与测试](cun-chu/ceph/ji-qun-bu-shu/xing-neng-tiao-you-yu-ce-shi.md)
   * [存储实践](cun-chu/ceph/cun-chu-shi-jian.md)
   * [核心](cun-chu/ceph/he-xin/README.md)
     * [认证管理 Cephx](cun-chu/ceph/he-xin/ren-zheng-guan-li-cephx/README.md)
@@ -582,9 +583,20 @@
     * [RBD](cun-chu/ceph/he-xin/rbd/README.md)
       * [实践](cun-chu/ceph/he-xin/rbd/shi-jian.md)
       * [快照管理](cun-chu/ceph/he-xin/rbd/kuai-zhao-guan-li.md)
+    * [CephFS接口](cun-chu/ceph/he-xin/cephfs-jie-kou/README.md)
+      * [实践](cun-chu/ceph/he-xin/cephfs-jie-kou/shi-jian.md)
+      * [使用方法](cun-chu/ceph/he-xin/cephfs-jie-kou/shi-yong-fang-fa/README.md)
+        * [FUSE实践](cun-chu/ceph/he-xin/cephfs-jie-kou/shi-yong-fang-fa/fuse-shi-jian.md)
+    * [RGW接口](cun-chu/ceph/he-xin/rgw-jie-kou/README.md)
+      * [基础操作](cun-chu/ceph/he-xin/rgw-jie-kou/ji-chu-cao-zuo.md)
+      * [泛域名实践](cun-chu/ceph/he-xin/rgw-jie-kou/fan-yu-ming-shi-jian.md)
+      * [s3测试](cun-chu/ceph/he-xin/rgw-jie-kou/s3-ce-shi.md)
+      * [Swift测试](cun-chu/ceph/he-xin/rgw-jie-kou/swift-ce-shi.md)
+      * [对象访问](cun-chu/ceph/he-xin/rgw-jie-kou/dui-xiang-fang-wen.md)
 * [预前知识](cun-chu/yu-qian-zhi-shi/README.md)
   * [DFS（分布式存储）](cun-chu/yu-qian-zhi-shi/dfs-fen-bu-shi-cun-chu.md)
   * [存储类型](cun-chu/yu-qian-zhi-shi/cun-chu-lei-xing.md)
+  * [OSS（对象存储）](cun-chu/yu-qian-zhi-shi/oss-dui-xiang-cun-chu.md)
 
 ## 🩻 gitbook文档
 

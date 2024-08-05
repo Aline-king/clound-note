@@ -14,7 +14,7 @@ A Service Mesh is a dedicated infrastructure layer for handling service-to-servi
 
 ### **网格解读**
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 服务网格主要专注于处理服务间通信的稳定性，在云原生应用场景中负责非常重要的数据通信基础设施。它的实现方式是经过多代演练后逐渐成熟起来的。
 
@@ -32,7 +32,7 @@ A Service Mesh is a dedicated infrastructure layer for handling service-to-servi
 
 #### 服务网格的作用
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 当我们在K8s集群中创建出来的应用，那么这些应用所面对的流量主要有两类：
 

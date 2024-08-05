@@ -4,7 +4,7 @@
 
 StorageClass根据自由申请后端存储的类型，有很多不同的实现方式，在我们的试验环境中，我们这里用nfs-client-provisioner的方式来演示StorageClass
 
-<figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 自从kubernetes 1.20版本禁用了 selfLink，所以默认情况下，我们在创建SC提供者环境的时候，会发生报错，只能首先修改kubernetes的启动属性。

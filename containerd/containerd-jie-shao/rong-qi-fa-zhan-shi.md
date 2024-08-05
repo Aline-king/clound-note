@@ -46,7 +46,7 @@ Kubelet 通过 gRPC 框架与容器运行时或 shim 进行通信，其中 kubel
 
 再往后，在Containerd 1.1时，将cri-containerd改成了Containerd的CRI插件，CRI插件位于containerd内部，这让k8s启动Pod时的通信更加高效：
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 与此同时 Kubernetes 社区也做了一个专门用于 Kubernetes 的 CRI 运行时 CRI-O，直接兼容 CRI 和 OCI 规范：
 
@@ -54,7 +54,7 @@ Kubelet 通过 gRPC 框架与容器运行时或 shim 进行通信，其中 kubel
 >
 > OCI：Open Container Initiative (OCI) 开放容器倡议，是一个由科技公司组成的团体，其目的是围绕容器镜像和运行时创建开放的行业标准。他们维护容器镜像格式的规范，以及容器应该如何运行。
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 无论是CRI-O还是containerd接入kubernetes的方式都比docker使用dockershim的方式接入kubernetes要来的简单。
 

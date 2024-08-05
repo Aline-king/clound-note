@@ -4,7 +4,7 @@
 
 <table data-header-hidden><thead><tr><th width="84"></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>Pool</td><td>RADOS存储集群提供的基础存储服务需要由“存储池（pool）”分割为<mark style="color:orange;"><strong>逻辑存储 区域</strong></mark>，此类的逻辑区域亦是对象数据的名称空间。</td><td></td></tr><tr><td>PG</td><td><p>归置组（Placement Group）是用于跨OSD将数据存储在某个存储池中的内部数据 </p><p>结构 相对于存储池来说，PG是一个虚拟组件，它是对象映射到存储池时使用的虚拟层 是实现大容量集群的关键效率技术</p></td><td></td></tr><tr><td>PGP</td><td>(Placement Group for Placement)是用于维持PG和OSD的一种策略。 防止OSD重新分配时候，PG找不到之前的OSD，从而引起大范围的数据迁移</td><td></td></tr><tr><td>CRUSH</td><td><p>把对象直接映射到OSD之上会导致二者之间的紧密耦合关系，在OSD设备变动时不可避免地对整个集群产生扰动。所以需要一种策略算法来处理这种问题。 Ceph将一个对象映射进RADOS集群的过程分为两步 </p><ul><li>首先是以一致性哈希算法将对象名称映射到PG </li><li><p>而后是将PG ID基于<mark style="color:purple;"><strong>CRUSH算法</strong></mark>映射到OSD CRUSH(Controlled Replication Under Scalable Hashing)</p><blockquote><p>它是一种数据分布式算法，类似于一致性哈希算法，用于为RADOS存储集群控制数据分布。</p></blockquote></li></ul></td><td></td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 ## 数据存储
 
@@ -83,7 +83,7 @@ osdmap e51 pool 'mypool' (1) object 'ceph-file' -> pg 1.7753490d (1.d) -> up ([2
 
 ## 存储解析
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>pool 是ceph存储数据时的逻辑分区，它起到据不同的用户场景，基于namespace实现隔离故障域的作用。 每个pool包含一定数量的PG, PG里的对象被映射到不同的OSD上。 OSD分散到所有的主机磁盘上</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p>pool 是ceph存储数据时的逻辑分区，它起到据不同的用户场景，基于namespace实现隔离故障域的作用。 每个pool包含一定数量的PG, PG里的对象被映射到不同的OSD上。 OSD分散到所有的主机磁盘上</p></figcaption></figure>
 
 {% tabs %}
 {% tab title="存储池" %}

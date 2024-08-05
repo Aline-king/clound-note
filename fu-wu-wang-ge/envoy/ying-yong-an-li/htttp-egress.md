@@ -113,7 +113,7 @@ networks:
               socket_address: { address: 172.23.1.4, port_value: 80 }
 </code></pre>
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
 </details>
 

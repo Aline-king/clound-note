@@ -1,0 +1,383 @@
+# s3测试
+
+S3 API接口简介
+
+S3服务的REST API使用用户账号（user）、存储桶（bucket）和对象（object）三个组件来组织存储的数据对象，对象保存于存储桶中，而存储桶则支持授权给特定账号进行读写及创建/删除等操作
+
+{% hint style="info" %}
+radosgw-admin是用于管理radowgw服务的命令行接口，它有着众多的分别用于不同管理功能的命令，例如user、subuser、key、bucket和object等
+
+命令：radosgw-admin user create --uid="s3user" --display-name="S3 Testing User"
+{% endhint %}
+
+而后即可通过其API接口进行访问测试，或者使用s3cmd命令进行
+
+使用s3cmd命令之前需要事先配置其工作环境，包括指定Access Key和Secret Key，以及S3服务的访问端点和默认的Region（Ceph的新版本中称作zonegroup）等
+
+格式：s3cmd --configure
+
+配置的结果将保存于\~/.s3cmd.cfg配置文件中，用户随后可通过编辑此文件修改配置参数，或者再次运行此配置命令为其指定新的配置信息
+
+> 参考资料： https://docs.ceph.com/en/latest/radosgw/s3/python/#using-s3-api-extensions
+
+**简单实践**
+
+{% tabs %}
+{% tab title="S3 API接口专用账号" %}
+```
+创建专属账号
+[cephadm@admin ceph-cluster]$ radosgw-admin user create --uid='s3user' --display-name='S3 Testing user'
+{
+    "user_id": "s3user",
+    "display_name": "S3 Testing user",
+    "email": "",
+    "suspended": 0,
+    "max_buckets": 1000,
+    "subusers": [],
+    "keys": [
+        {
+            "user": "s3user",
+            "access_key": "BX2IDCO5ADZ8IWZ4AVX7",
+            "secret_key": "wKXAiBBspTx9kl1NpcAi4eOCHxvQD7ORHnrmvBlf"
+        }
+    ],
+    ...
+}
+```
+
+```
+查看认证用户
+[cephadm@admin ceph-cluster]$ radosgw-admin user list
+[
+    "s3user"
+]
+​
+查看详情
+[cephadm@admin ceph-cluster]$ radosgw-admin user info --uid s3user
+{
+    "user_id": "s3user",
+    ...
+    "keys": [
+        {
+            "user": "s3user",
+            "access_key": "BX2IDCO5ADZ8IWZ4AVX7",
+            "secret_key": "wKXAiBBspTx9kl1NpcAi4eOCHxvQD7ORHnrmvBlf"
+        }
+    ],
+    ...
+}
+```
+
+
+{% endtab %}
+
+{% tab title="客户端配置" %}
+```
+在客户端上安装测试命令 s3cmd
+[root@stor04 ~]# yum install s3cmd -y
+```
+
+```
+使用s3之前，需要做一些预设的配置
+[root@stor04 ~]# s3cmd --configure
+​
+Enter new values or accept defaults in brackets with Enter.
+Refer to user manual for detailed description of all options.
+​
+Access key and Secret key are your identifiers for Amazon S3. Leave them empty for using the env variables.
+# 下面的两个属性是来自于之前的账号信息
+Access Key: BX2IDCO5ADZ8IWZ4AVX7        
+Secret Key: wKXAiBBspTx9kl1NpcAi4eOCHxvQD7ORHnrmvBlf
+Default Region [US]:        # 此处可以使用默认的
+​
+Use "s3.amazonaws.com" for S3 Endpoint and not modify it to the target Amazon S3.
+# 此处的域名是否用，我们自己定义的内容
+S3 Endpoint [s3.amazonaws.com]: stor04.superopsmsb.com:7480
+​
+Use "%(bucket)s.s3.amazonaws.com" to the target Amazon S3. "%(bucket)s" and "%(location)s" vars can be used
+if the target S3 system supports dns based buckets.
+# 关于存储桶的定制，需要使用自己的域名，但是格式一样
+DNS-style bucket+hostname:port template for accessing a bucket [%(bucket)s.s3.amazonaws.com]: %(bucket)s.stor04.superopsmsb.com:7480
+​
+Encryption password is used to protect your files from reading
+by unauthorized persons while in transfer to S3
+Encryption password:                        # 这里不需要密码
+Path to GPG program [/usr/bin/gpg]:         # 使用默认的gpg命令路径
+​
+When using secure HTTPS protocol all communication with Amazon S3
+servers is protected from 3rd party eavesdropping. This method is
+slower than plain HTTP, and can only be proxied with Python 2.7 or newer
+Use HTTPS protocol [Yes]: No                # 不使用HTTPs协议
+​
+On some networks all internet access must go through a HTTP proxy.
+Try setting it here if you can't connect to S3 directly
+HTTP Proxy server name:                     # 不使用代理，因为是本地访问
+​
+New settings:
+  Access Key: NOF182FGP8Q38CWLZ8WQ
+  Secret Key: zP2ZWJPXTsZWQXg2hKY4Wv4OpoolKZEOwfheJlx3
+  Default Region: US
+  S3 Endpoint: stor04.superopsmsb.com:7480
+  DNS-style bucket+hostname:port template for accessing a bucket: %(bucket)s.stor04.superopsmsb.com:7480
+  Encryption password:
+  Path to GPG program: /usr/bin/gpg
+  Use HTTPS protocol: False
+  HTTP Proxy server name:
+  HTTP Proxy server port: 0
+​
+Test access with supplied credentials? [Y/n] Y      # 确认最后的信息
+Please wait, attempting to list all buckets...
+Success. Your access key and secret key worked fine :-)
+​
+Now verifying that encryption works...
+Not configured. Never mind.
+​
+Save settings? [y/N] y                              # 保存信息
+Configuration saved to '/root/.s3cfg'
+```
+
+```
+查看常见的帮助信息
+[root@stor04 ~]# s3cmd
+Usage: s3cmd [options] COMMAND [parameters]
+...
+Commands:
+  Make bucket
+      s3cmd mb s3://BUCKET
+  Remove bucket
+      s3cmd rb s3://BUCKET
+  List objects or buckets
+      s3cmd ls [s3://BUCKET[/PREFIX]]
+  List all object in all buckets
+      s3cmd la
+  Put file into bucket
+      s3cmd put FILE [FILE...] s3://BUCKET[/PREFIX]
+  Get file from bucket
+      s3cmd get s3://BUCKET/OBJECT LOCAL_FILE
+  Delete file from bucket
+      s3cmd del s3://BUCKET/OBJECT
+  Delete file from bucket (alias for del)
+      s3cmd rm s3://BUCKET/OBJECT
+  Restore file from Glacier storage
+      s3cmd restore s3://BUCKET/OBJECT
+...
+```
+
+
+{% endtab %}
+
+{% tab title="域名解析" %}
+```
+定制专属的dns域名，让客户端找到 stor04.superopsmsb.com 主机名。
+[root@stor04 ~]# cat /etc/resolv.conf
+# Generated by NetworkManager
+nameserver 10.0.0.12
+      ...
+[root@stor04 ~]# nslookup file.stor04.superopsmsb.com 10.0.0.12
+Server:         10.0.0.12
+Address:        10.0.0.12#53
+​
+Name:   file.stor04.superopsmsb.com
+Address: 10.0.0.16
+```
+
+
+{% endtab %}
+
+{% tab title="存储桶创建实践" %}
+```
+创建存储桶
+[root@stor04 ~]# s3cmd mb s3://images
+Bucket 's3://images/' created
+[root@stor04 ~]# s3cmd mb s3://dir
+Bucket 's3://dir/' created
+​
+查看存储桶
+[root@stor04 ~]# s3cmd ls
+2062-09-26 14:21  s3://dir
+2062-09-26 13:57  s3://images
+```
+
+
+{% endtab %}
+
+{% tab title="文件上传下载实践" %}
+```
+上传文件到存储桶中，存储同目录可以随意玩耍
+[root@stor04 ~]# s3cmd put /etc/issue s3://images/linux/issue
+upload: '/etc/issue' -> 's3://images/linux/issue'  [1 of 1]
+ 23 of 23   100% in    1s    12.79 B/s  done
+ 
+查看文件对象效果
+[root@stor04 ~]# s3cmd ls s3://images/linux
+                          DIR  s3://images/linux/
+[root@stor04 ~]# s3cmd ls s3://images/linux/issue
+2062-09-26 13:58           23  s3://images/linux/issue
+```
+
+```
+下载文件对象
+[root@stor04 ~]# s3cmd get s3://images/linux/issue
+download: 's3://images/linux/issue' -> './issue'  [1 of 1]
+ 23 of 23   100% in    0s     3.42 KB/s  done
+[root@stor04 ~]# s3cmd get s3://images/linux/issue /tmp/issue-bak
+download: 's3://images/linux/issue' -> '/tmp/issue-bak'  [1 of 1]
+ 23 of 23   100% in    0s     3.38 KB/s  done
+ 
+查看效果
+[root@stor04 ~]# ls
+anaconda-ks.cfg  issue
+[root@stor04 ~]# ls /tmp/issue-bak
+/tmp/issue-bak
+```
+
+```
+对于一个大的RGW Object，会被切割成多个独立的RGW Object上传，称为multipart。multipar的优势是断点续传。s3接口默认切割大小为15MB。
+[root@stor04 /data/scripts]# dd if=/dev/zero of=a.txt bs=1M count=60
+记录了60+0 的读入
+记录了60+0 的写出
+62914560字节(63 MB)已复制，0.0495739 秒，1.3 GB/秒
+​
+[root@stor04 /data/scripts]# ll a.txt
+-rw-r--r-- 1 root root 62914560 9月  27 11:06 a.txt
+[root@stor04 /data/scripts]#  s3cmd put a.txt s3://images/linux/
+upload: 'a.txt' -> 's3://images/linux/a.txt'  [part 1 of 4, 15MB] [1 of 1]
+ 15728640 of 15728640   100% in    0s    25.99 MB/s  done
+upload: 'a.txt' -> 's3://images/linux/a.txt'  [part 2 of 4, 15MB] [1 of 1]
+ 15728640 of 15728640   100% in    0s    27.90 MB/s  done
+upload: 'a.txt' -> 's3://images/linux/a.txt'  [part 3 of 4, 15MB] [1 of 1]
+ 15728640 of 15728640   100% in    0s    28.93 MB/s  done
+upload: 'a.txt' -> 's3://images/linux/a.txt'  [part 4 of 4, 15MB] [1 of 1]
+ 15728640 of 15728640   100% in    0s    31.85 MB/s  done
+```
+
+
+{% endtab %}
+{% endtabs %}
+
+
+
+{% tabs %}
+{% tab title="目录上传下载实践" %}
+```
+准备目录结构
+[root@stor04 ~]# mkdir /data/test/{scripts,conf,file} -p
+[root@stor04 ~]# touch /data/test/{scripts/{1..4}.sh,conf/{1..3}.conf,file/{1..5}.txt}
+[root@stor04 ~]# echo scripts-1 > /data/test/scripts/1.sh
+[root@stor04 ~]# echo conf-2 > /data/test/conf/2.conf
+[root@stor04 ~]# echo file-5 > /data/test/file/5.txt
+​
+上传目录 
+[root@stor04 ~]# s3cmd put /data/test/ s3://dir/etc/ --recursive
+upload: '/data/test/conf/1.conf' -> 's3://dir/etc/conf/1.conf'  [1 of 12]
+ 0 of 0     0% in    0s     0.00 B/s  done
+...
+upload: '/data/test/scripts/4.sh' -> 's3://dir/etc/scripts/4.sh'  [12 of 12]
+ 0 of 0     0% in    0s     0.00 B/s  done
+ 
+查看效果
+[root@stor04 ~]# s3cmd ls s3://dir
+                          DIR  s3://dir/etc/
+[root@stor04 ~]# s3cmd ls s3://dir/etc              # 查看目录的时候，必须在最后添加/
+                          DIR  s3://dir/etc/
+[root@stor04 ~]# s3cmd ls s3://dir/etc/
+                          DIR  s3://dir/etc/conf/
+                          DIR  s3://dir/etc/file/
+                          DIR  s3://dir/etc/scripts/
+[root@stor04 ~]# s3cmd ls s3://dir/etc/conf/
+2062-09-26 14:23            0  s3://dir/etc/conf/1.conf
+2062-09-26 14:23            7  s3://dir/etc/conf/2.conf
+2062-09-26 14:23            0  s3://dir/etc/conf/3.conf
+```
+
+如果按照上传目录结构方式下载文件的时候，不要加子目录，
+
+```
+下载目录对象
+[root@stor04 ~]# s3cmd get s3://dir/  --recursive
+download: 's3://dir/etc/conf/1.conf' -> './etc/conf/1.conf'  [1 of 12]
+ 0 of 0     0% in    0s     0.00 B/s  done
+...
+    
+下载子目录
+# 它是将子目录下载到当前目录了
+[root@stor04 ~]# s3cmd get s3://dir/etc/  --recursive
+download: 's3://dir/etc/conf/1.conf' -> './conf/1.conf'  [1 of 12]
+ 0 of 0     0% in    0s     0.00 B/s  done
+...
+```
+
+
+{% endtab %}
+
+{% tab title="文件删除" %}
+```
+删除文件文件对象
+[root@stor04 ~]# s3cmd del s3://images/linux/issue
+delete: 's3://images/linux/issue'
+[root@stor04 ~]# s3cmd ls s3://images/linux/issue
+[root@stor04 ~]#
+​
+删除目录对象
+[root@stor04 ~]# s3cmd del s3://images/linux/issue
+delete: 's3://images/linux/issue'
+[root@stor04 ~]# s3cmd del s3://dir/etc/  --recursive
+delete: 's3://dir/etc/conf/1.conf'
+...
+delete: 's3://dir/etc/scripts/4.sh'
+​
+删除存储桶
+[root@stor04 ~]# s3cmd rb  s3://images
+Bucket 's3://images/' removed
+[root@stor04 ~]# s3cmd rb  s3://dir
+Bucket 's3://dir/' removed
+```
+
+
+{% endtab %}
+
+{% tab title="python测试" %}
+```
+安装测试模块
+[root@stor04 ~]# yum -y install python-boto
+```
+
+```
+定制测试脚本
+[root@stor04 ~]# cat /data/scripts/tests3.py
+import boto.s3.connection
+​
+access_key = 'BX2IDCO5ADZ8IWZ4AVX7'
+secret_key = 'wKXAiBBspTx9kl1NpcAi4eOCHxvQD7ORHnrmvBlf'
+conn = boto.connect_s3(
+        aws_access_key_id=access_key,
+        aws_secret_access_key=secret_key,
+        host='10.0.0.16', port=7480,
+        is_secure=False, calling_format=boto.s3.connection.OrdinaryCallingFormat(),
+       )
+​
+bucket = conn.create_bucket('ceph-s3-bucket')
+for bucket in conn.get_all_buckets():
+    print "{name} {created}".format(
+        name=bucket.name,
+        created=bucket.creation_date,
+    )
+```
+
+```
+测试效果
+[root@stor04 ~]# python /data/scripts/tests3.py
+ceph-s3-bucket 2062-09-26T14:41:42.505Z
+```
+
+
+{% endtab %}
+{% endtabs %}
+
+
+
+
+
+
+
+\

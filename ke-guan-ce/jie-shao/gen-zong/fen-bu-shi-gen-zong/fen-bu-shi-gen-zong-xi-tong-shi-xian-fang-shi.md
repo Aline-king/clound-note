@@ -104,7 +104,7 @@
 
 ### 工作逻辑 <a href="#id-331-gong-zuo-luo-ji-46" id="id-331-gong-zuo-luo-ji-46"></a>
 
-<figure><img src="../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>展示了一个请求在分布式系统中的完整流动路径（端到端追踪），以及每个节点处理请求所花的时间。</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>展示了一个请求在分布式系统中的完整流动路径（端到端追踪），以及每个节点处理请求所花的时间。</p></figcaption></figure>
 
 以下是各部分的详细解释：
 

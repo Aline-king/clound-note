@@ -244,7 +244,7 @@ Jaeger 是一个开源的端到端分布式追踪系统，最初由Uber Technolo
 
 假设你有一个电子商务网站，当用户下单时，系统需要调用多个微服务：用户服务、订单服务、支付服务和库存服务。使用Jaeger，你可以追踪整个下单过程，查看每个微服务的响应时间，识别出哪个服务可能导致了延迟。
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>这张图片展示了Jaeger的工作流程和架构，帮助我们理解如何使用Jaeger进行分布式追踪。为了更通俗易懂地介绍，我们可以将整个流程比作一个包裹物流系统。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>这张图片展示了Jaeger的工作流程和架构，帮助我们理解如何使用Jaeger进行分布式追踪。为了更通俗易懂地介绍，我们可以将整个流程比作一个包裹物流系统。</p></figcaption></figure>
 
 **具体组件和流程**
 

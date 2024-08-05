@@ -2,7 +2,7 @@
 
 ## 身份验证流程
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 client和osd都有一个叫做monclient的模块负责认证和密钥交换。
 
@@ -28,7 +28,7 @@ CephX身份验正功能仅限制Ceph的各组件之间，它不能扩展到其�
 
 ## MDS和OSD验证流程
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 1 当client与Monitor实现基本的认证后，monitor与后端的mds和osd会自动进行认证信息的同步&#x20;
 

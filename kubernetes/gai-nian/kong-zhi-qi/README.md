@@ -49,7 +49,7 @@ node
 
 对象形态 - 基于资源对象文件初始化后出来的应用对象。
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 API Server 从某种层面上来说，它仅仅是一个数据库的接口，对外提供数据库的访问
 
