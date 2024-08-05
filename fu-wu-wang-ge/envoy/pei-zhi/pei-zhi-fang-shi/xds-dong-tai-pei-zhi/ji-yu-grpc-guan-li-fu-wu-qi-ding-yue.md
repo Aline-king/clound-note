@@ -6,7 +6,7 @@
 
 这种方法使得Envoy能够在不重启的情况下，动态地接收和应用配置变更。
 
-<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **使用优势**
 

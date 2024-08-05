@@ -28,9 +28,9 @@ Ceph的发展对于Centos系列和Redhat系列不友好，新版本不支持旧�
 
 ## 介绍
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ceph 是一个开源的分布式存储系统，同时支持对象存储、块设备、文件系统.
 
@@ -44,7 +44,7 @@ Ceph 是一个开源的分布式存储系统，同时支持对象存储、块设
 
 #### _基本结构_
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ceph是一个多版本存储系统，它把每一个待管理的数据流（例如一个文件） 切分为一到多个固定大小的对象数据，并以其为原子单元完成数据存取。&#x20;
 

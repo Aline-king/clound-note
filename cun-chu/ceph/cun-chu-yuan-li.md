@@ -12,7 +12,7 @@ Ceph OSD 守护进程处理存储驱动器上的读、写和复制操作。它�
 在Ceph中，每一个文件都会被拆分为多个独立的object，然后按照上面的逻辑进行持久化。
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ceph OSD 守护进程将"数据"作为对象存储在平面命名空间中,该对象包括如下部分：
 
@@ -22,4 +22,4 @@ Ceph OSD 守护进程将"数据"作为对象存储在平面命名空间中,该�
 对象 ID 在整个集群中是唯一的，而不仅仅是本地文件系统.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>

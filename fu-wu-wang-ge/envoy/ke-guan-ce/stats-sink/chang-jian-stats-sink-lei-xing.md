@@ -18,7 +18,7 @@ stats_sinks:
 
 Envoy 代理 收集指标 并导出和存储到 Prometheus 使用 Grafana进行可视化仪表盘，最后使用仪表盘进行展示
 
-<img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
+<img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" data-size="original">
 
 **数据流：**
 
@@ -55,7 +55,7 @@ stats_sinks:
          port_value: 8125
 ```
 
-![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 
 
